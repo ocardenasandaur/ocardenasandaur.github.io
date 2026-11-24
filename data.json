@@ -334,27 +334,32 @@
       {
         "title": "Cálculo I",
         "description": "Docencia de pregrado.",
-        "institution": "Universidad de Valparaíso · 2020-2022"
+        "institution": "Universidad de Valparaíso · 2020-2022",
+        "current": false
       },
       {
         "title": "Fundamentos de la Matemática",
         "description": "Docencia de pregrado.",
-        "institution": "Universidad de Valparaíso · 2020-2022"
+        "institution": "Universidad de Valparaíso · 2020-2022",
+        "current": false
       },
       {
         "title": "Fundamentos de Matemática",
         "description": "Cátedra y taller.",
-        "institution": "PUCV · marzo-julio 2022"
+        "institution": "PUCV · marzo-julio 2022",
+        "current": false
       },
       {
         "title": "Matemática Discreta",
         "description": "Docencia de pregrado.",
-        "institution": "UTFSM · marzo-julio 2022"
+        "institution": "UTFSM · marzo-julio 2022",
+        "current": false
       },
       {
         "title": "Matemática III",
         "description": "Docencia de pregrado.",
-        "institution": "UTFSM · marzo-julio 2022"
+        "institution": "UTFSM · marzo-julio 2022",
+        "current": false
       }
     ],
     "assistant": [
@@ -453,103 +458,111 @@
       "name": "Pilar Scollo",
       "institution": "Universidad Nacional de Mar del Plata",
       "topic": "Una introducción a grafos temporales: El mundo dinámico.",
-      "award": "Beca Fluence 2026 para una versión preliminar del proyecto"
+      "award": "Beca Fluence 2026 para una versión preliminar del proyecto",
+      "program": "pares-ordenados"
     },
     {
       "year": "2026 · Argentina",
       "name": "Rodrigo Cortinez",
       "institution": "Universidad Nacional de Cuyo",
       "topic": "Una introducción a la Teoría de Juegos.",
-      "award": ""
+      "award": "",
+      "program": "pares-ordenados"
     },
     {
       "year": "2025 · Argentina",
       "name": "Mateo Alessi",
       "institution": "Universidad Nacional de Cuyo",
       "topic": "Clasificación de nudos hasta 8 cruces.",
-      "award": "Mención de honor en el concurso de monografías de la Unión Matemática Argentina"
+      "award": "Mención de honor en el concurso de monografías de la Unión Matemática Argentina",
+      "program": "pares-ordenados"
     },
     {
       "year": "2025 · Colombia",
       "name": "Johann Telus Antelo",
       "institution": "Universidad del Atlántico",
       "topic": "Algoritmos para calcular la p-coloración y el polinomio de Jones.",
-      "award": ""
+      "award": "",
+      "program": "pares-ordenados"
     },
     {
       "year": "2024 · México",
       "name": "Kevin Messina Rodríguez",
       "institution": "Universidad Autónoma de Guerrero",
       "topic": "Gráficas llamativas.",
-      "award": ""
+      "award": "",
+      "program": "pares-ordenados"
     },
     {
       "year": "2023 · Colombia",
       "name": "Emmanuel Silva Amaya",
       "institution": "Universidad Nacional de Colombia",
       "topic": "Una introducción a la Teoría de Juegos.",
-      "award": ""
+      "award": "",
+      "program": "pares-ordenados"
     },
     {
       "year": "2021 · Chile",
       "name": "Marcia Aguilera y Emilio Oyanedel",
       "institution": "UTFSM · Laboratorio de Modelación I",
       "topic": "Implementación de un algoritmo para obtener el polinomio HOMFLYPT en Python.",
-      "award": ""
+      "award": "",
+      "program": "lab-modelacion"
     },
     {
       "year": "2017 · Chile",
       "name": "Ricardo Ávalos",
       "institution": "UTFSM · Laboratorio de Modelación I",
       "topic": "Estudio de endolisinas.",
-      "award": ""
+      "award": "",
+      "program": "lab-modelacion"
     }
   ],
   "outreach": [
     {
-      "emoji": "mic",
+      "emoji": "🎤",
       "title": "Matemátic@s Latin@s/Hispan@s Alrededor del Mundo",
       "description": "Panelista en Pares Ordenados, compartiendo experiencias académicas.",
       "year": "2025 · Virtual"
     },
     {
-      "emoji": "satellite",
+      "emoji": "📡",
       "title": "Contagiando Matemáticas",
       "description": "Coorganizador y moderador del ciclo de charlas abiertas al público durante la pandemia.",
       "year": "Octubre-diciembre 2020 · UV"
     },
     {
-      "emoji": "tent",
+      "emoji": "⛺",
       "title": "Campamento STEM",
       "description": "Monitor y monitor coordinador. Talleres de nudos, trenzas y criptografía para estudiantes de enseñanza media.",
       "year": "2017-2019 · UTFSM"
     },
     {
-      "emoji": "circus",
+      "emoji": "🎪",
       "title": "Festival de Matemática: Teoría de Nudos y Redes de Pesca",
       "description": "Exposición interactiva mediante la construcción de redes de pesca.",
       "year": "Septiembre 2017 · San Antonio"
     },
     {
-      "emoji": "circus",
+      "emoji": "🎪",
       "title": "Festival de Matemática: Cúpulas de da Vinci",
       "description": "Exposición y construcción participativa de cúpulas.",
       "year": "Diciembre 2016 · Valparaíso"
     },
     {
-      "emoji": "school",
+      "emoji": "🏫",
       "title": "Preuniversitario Solidario UV",
       "description": "Profesor de Matemática (2012-2024), coordinador del Departamento de Matemática (2017-2024) y secretario general (enero-septiembre 2024).",
       "year": "2012-2024 · UV"
     },
     {
-      "emoji": "school",
+      "emoji": "🏫",
       "title": "Preuniversitario Universidad Católica de Valparaíso",
       "description": "Profesor de Matemática.",
       "year": "Agosto-diciembre 2019"
     },
     {
-      "emoji": "books",
+      "emoji": "📚",
       "title": "Minicursos en línea",
       "description": "Minicursos de teoría de nudos, grafos y juegos.",
       "year": "2020-2021 · UV"
