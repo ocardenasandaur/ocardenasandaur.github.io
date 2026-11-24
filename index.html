@@ -276,26 +276,33 @@
 </div>
 <div id="tab-docencia" class="tab-panel sec" style="background:white;">
   <div class="sec-inner">
-    <div class="sec-header"><div class="sec-icon ic-rose">🎓</div><div><h2>Docencia</h2><p>Cursos impartidos y ayudantías</p></div></div>
-    <div id="teaching-professor" class="doc-block">
-      <div class="doc-block-title dbt-profesor">🏫 Cursos impartidos (Profesor)</div>
-      <div class="courses-grid" id="courses-professor"></div>
+    <div class="sec-header"><div class="sec-icon ic-rose">🎓</div><div><h2>Docencia</h2><p>Cursos impartidos, minicursos y ayudantías</p></div></div>
+    <div id="teaching-present" class="doc-block">
+      <div class="doc-block-title dbt-profesor">🏫 Cursos impartidos · Presentes</div>
+      <div class="courses-grid" id="courses-present"></div>
+    </div>
+    <div id="teaching-past" class="doc-block">
+      <div class="doc-block-title dbt-profesor">🏫 Cursos impartidos · Anteriores</div>
+      <div class="courses-grid" id="courses-past"></div>
+    </div>
+    <div id="teaching-mini" class="doc-block">
+      <div class="doc-block-title dbt-mini">🪢 Minicursos</div>
+      <div class="courses-grid" id="courses-mini"></div>
     </div>
     <div id="teaching-assistant" class="doc-block">
       <div class="doc-block-title dbt-ayudante">📐 Ayudantías</div>
       <div class="courses-grid" id="courses-assistant"></div>
     </div>
-    <div id="teaching-mini" class="doc-block">
-      <div class="doc-block-title dbt-mini">🪢 Minicursos de divulgación</div>
-      <div class="courses-grid" id="courses-mini"></div>
-    </div>
   </div>
 </div>
 <div id="tab-tutorias-div" class="tab-panel sec" style="background:#f8fafc;">
   <div class="sec-inner">
-    <div class="sec-header"><div class="sec-icon ic-indigo">🌎</div><div><h2>Tutorías — Pares Ordenados</h2><p>Programa virtual de lectura dirigida · 2023–presente</p></div></div>
-    <p class="po-intro">Desde 2023 participo como tutor en el Programa Virtual de Lectura Dirigida <strong>"Pares Ordenados"</strong>, acompañando proyectos de investigación formativa a estudiantes de universidades latinoamericanas en temas de teoría de nudos, grafos, juegos y algoritmos.</p>
-    <div class="students-grid" id="students-list"></div>
+    <div class="sec-header"><div class="sec-icon ic-indigo">🌎</div><div><h2>Tutorías y Supervisión</h2><p>Lectura dirigida y proyectos de investigación formativa</p></div></div>
+    <p class="po-intro">Desde 2023 participo como tutor en el Programa Virtual de Lectura Dirigida <strong>"Pares Ordenados"</strong>, acompañando proyectos de investigación formativa a estudiantes de universidades latinoamericanas en temas de teoría de nudos, grafos, juegos y algoritmos. Anteriormente, también participé en la supervisión y orientación de proyectos desarrollados en la asignatura <strong>Laboratorio de Modelación I</strong> de la Universidad Técnica Federico Santa María (UTFSM).</p>
+    <div class="subsec-title">🤝 Pares Ordenados</div>
+    <div class="students-grid" id="students-pares"></div>
+    <div class="subsec-title">🔬 Laboratorio de Modelación I · UTFSM</div>
+    <div class="students-grid" id="students-lab" style="margin-bottom:3rem;"></div>
     <div class="sec-header" style="margin-top:1rem;"><div class="sec-icon ic-green">📢</div><div><h2>Divulgación &amp; Comunidad</h2><p>Matemáticas para todo el mundo</p></div></div>
     <div class="div-grid" id="outreach-list"></div>
   </div>
@@ -330,7 +337,7 @@
     <div class="sec-header"><div class="sec-icon ic-white">✉️</div><div><h2>Contacto</h2><p>Colaboraciones, consultas académicas o estudiantes de tesis</p></div></div>
     <div class="contact-grid">
       <div class="contact-info">
-        <p>Estoy interesado en colaboraciones sobre teoría de nudos, enlaces ligados e invariantes de baja dimensión. También acepto estudiantes de posgrado con interés en estas áreas.</p>
+        <p>Estoy abierto a colaboraciones en investigación sobre teoría de nudos, enlaces ligados e invariantes de baja dimensión, así como a dirigir trabajos de pre y postgrado en estas áreas.</p>
         <div class="contact-links" id="contact-links"></div>
       </div>
       <div class="cv-box">
@@ -453,17 +460,23 @@ fetch('data.json')
         <p>${c.description}</p>
         <div class="course-univ">${c.institution}</div>
       </div>`).join('');
-    document.getElementById('courses-professor').innerHTML=renderCourses(d.teaching.professor,'profesor');
-    document.getElementById('courses-assistant').innerHTML=renderCourses(d.teaching.assistant,'ayudante');
+    const present=d.teaching.professor.filter(c=>c.current);
+    const past=d.teaching.professor.filter(c=>!c.current);
+    document.getElementById('teaching-present').style.display=present.length?'':'none';
+    document.getElementById('courses-present').innerHTML=renderCourses(present,'profesor');
+    document.getElementById('courses-past').innerHTML=renderCourses(past,'profesor');
     document.getElementById('courses-mini').innerHTML=renderCourses(d.teaching.minicourses,'minicurso');
-    document.getElementById('students-list').innerHTML=d.students.map(s=>`
+    document.getElementById('courses-assistant').innerHTML=renderCourses(d.teaching.assistant,'ayudante');
+    const renderStudent=s=>`
       <div class="student-card">
         <div class="student-year">${s.year}</div>
         <h3>${s.name}</h3>
         <div class="student-univ">${s.institution}</div>
         <div class="student-topic">${s.topic}</div>
         ${s.award?`<div class="student-award">${s.award}</div>`:''}
-      </div>`).join('');
+      </div>`;
+    document.getElementById('students-pares').innerHTML=d.students.filter(s=>s.program==='pares-ordenados').map(renderStudent).join('');
+    document.getElementById('students-lab').innerHTML=d.students.filter(s=>s.program==='lab-modelacion').map(renderStudent).join('');
     document.getElementById('outreach-list').innerHTML=d.outreach.map(o=>`
       <div class="div-card">
         <div class="div-emoji">${o.emoji}</div>
