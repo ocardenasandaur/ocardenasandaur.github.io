@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O'Bryan Cárdenas-Andaur — Teoría de Nudos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --violet: #7c3aed; --violet-light: #a78bfa; --violet-dark: #5b21b6;
+      --teal: #0d9488;   --teal-light: #5eead4;
+      --amber: #d97706;  --amber-light: #fcd34d;
+      --rose: #e11d48;   --rose-light: #fda4af;
+      --indigo: #4f46e5;
+      --slate: #0f172a;  --slate-mid: #334155;  --slate-soft: #64748b;
+      --bg: #f8fafc;     --white: #ffffff;      --border: #e2e8f0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--slate); line-height: 1.6; }
+    #hero {
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 35%, #4f46e5 70%, #7c3aed 100%);
+      color: white; padding: 5rem 2rem 4rem;
+    }
+    #hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(94,234,212,0.06) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(167,139,250,0.08) 0%, transparent 40%);
+    }
+    .hero-inner { max-width: 920px; margin: 0 auto; display: flex; gap: 3rem; align-items: center; position: relative; }
+    #trefoil-main { border-radius: 50%; filter: drop-shadow(0 20px 60px rgba(124,58,237,0.5)); flex-shrink: 0; }
+    .hero-text h1 { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 700; line-height: 1.15; margin-bottom: 0.3rem; }
+    #hero-role { font-size: 1rem; color: var(--teal-light); font-weight: 500; margin-bottom: 0.2rem; }
+    #hero-inst { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin-bottom: 1rem; }
+    #hero-summary { font-size: 0.95rem; color: rgba(255,255,255,0.82); max-width: 500px; line-height: 1.75; margin-bottom: 1.2rem; }
+    #hero-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.3rem; }
+    .badge { background: rgba(255,255,255,0.11); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 0.2rem 0.7rem; border-radius: 999px; font-size: 0.75rem; font-weight: 500; font-family: 'JetBrains Mono', monospace; }
+    .hero-links { display: flex; gap: 0.7rem; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.52rem 1.15rem; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: all 0.2s; cursor: pointer; }
+    .btn-white { background: white; color: var(--violet-dark); }
+    .btn-white:hover { background: #f1f5f9; transform: translateY(-1px); }
+    .btn-outline-white { background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.35); }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.1); }
+    .tab-bar-wrap { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.93); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+    .tab-bar { max-width: 980px; margin: 0 auto; display: flex; align-items: center; overflow-x: auto; scrollbar-width: none; padding: 0 1rem; }
+    .tab-bar::-webkit-scrollbar { display: none; }
+    .tab-btn { padding: 0.9rem 1.1rem; border: none; background: none; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--slate-soft); white-space: nowrap; position: relative; transition: color 0.2s; border-bottom: 2.5px solid transparent; margin-bottom: -1px; }
+    .tab-btn:hover { color: var(--slate); }
+    .tab-btn.active { color: var(--violet); border-bottom-color: var(--violet); font-weight: 600; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .sec { padding: 3.5rem 2rem; }
+    .sec-inner { max-width: 920px; margin: 0 auto; }
+    .sec-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2.2rem; }
+    .sec-icon { width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; }
+    .sec-header h2 { font-family: 'Playfair Display', serif; font-size: 1.65rem; font-weight: 700; color: var(--slate); }
+    .sec-header p { font-size: 0.84rem; color: var(--slate-soft); margin-top: 0.1rem; }
+    .ic-violet { background: #ede9fe; } .ic-teal { background: #ccfbf1; }
+    .ic-amber { background: #fef3c7; } .ic-rose  { background: #ffe4e6; }
+    .ic-indigo{ background: #e0e7ff; } .ic-green { background: #dcfce7; }
+    .ic-star  { background: #fef9c3; } .ic-white { background: rgba(255,255,255,0.1); }
+    .subsec-title { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--slate-soft); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
+    .subsec-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    #tab-perfil { background: white; }
+    #about-text { font-size: 0.97rem; color: var(--slate-soft); line-height: 1.8; max-width: 720px; margin-bottom: 2.5rem; }
+    .formation-grid { display: flex; flex-direction: column; }
+    .formation-item { display: flex; gap: 1.5rem; padding: 1.3rem 0; border-bottom: 1px solid var(--border); }
+    .formation-item:last-child { border-bottom: none; }
+    .fi-year { flex-shrink: 0; width: 90px; padding-top: 0.1rem; font-size: 0.8rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; color: var(--violet); text-align: right; }
+    .fi-dot { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; padding-top: 0.4rem; }
+    .fi-dot-circle { width: 12px; height: 12px; border-radius: 50%; background: var(--violet); border: 3px solid white; box-shadow: 0 0 0 2px var(--violet-light); flex-shrink: 0; }
+    .fi-dot-line { width: 2px; flex: 1; background: var(--border); margin-top: 4px; }
+    .formation-item:last-child .fi-dot-line { display: none; }
+    .fi-body { flex: 1; }
+    .fi-degree { font-size: 1rem; font-weight: 700; color: var(--slate); margin-bottom: 0.15rem; }
+    .fi-univ { font-size: 0.88rem; color: var(--violet); font-weight: 500; margin-bottom: 0.3rem; }
+    .fi-desc { font-size: 0.85rem; color: var(--slate-soft); line-height: 1.65; }
+    .fi-tag { display: inline-block; margin-top: 0.4rem; font-size: 0.74rem; font-weight: 600; padding: 0.18rem 0.55rem; border-radius: 999px; background: #ede9fe; color: var(--violet-dark); font-family: 'JetBrains Mono', monospace; }
+    .thesis-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+    .thesis-card { border: 1.5px solid var(--border); border-radius: 14px; padding: 1.4rem; position: relative; overflow: hidden; transition: all 0.2s; }
+    .thesis-card:hover { border-color: var(--violet-light); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(124,58,237,0.08); }
+    .thesis-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .thesis-card:nth-child(1)::before { background: linear-gradient(90deg,#7c3aed,#a78bfa); }
+    .thesis-card:nth-child(2)::before { background: linear-gradient(90deg,#0d9488,#5eead4); }
+    .thesis-card:nth-child(3)::before { background: linear-gradient(90deg,#d97706,#fcd34d); }
+    .thesis-type { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+    .tt-doc { color: var(--violet); } .tt-lic { color: var(--teal); } .tt-ing { color: var(--amber); }
+    .thesis-card h3 { font-size: 0.92rem; font-weight: 700; color: var(--slate); margin-bottom: 0.4rem; line-height: 1.4; }
+    .tc-univ { font-size: 0.82rem; color: var(--slate-soft); margin-bottom: 0.25rem; }
+    .tc-adv  { font-size: 0.8rem; color: var(--slate-soft); font-style: italic; }
+    .tc-year { font-size: 0.75rem; font-weight: 700; color: var(--slate-soft); font-family: 'JetBrains Mono', monospace; margin-top: 0.6rem; }
+    #tab-investigacion { background: #f8fafc; }
+    .research-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 1.2rem; }
+    .research-card { background: white; border: 1.5px solid var(--border); border-radius: 16px; padding: 1.5rem; transition: all 0.25s; position: relative; overflow: hidden; }
+    .research-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+    .research-card:nth-child(1)::before { background: linear-gradient(90deg,#7c3aed,#a78bfa); }
+    .research-card:nth-child(2)::before { background: linear-gradient(90deg,#0d9488,#5eead4); }
+    .research-card:nth-child(3)::before { background: linear-gradient(90deg,#d97706,#fcd34d); }
+    .research-card:nth-child(4)::before { background: linear-gradient(90deg,#e11d48,#fda4af); }
+    .research-card:hover { border-color: var(--violet-light); transform: translateY(-3px); box-shadow: 0 12px 36px rgba(124,58,237,0.1); }
+    .research-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .research-card p { font-size: 0.875rem; color: var(--slate-soft); line-height: 1.65; }
+    .rc-tag { display: inline-block; margin-top: 0.75rem; font-size: 0.74rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; font-family: 'JetBrains Mono', monospace; }
+    .tag-violet { background: #ede9fe; color: var(--violet-dark); }
+    .tag-teal   { background: #ccfbf1; color: #0f766e; }
+    .tag-amber  { background: #fef3c7; color: #92400e; }
+    .tag-rose   { background: #ffe4e6; color: #9f1239; }
+    #tab-publicaciones { background: white; }
+    .pub-list { display: flex; flex-direction: column; gap: 1rem; }
+    .pub-item { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 14px; padding: 1.4rem 1.6rem; display: flex; gap: 1.2rem; align-items: flex-start; transition: all 0.2s; }
+    .pub-item:hover { border-color: var(--teal-light); box-shadow: 0 8px 24px rgba(13,148,136,0.08); }
+    .pub-year { flex-shrink: 0; min-width: 60px; text-align: center; font-size: 0.78rem; font-weight: 700; color: var(--teal); background: #ccfbf1; padding: 0.3rem 0.4rem; border-radius: 8px; margin-top: 0.1rem; }
+    .pub-year.wip { background: #fef3c7; color: var(--amber); }
+    .pub-year.acc { background: #f0fdf4; color: #15803d; }
+    .pub-content h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.3rem; }
+    .pub-content .authors { font-size: 0.84rem; color: var(--slate-soft); margin-bottom: 0.25rem; }
+    .pub-content .journal { font-size: 0.82rem; color: var(--teal); font-style: italic; font-weight: 500; }
+    .pub-actions { margin-top: 0.6rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .pub-link { font-size: 0.77rem; font-weight: 600; text-decoration: none; padding: 0.2rem 0.6rem; border-radius: 6px; transition: opacity 0.2s; }
+    .pub-link.doi   { background: #ede9fe; color: var(--violet); }
+    .pub-link.arxiv { background: #f0fdf4; color: #15803d; }
+    .pub-link:hover { opacity: 0.75; }
+    #tab-charlas { background: #f8fafc; }
+    .talks-timeline { position: relative; padding-left: 2rem; }
+    .talks-timeline::before { content: ''; position: absolute; left: 7px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom,var(--amber),var(--amber-light),transparent); }
+    .talk-item { position: relative; margin-bottom: 1.75rem; }
+    .talk-item::before { content: ''; position: absolute; left: -1.75rem; top: 0.35rem; width: 12px; height: 12px; border-radius: 50%; background: var(--amber); border: 3px solid #f8fafc; box-shadow: 0 0 0 2px var(--amber-light); }
+    .talk-meta { font-size: 0.77rem; font-weight: 600; color: var(--amber); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem; }
+    .talk-item h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .talk-item p  { font-size: 0.875rem; color: var(--slate-soft); }
+    .talk-type { display: inline-block; font-size: 0.72rem; font-weight: 600; padding: 0.14rem 0.5rem; border-radius: 999px; margin-left: 0.4rem; vertical-align: middle; }
+    .tt-poster  { background: #ede9fe; color: var(--violet-dark); }
+    .tt-invited { background: #ccfbf1; color: #0f766e; }
+    .tt-oral    { background: #fef3c7; color: #92400e; }
+    .tt-mini    { background: #ffe4e6; color: #9f1239; }
+    #tab-docencia { background: white; }
+    .doc-block { margin-bottom: 2.5rem; }
+    .doc-block-title { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.1rem; display: flex; align-items: center; gap: 0.6rem; }
+    .doc-block-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .dbt-profesor { color: var(--rose); } .dbt-ayudante { color: var(--violet); } .dbt-mini { color: var(--teal); }
+    .courses-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px,1fr)); gap: 0.9rem; }
+    .course-card { background: #f8fafc; border: 1.5px solid var(--border); border-radius: 13px; padding: 1.3rem; transition: all 0.2s; }
+    .course-card.profesor:hover  { border-color: var(--rose-light); box-shadow: 0 6px 20px rgba(225,29,72,0.07); }
+    .course-card.ayudante:hover  { border-color: var(--violet-light); box-shadow: 0 6px 20px rgba(124,58,237,0.07); }
+    .course-card.minicurso:hover { border-color: var(--teal-light); box-shadow: 0 6px 20px rgba(13,148,136,0.07); }
+    .course-card h3 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .course-card p  { font-size: 0.82rem; color: var(--slate-soft); line-height: 1.55; }
+    .course-univ { font-size: 0.75rem; font-weight: 600; color: var(--slate-soft); margin-top: 0.4rem; opacity: 0.75; }
+    #tab-tutorias-div { background: #f8fafc; }
+    .po-intro { font-size: 0.95rem; color: var(--slate-soft); line-height: 1.75; margin-bottom: 2rem; max-width: 680px; }
+    .students-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 1rem; margin-bottom: 3rem; }
+    .student-card { background: white; border: 1.5px solid var(--border); border-radius: 14px; padding: 1.3rem; transition: all 0.2s; }
+    .student-card:hover { border-color: #818cf8; box-shadow: 0 8px 24px rgba(99,102,241,0.08); }
+    .student-year { font-size: 0.74rem; font-weight: 700; color: #6366f1; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
+    .student-card h3 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.15rem; }
+    .student-univ  { font-size: 0.8rem; color: var(--slate-soft); margin-bottom: 0.4rem; }
+    .student-topic { font-size: 0.82rem; color: var(--slate-mid); line-height: 1.5; font-style: italic; }
+    .student-award { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.74rem; font-weight: 600; color: var(--amber); margin-top: 0.4rem; }
+    .div-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); gap: 1.1rem; }
+    .div-card { background: white; border: 1.5px solid var(--border); border-radius: 15px; padding: 1.4rem; transition: all 0.2s; }
+    .div-card:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.07); }
+    .div-emoji { font-size: 1.8rem; margin-bottom: 0.65rem; }
+    .div-card h3 { font-size: 0.92rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .div-card p  { font-size: 0.84rem; color: var(--slate-soft); line-height: 1.65; }
+    .div-year { font-size: 0.74rem; font-weight: 600; color: #16a34a; margin-top: 0.55rem; font-family: 'JetBrains Mono', monospace; }
+    #tab-mas-alla { background: linear-gradient(135deg,#1e1b4b 0%,#312e81 60%,#1e3a5f 100%); color: white; }
+    #tab-mas-alla .sec-header h2 { color: white; }
+    #tab-mas-alla .sec-header p  { color: rgba(255,255,255,0.5); }
+    .mas-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 2.5rem; align-items: start; }
+    .intereses-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .ii-item { display: flex; align-items: flex-start; gap: 0.75rem; }
+    .ii-icon { width: 38px; height: 38px; border-radius: 10px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .ii-text { font-size: 0.88rem; color: rgba(255,255,255,0.75); padding-top: 0.1rem; }
+    .ii-text strong { display: block; color: white; font-size: 0.88rem; margin-bottom: 0.1rem; }
+    .photo-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.65rem; }
+    .photo-card { aspect-ratio: 1; border-radius: 13px; overflow: hidden; position: relative; border: 1.5px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; }
+    .ph-bg { position: absolute; inset: 0; }
+    .ph-content { position: relative; z-index: 1; text-align: center; padding: 0.4rem; }
+    .ph-emoji { font-size: 1.7rem; display: block; margin-bottom: 0.25rem; }
+    .ph-label { font-size: 0.69rem; font-weight: 600; color: white; line-height: 1.3; }
+    .ph-bg-1{background:linear-gradient(135deg,#7c3aed,#5b21b6)} .ph-bg-2{background:linear-gradient(135deg,#0d9488,#0f766e)}
+    .ph-bg-3{background:linear-gradient(135deg,#d97706,#b45309)} .ph-bg-4{background:linear-gradient(135deg,#e11d48,#9f1239)}
+    .ph-bg-5{background:linear-gradient(135deg,#2563eb,#1d4ed8)} .ph-bg-6{background:linear-gradient(135deg,#059669,#047857)}
+    .photo-note { font-size: 0.74rem; color: rgba(255,255,255,0.28); margin-top: 0.65rem; text-align: center; font-style: italic; }
+    #tab-contacto { background: linear-gradient(135deg,#0f172a,#1e1b4b); color: white; }
+    #tab-contacto .sec-header h2 { color: white; }
+    #tab-contacto .sec-header p  { color: rgba(255,255,255,0.55); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+    .contact-info p { color: rgba(255,255,255,0.72); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.4rem; }
+    .contact-links { display: flex; flex-direction: column; gap: 0.7rem; }
+    .contact-link { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: rgba(255,255,255,0.78); font-size: 0.88rem; transition: color 0.2s; }
+    .contact-link:hover { color: var(--teal-light); }
+    .cicon { width: 34px; height: 34px; border-radius: 9px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; flex-shrink: 0; }
+    .cv-box { background: rgba(255,255,255,0.05); border: 1.5px solid rgba(255,255,255,0.11); border-radius: 18px; padding: 2rem; text-align: center; }
+    .cv-box .cv-icon { font-size: 2.8rem; margin-bottom: 0.9rem; }
+    .cv-box h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.45rem; color: white; }
+    .cv-box p  { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin-bottom: 1.4rem; }
+    .btn-teal { background: linear-gradient(135deg,var(--teal),#0f766e); color: white; border: none; padding: 0.65rem 1.4rem; border-radius: 9px; font-size: 0.88rem; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-block; }
+    .btn-teal:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(13,148,136,0.3); }
+    footer { background: #0f172a; border-top: 1px solid rgba(255,255,255,0.05); padding: 1.4rem 2rem; text-align: center; }
+    .footer-text { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
+    .footer-motto { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: rgba(167,139,250,0.35); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.6rem; margin-top: 0.4rem; }
+    @media (max-width: 720px) {
+      .hero-inner { flex-direction: column; text-align: center; }
+      #hero-badges, .hero-links { justify-content: center; }
+      #hero-summary { margin: 0 auto 1.2rem; }
+      .contact-grid, .mas-layout { grid-template-columns: 1fr; }
+      .hero-text h1 { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+<div id="hero">
+  <div class="hero-inner">
+    <canvas id="trefoil-main" width="160" height="160"></canvas>
+    <div class="hero-text">
+      <h1 id="hero-name">…</h1>
+      <div id="hero-role"></div>
+      <div id="hero-inst"></div>
+      <p id="hero-summary"></p>
+      <div id="hero-badges"></div>
+      <div class="hero-links">
+        <a href="#" class="btn btn-white" onclick="switchTab('publicaciones');return false;">📄 Publicaciones</a>
+        <a href="#" class="btn btn-outline-white" onclick="switchTab('contacto');return false;">✉️ Contacto</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tab-bar-wrap">
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="perfil" onclick="switchTab('perfil')">Perfil</button>
+    <button class="tab-btn" data-tab="investigacion" onclick="switchTab('investigacion')">Investigación</button>
+    <button class="tab-btn" data-tab="publicaciones" onclick="switchTab('publicaciones')">Publicaciones</button>
+    <button class="tab-btn" data-tab="charlas" onclick="switchTab('charlas')">Charlas</button>
+    <button class="tab-btn" data-tab="docencia" onclick="switchTab('docencia')">Docencia</button>
+    <button class="tab-btn" data-tab="tutorias-div" onclick="switchTab('tutorias-div')">Divulgación &amp; Tutorías</button>
+    <button class="tab-btn" data-tab="mas-alla" onclick="switchTab('mas-alla')">Más allá</button>
+    <button class="tab-btn" data-tab="contacto" onclick="switchTab('contacto')">Contacto</button>
+  </div>
+</div>
+<div id="tab-perfil" class="tab-panel active sec" style="background:white;">
+  <div class="sec-inner">
+    <div class="sec-header"><div class="sec-icon ic-violet">🧑‍🔬</div><div><h2>Sobre mí</h2><p>Matemático, docente y divulgador</p></div></div>
+    <p id="about-text"></p>
+    <div style="margin-bottom:2.5rem;">
+      <div class="subsec-title">🎓 Formación académica</div>
+      <div class="formation-grid" id="formation-list"></div>
+    </div>
+    <div>
+      <div class="subsec-title">📜 Trabajos de tesis</div>
+      <div class="thesis-grid" id="thesis-list"></div>
+    </div>
+  </div>
+</div>
+<div id="tab-investigacion" class="tab-panel sec" style="background:#f8fafc;">
+  <div class="sec-inner">
+    <div class="sec-header"><div class="sec-icon ic-violet">🪢</div><div><h2>Investigación</h2><p>Proyectos y líneas de trabajo activos</p></div></div>
+    <div class="research-grid" id="research-list"></div>
+  </div>
+</div>
+<div id="tab-publicaciones" class="tab-panel sec" style="background:white;">
+  <div class="sec-inner">
+    <div class="sec-header"><div class="sec-icon ic-teal">📚</div><div><h2>Publicaciones</h2><p>Artículos publicados, aceptados y en preparación</p></div></div>
+    <div class="pub-list" id="pub-list"></div>
+  </div>
+</div>
+<div id="tab-charlas" class="tab-panel sec" style="background:#f8fafc;">
+  <div class="sec-inner">
+    <div class="sec-header"><div class="sec-icon ic-amber">🎤</div><div><h2>Charlas &amp; Conferencias</h2><p>Presentaciones seleccionadas</p></div></div>
+    <div class="talks-timeline" id="talks-list"></div>
+  </div>
+</div>
+<div id="tab-docencia" class="tab-panel sec" style="background:white;">
+  <div class="sec-inner">
+    <div class="sec-header"><div class="sec-icon ic-rose">🎓</div><div><h2>Docencia</h2><p>Cursos impartidos y ayudantías</p></div></div>
+    <div id="teaching-professor" class="doc-block">
+      <div class="doc-block-title dbt-profesor">🏫 Cursos impartidos (Profesor)</div>
+      <div class="courses-grid" id="courses-professor"></div>
+    </div>
+    <div id="teaching-assistant" class="doc-block">
+      <div class="doc-block-title dbt-ayudante">📐 Ayudantías</div>
+      <div class="courses-grid" id="courses-assistant"></div>
+    </div>
+    <div id="teaching-mini" class="doc-block">
+      <div class="doc-block-title dbt-mini">🪢 Minicursos de divulgación</div>
+      <div class="courses-grid" id="courses-mini"></div>
+    </div>
+  </div>
+</div>
+<div id="tab-tutorias-div" class="tab-panel sec" style="background:#f8fafc;">
+  <div class="sec-inner">
+    <div class="sec-header"><div class="sec-icon ic-indigo">🌎</div><div><h2>Tutorías — Pares Ordenados</h2><p>Programa virtual de lectura dirigida · 2023–presente</p></div></div>
+    <p class="po-intro">Desde 2023 participo como tutor en el Programa Virtual de Lectura Dirigida <strong>"Pares Ordenados"</strong>, acompañando proyectos de investigación formativa a estudiantes de universidades latinoamericanas en temas de teoría de nudos, grafos, juegos y algoritmos.</p>
+    <div class="students-grid" id="students-list"></div>
+    <div class="sec-header" style="margin-top:1rem;"><div class="sec-icon ic-green">📢</div><div><h2>Divulgación &amp; Comunidad</h2><p>Matemáticas para todo el mundo</p></div></div>
+    <div class="div-grid" id="outreach-list"></div>
+  </div>
+</div>
+<div id="tab-mas-alla" class="tab-panel sec">
+  <div class="sec-inner">
+    <div class="sec-header"><div class="sec-icon ic-star">✨</div><div><h2>Más allá de los nudos</h2><p>El matemático fuera del pizarrón</p></div></div>
+    <div class="mas-layout">
+      <div class="intereses-list">
+        <div class="ii-item"><div class="ii-icon">🐍</div><div class="ii-text"><strong>Python &amp; LaTeX</strong>Programación matemática y escritura científica. Avanzado.</div></div>
+        <div class="ii-item"><div class="ii-icon">🎲</div><div class="ii-text"><strong>Teoría de Juegos</strong>La uso tanto en investigación como en divulgación.</div></div>
+        <div class="ii-item"><div class="ii-icon">🌍</div><div class="ii-text"><strong>Español · Inglés B2 · Francés A2</strong>Viajé entre Chile y España para el doctorado.</div></div>
+        <div class="ii-item"><div class="ii-icon">🎨</div><div class="ii-text"><strong>[Tu interés]</strong>Cuéntame qué va aquí 🙂</div></div>
+        <div class="ii-item"><div class="ii-icon">🎵</div><div class="ii-text"><strong>[Otro interés]</strong>Música, deporte, lectura...</div></div>
+      </div>
+      <div>
+        <div class="photo-grid">
+          <div class="photo-card"><div class="ph-bg ph-bg-1"></div><div class="ph-content"><span class="ph-emoji">🏕️</span><span class="ph-label">STEM Camp UTFSM</span></div></div>
+          <div class="photo-card"><div class="ph-bg ph-bg-2"></div><div class="ph-content"><span class="ph-emoji">🎪</span><span class="ph-label">Festival de Matemática</span></div></div>
+          <div class="photo-card"><div class="ph-bg ph-bg-3"></div><div class="ph-content"><span class="ph-emoji">✈️</span><span class="ph-label">Congreso en Europa</span></div></div>
+          <div class="photo-card"><div class="ph-bg ph-bg-4"></div><div class="ph-content"><span class="ph-emoji">📐</span><span class="ph-label">Pizarrón y nudos</span></div></div>
+          <div class="photo-card"><div class="ph-bg ph-bg-5"></div><div class="ph-content"><span class="ph-emoji">🌊</span><span class="ph-label">Viña del Mar</span></div></div>
+          <div class="photo-card"><div class="ph-bg ph-bg-6"></div><div class="ph-content"><span class="ph-emoji">📸</span><span class="ph-label">Tu foto aquí</span></div></div>
+        </div>
+        <p class="photo-note">Galería lista — cuéntame qué fotos quieres agregar</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="tab-contacto" class="tab-panel sec">
+  <div class="sec-inner">
+    <div class="sec-header"><div class="sec-icon ic-white">✉️</div><div><h2>Contacto</h2><p>Colaboraciones, consultas académicas o estudiantes de tesis</p></div></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>Estoy interesado en colaboraciones sobre teoría de nudos, enlaces ligados e invariantes de baja dimensión. También acepto estudiantes de posgrado con interés en estas áreas.</p>
+        <div class="contact-links" id="contact-links"></div>
+      </div>
+      <div class="cv-box">
+        <div class="cv-icon">📋</div>
+        <h3>Curriculum Vitae</h3>
+        <p>CV completo con publicaciones, proyectos, docencia, tutorías y trayectoria académica.</p>
+        <a href="CV_2026.pdf" class="btn-teal">Descargar CV (PDF)</a>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-text" id="footer-name"></div>
+  <div class="footer-motto">Este sitio es invariante bajo isotopía ambiente 🪢</div>
+</footer>
+<script>
+function switchTab(id) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  const panel = document.getElementById('tab-' + id);
+  if (panel) panel.classList.add('active');
+  const btn = document.querySelector('[data-tab="' + id + '"]');
+  if (btn) { btn.classList.add('active'); btn.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'}); }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+(function(){
+  function normalizePts(pts,cx,cy,r){
+    const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]);
+    const xm=(Math.min(...xs)+Math.max(...xs))/2,ym=(Math.min(...ys)+Math.max(...ys))/2;
+    const sp=Math.max(Math.max(...xs)-Math.min(...xs),Math.max(...ys)-Math.min(...ys))/2;
+    return pts.map(([x,y])=>[cx+(x-xm)/sp*r,cy+(y-ym)/sp*r]);
+  }
+  function drawKnot(ctx,pts,sc,bg,sw,bw,segs){
+    const N=pts.length;
+    for(let s=0;s<segs;s++){
+      const a=Math.floor(s*N/segs),b=Math.floor((s+1)*N/segs);
+      for(const[col,w]of[[bg,bw],[sc,sw]]){
+        ctx.beginPath();ctx.moveTo(pts[a][0],pts[a][1]);
+        for(let i=a+1;i<=b;i++)ctx.lineTo(pts[i%N][0],pts[i%N][1]);
+        ctx.strokeStyle=col;ctx.lineWidth=w;ctx.lineCap='round';ctx.stroke();
+      }
+    }
+  }
+  const canvas=document.getElementById('trefoil-main');
+  if(!canvas)return;
+  const ctx=canvas.getContext('2d'),W=160,H=160,cx=W/2,cy=H/2;
+  let angle=0;
+  function frame(){
+    ctx.clearRect(0,0,W,H);
+    ctx.beginPath();ctx.arc(cx,cy,W/2-2,0,Math.PI*2);
+    const bg=ctx.createRadialGradient(cx-20,cy-20,10,cx,cy,W/2);
+    bg.addColorStop(0,'#3d1f9e');bg.addColorStop(1,'#1a0a5e');
+    ctx.fillStyle=bg;ctx.fill();
+    ctx.beginPath();ctx.arc(cx,cy,W/2-2,0,Math.PI*2);
+    ctx.strokeStyle='rgba(167,139,250,0.2)';ctx.lineWidth=2;ctx.stroke();
+    const rawPts=[];
+    for(let i=0;i<500;i++){const t=angle+(i/500)*2*Math.PI;rawPts.push([Math.sin(t)+2*Math.sin(2*t),-(Math.cos(t)-2*Math.cos(2*t))]);}
+    const pts=normalizePts(rawPts,cx,cy,56);
+    const grad=ctx.createLinearGradient(cx-56,cy-56,cx+56,cy+56);
+    grad.addColorStop(0,'#c4b5fd');grad.addColorStop(0.4,'#8b5cf6');grad.addColorStop(1,'#5eead4');
+    drawKnot(ctx,pts,grad,'#1f1270',8,16,3);
+    angle+=0.004;requestAnimationFrame(frame);
+  }
+  frame();
+})();
+fetch('data.json')
+  .then(r=>r.json())
+  .then(d=>{
+    document.getElementById('hero-name').textContent=d.bio.name;
+    document.getElementById('hero-role').textContent=d.bio.role;
+    document.getElementById('hero-inst').textContent=d.bio.institution;
+    document.getElementById('hero-summary').innerHTML=d.bio.summary;
+    document.getElementById('hero-badges').innerHTML=d.bio.badges.map(b=>`<span class="badge">${b}</span>`).join('');
+    document.getElementById('footer-name').textContent=`© 2026 ${d.bio.name} · Universidad de Valparaíso · Viña del Mar, Chile`;
+    document.getElementById('about-text').innerHTML=d.bio.about;
+    document.getElementById('formation-list').innerHTML=d.formation.map(f=>`
+      <div class="formation-item">
+        <div class="fi-year">${f.years}</div>
+        <div class="fi-dot"><div class="fi-dot-circle"></div><div class="fi-dot-line"></div></div>
+        <div class="fi-body">
+          <div class="fi-degree">${f.degree}</div>
+          <div class="fi-univ">${f.institution}</div>
+          <div class="fi-desc">${f.description}</div>
+          <span class="fi-tag">${f.tag}</span>
+        </div>
+      </div>`).join('');
+    document.getElementById('thesis-list').innerHTML=d.thesis.map(t=>`
+      <div class="thesis-card">
+        <div class="thesis-type ${t.typeClass}">${t.type}</div>
+        <h3>${t.title}</h3>
+        <div class="tc-univ">${t.institution}</div>
+        <div class="tc-adv">${t.advisor}</div>
+        <div class="tc-year">${t.year}</div>
+      </div>`).join('');
+    document.getElementById('research-list').innerHTML=d.research.map(r=>`
+      <div class="research-card">
+        <h3>${r.title}</h3>
+        <p>${r.description}</p>
+        <span class="rc-tag ${r.tagClass}">${r.tag}</span>
+      </div>`).join('');
+    document.getElementById('pub-list').innerHTML=d.publications.map(p=>`
+      <div class="pub-item">
+        <div class="pub-year ${p.yearClass}">${p.year}</div>
+        <div class="pub-content">
+          <h3>${p.title}</h3>
+          <div class="authors">${p.authors}</div>
+          <div class="journal">${p.journal}</div>
+          ${p.links.length?`<div class="pub-actions">${p.links.map(l=>`<a href="${l.url}" target="_blank" class="pub-link ${l.class}">${l.label}</a>`).join('')}</div>`:''}
+        </div>
+      </div>`).join('');
+    document.getElementById('talks-list').innerHTML=d.talks.map(t=>`
+      <div class="talk-item">
+        <div class="talk-meta">${t.date}</div>
+        <h3>${t.title} <span class="talk-type ${t.typeClass}">${t.type}</span></h3>
+        <p>${t.venue}</p>
+      </div>`).join('');
+    const renderCourses=(arr,cls)=>arr.map(c=>`
+      <div class="course-card ${cls}">
+        <h3>${c.title}</h3>
+        <p>${c.description}</p>
+        <div class="course-univ">${c.institution}</div>
+      </div>`).join('');
+    document.getElementById('courses-professor').innerHTML=renderCourses(d.teaching.professor,'profesor');
+    document.getElementById('courses-assistant').innerHTML=renderCourses(d.teaching.assistant,'ayudante');
+    document.getElementById('courses-mini').innerHTML=renderCourses(d.teaching.minicourses,'minicurso');
+    document.getElementById('students-list').innerHTML=d.students.map(s=>`
+      <div class="student-card">
+        <div class="student-year">${s.year}</div>
+        <h3>${s.name}</h3>
+        <div class="student-univ">${s.institution}</div>
+        <div class="student-topic">${s.topic}</div>
+        ${s.award?`<div class="student-award">${s.award}</div>`:''}
+      </div>`).join('');
+    document.getElementById('outreach-list').innerHTML=d.outreach.map(o=>`
+      <div class="div-card">
+        <div class="div-emoji">${o.emoji}</div>
+        <h3>${o.title}</h3>
+        <p>${o.description}</p>
+        <div class="div-year">${o.year}</div>
+      </div>`).join('');
+    const links=[
+      {icon:'📧',label:d.bio.email,url:`mailto:${d.bio.email}`},
+      {icon:'📐',label:'arXiv (math.GT)',url:d.bio.arxiv},
+      {icon:'🎓',label:'Google Scholar',url:d.bio.scholar||'#'},
+      {icon:'🔗',label:'ORCID',url:d.bio.orcid||'#'},
+      {icon:'🏛️',label:'Universidad de Valparaíso',url:d.bio.website_uv},
+    ];
+    document.getElementById('contact-links').innerHTML=links.map(l=>`
+      <a href="${l.url}" ${l.url.startsWith('mailto')?'':'target="_blank"'} class="contact-link">
+        <div class="cicon">${l.icon}</div>${l.label}
+      </a>`).join('');
+  })
+  .catch(err=>console.error('Error cargando data.json:',err));
+</script>
+</body>
+</html>
