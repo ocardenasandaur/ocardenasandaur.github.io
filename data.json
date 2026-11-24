@@ -85,7 +85,7 @@
   ],
   "research": [
     {
-      "title": "Corchete de Aicardi–Juyumaya para tied links",
+      "title": "Corchete de Aicardi-Juyumaya para tied links",
       "description": "Estudio del corchete para enlaces ligados y deducción de fórmulas explícitas. Proyecto Topología, grupos y representaciones.",
       "tag": "I+D+i · Universidad de Sevilla · Desde 2025",
       "tagClass": "tag-violet"
@@ -117,7 +117,7 @@
     {
       "title": "Análisis metagenómico de coexistencia fago-bacteria",
       "description": "Métricas de coexistencia, variantes del índice de Jaccard, automatización y validación estadística.",
-      "tag": "UTFSM–UPLA · 2017-2019",
+      "tag": "UTFSM-UPLA · 2017-2019",
       "tagClass": "tag-teal"
     },
     {
@@ -177,7 +177,7 @@
     {
       "date": "8 septiembre 2026 · Valparaíso, Chile",
       "title": "Polinomios de Jones y Kauffman para enlaces ligado-anulares",
-      "venue": "Seminario UV – Puerto de Matemática, Universidad de Valparaíso",
+      "venue": "Seminario UV - Puerto de Matemática, Universidad de Valparaíso",
       "type": "oral",
       "typeClass": "tt-oral"
     },
@@ -191,14 +191,14 @@
     {
       "date": "7-9 enero 2026 · Buenos Aires, Argentina",
       "title": "Algunos resultados sobre polinomio corchete para enlaces ligados",
-      "venue": "VII Encuentro de Álgebra y Teoría de Nudos – Universidad de San Andrés",
+      "venue": "VII Encuentro de Álgebra y Teoría de Nudos - Universidad de San Andrés",
       "type": "oral",
       "typeClass": "tt-oral"
     },
     {
       "date": "21-23 octubre 2025 · Madrid, España",
       "title": "Nuevos invariantes de tipo Kauffman para enlaces ligados anulares",
-      "venue": "XIII Encuentro de Jóvenes Topólogos – Universidad Politécnica de Madrid",
+      "venue": "XIII Encuentro de Jóvenes Topólogos - Universidad Politécnica de Madrid",
       "type": "póster",
       "typeClass": "tt-poster"
     },
@@ -219,7 +219,7 @@
     {
       "date": "26 julio-11 septiembre 2024 · Valparaíso, Chile",
       "title": "Invariantes de Tipo Vassiliev",
-      "venue": "Seminario AtN – Universidad de Valparaíso",
+      "venue": "Seminario AtN - Universidad de Valparaíso",
       "type": "cursillo",
       "typeClass": "tt-mini"
     },
@@ -233,13 +233,13 @@
     {
       "date": "20-21 junio 2024 · Nebraska, EE. UU.",
       "title": "Bracket Polynomials for classical and tied links",
-      "venue": "Trisectors Workshop – Universidad de Nebraska",
+      "venue": "Trisectors Workshop - Universidad de Nebraska",
       "type": "oral",
       "typeClass": "tt-oral"
     },
     {
       "date": "18-21 diciembre 2023 · Santiago, Chile",
-      "title": "En camino a una versión “ligada” de la Homología de Khovanov",
+      "title": "En camino a una versión «ligada» de la Homología de Khovanov",
       "venue": "XCI Encuentro Anual de la SOMACHI",
       "type": "oral",
       "typeClass": "tt-oral"
@@ -268,7 +268,7 @@
     {
       "date": "24 agosto 2021 · México (virtual)",
       "title": "Invariantes para tied links",
-      "venue": "Seminario Virtual de Topología Algebraica – CIMAT",
+      "venue": "Seminario Virtual de Topología Algebraica - CIMAT",
       "type": "oral",
       "typeClass": "tt-oral"
     },
@@ -289,7 +289,7 @@
     {
       "date": "26 noviembre 2020 · Virtual",
       "title": "De estaciones de metro a redes sociales: Teoría de Grafos en el día a día",
-      "venue": "Contagiando Matemáticas – Universidad de Valparaíso",
+      "venue": "Contagiando Matemáticas - Universidad de Valparaíso",
       "type": "oral",
       "typeClass": "tt-oral"
     },
@@ -317,7 +317,7 @@
     {
       "date": "5-19 julio 2018 · Valparaíso, Chile",
       "title": "Nudos, Links y Trenzas: Clasificando 3-variedades",
-      "venue": "Seminario AtN – Universidad de Valparaíso",
+      "venue": "Seminario AtN - Universidad de Valparaíso",
       "type": "oral",
       "typeClass": "tt-oral"
     },
@@ -412,7 +412,7 @@
     "minicourses": [
       {
         "title": "Invariantes de Tipo Vassiliev",
-        "description": "Seminario AtN – Universidad de Valparaíso",
+        "description": "Seminario AtN - Universidad de Valparaíso",
         "institution": "26 julio-11 septiembre 2024 · Valparaíso, Chile"
       },
       {
