@@ -1,331 +1,110 @@
-{
-  "bio": {
-    "name": "O'Bryan Cardenas-Andaur",
-    "role": "Doctor en Matematicas - Teoria de Nudos y Topologia",
-    "institution": "Universidad de Valparaiso - Vina del Mar, Chile - PhD Universidad de Sevilla",
-    "summary": "Investigo los <strong style='color:var(--teal-light)'>tied links</strong> y sus invariantes polinomiales, en especial el <em>corchete de Aicardi-Juyumaya</em>.",
-    "about": "Soy Doctor en Matematicas por la Universidad de Sevilla (2026), con especializacion en <strong>topologia de baja dimension</strong> y, en particular, en <strong>tied links</strong>. Mi investigacion conecta combinatoria de diagramas de nudos, algebras de Hecke y homologia categorificada.<br><br>Soy docente en la <strong>Universidad de Valparaiso</strong>, donde tambien dirijo proyectos de investigacion formativa a traves del programa <em>Pares Ordenados</em>.",
-    "badges": ["Tied links", "Corchete Aicardi-Juyumaya", "Polinomio de Jones", "Khovanov", "Toro solido"],
-    "email": "TU_EMAIL_AQUI",
-    "arxiv": "https://arxiv.org/search/?searchtype=author&query=Cardenas-Andaur",
-    "scholar": "",
-    "orcid": "",
-    "website_uv": "https://www.uv.cl"
   },
-
-  "formation": [
-    {
-      "years": "2021-2026",
-      "degree": "Doctor en Matematicas",
-      "institution": "Universidad de Sevilla, Espana",
-      "description": "Tesis: <em>On the Aicardi-Juyumaya bracket for tied links</em>. Directores: Juan Gonzalez-Meneses y Marithania Silvero.",
-      "tag": "PhD"
-    },
-    {
-      "years": "~2018-2020",
-      "degree": "Licenciatura en Matematicas",
-      "institution": "Universidad de Valparaiso, Chile",
-      "description": "Formacion en matematica pura: algebra, topologia, analisis y geometria diferencial.",
-      "tag": "Licenciatura"
-    },
-    {
-      "years": "~2011-2017",
-      "degree": "Ingenieria Civil Matematica",
-      "institution": "Universidad Tecnica Federico Santa Maria (UTFSM), Chile",
-      "description": "Formacion en matematica aplicada, fisica e ingenieria. Tesis en dielectricos con herramientas de dimension fractal.",
-      "tag": "Ingenieria Civil"
-    }
-  ],
-
-  "thesis": [
-    {
-      "type": "Tesis doctoral",
-      "typeClass": "tt-doc",
-      "title": "On the Aicardi-Juyumaya bracket for tied links",
-      "institution": "Universidad de Sevilla, Espana",
-      "advisor": "Dir.: Juan Gonzalez-Meneses y Marithania Silvero",
-      "year": "2026"
-    },
-    {
-      "type": "Tesis de licenciatura",
-      "typeClass": "tt-lic",
-      "title": "[Titulo de tesis de licenciatura]",
-      "institution": "Universidad de Valparaiso, Chile",
-      "advisor": "[Director/a: por completar]",
-      "year": "c. 2020"
-    },
-    {
-      "type": "Tesis de ingenieria",
-      "typeClass": "tt-ing",
-      "title": "Electrical tree growth and partial discharges: fractal and correlation dimensions",
-      "institution": "Universidad Tecnica Federico Santa Maria, Chile",
-      "advisor": "Con R. Schurch, P. Donoso et al.",
-      "year": "2017"
-    }
-  ],
-
-  "research": [
-    {
-      "title": "Corchete de Aicardi-Juyumaya para tied links",
-      "description": "Deduccion de formulas explicitas para el corchete de Aicardi-Juyumaya en el marco del desarrollo avanzado de la teoria de <em>enlaces ligados</em>.",
-      "tag": "I+D+i - Univ. Sevilla - 2025",
-      "tagClass": "tag-violet"
-    },
-    {
-      "title": "Invariantes polinomiales y algebras de diagramas",
-      "description": "Estudio de objetos anudados via la receta de Jones y el metodo de Kauffman.",
-      "tag": "I+D+i - Univ. Sevilla - 2022-2024",
-      "tagClass": "tag-teal"
-    },
-    {
-      "title": "Homologia de Khovanov para tied links",
-      "description": "Extension de la homologia de Khovanov al setting de los <em>tied links</em>.",
-      "tag": "En desarrollo",
-      "tagClass": "tag-amber"
-    },
-    {
-      "title": "Nuevos invariantes de tipo Kauffman en el toro solido",
-      "description": "Con A. del Valle Vilchez. Construccion de invariantes para (tied) links en el toro solido.",
-      "tag": "En preparacion",
-      "tagClass": "tag-rose"
-    }
-  ],
-
-  "publications": [
-    {
-      "year": "2026",
-      "yearClass": "",
-      "title": "On the Aicardi-Juyumaya bracket for tied links",
-      "authors": "<strong>O. Cardenas-Andaur</strong>",
-      "journal": "Journal of Knot Theory and Its Ramifications, 35 (2026), 2550087",
-      "links": [
-        { "label": "DOI", "url": "https://doi.org/10.1142/S0218216525500877", "class": "doi" }
-      ]
-    },
-    {
-      "year": "aceptado",
-      "yearClass": "acc",
-      "title": "Explicit formulae for the Aicardi-Juyumaya bracket of tied links",
-      "authors": "<strong>O. Cardenas-Andaur</strong>, J. Gonzalez-Meneses &amp; M. Silvero",
-      "journal": "Journal of Algebraic Combinatorics - aceptado para publicacion",
-      "links": [
-        { "label": "arXiv:2510.02075", "url": "https://arxiv.org/abs/2510.02075", "class": "arxiv" }
-      ]
-    },
-    {
-      "year": "prep.",
-      "yearClass": "wip",
-      "title": "New Kauffman type invariants for (tied) links in the solid torus",
-      "authors": "<strong>O. Cardenas-Andaur</strong> &amp; A. del Valle Vilchez",
-      "journal": "Manuscrito en preparacion",
-      "links": []
-    },
-    {
-      "year": "2017",
-      "yearClass": "",
-      "title": "Electrical tree growth and partial discharges analyzed by fractal and correlation dimensions",
-      "authors": "R. Schurch, P. Donoso, P. Aguirre, <strong>O. Cardenas</strong>, M. Zuniga &amp; S. Rowland",
-      "journal": "IEEE Conference on Electrical Insulation and Dielectric Phenomena (CEIDP), 2017",
-      "links": []
-    }
-  ],
-
-  "talks": [
-    {
-      "date": "8 Septiembre 2026 - Valparaiso, Chile",
-      "title": "Polinomios de Jones y Kauffman para enlaces ligado-anulares",
-      "venue": "Seminario UV - Puerto de Matematica - Facultad de Ciencias, Universidad de Valparaiso",
-      "type": "invitada",
-      "typeClass": "tt-invited"
-    },
-    {
-      "date": "22 Enero 2026 - Alicante, Espana",
-      "title": "Algunos resultados sobre polinomios corchete",
-      "venue": "Congreso Bienal de la Real Sociedad Matematica Espanola (RSME)",
-      "type": "oral",
-      "typeClass": "tt-oral"
-    },
-    {
-      "date": "7-9 Enero 2026 - Buenos Aires, Argentina",
-      "title": "Algunos resultados sobre polinomio corchete para enlaces ligados",
-      "venue": "VII Encuentro de Algebra y Teoria de Nudos - Universidad de San Andres",
-      "type": "oral",
-      "typeClass": "tt-oral"
-    },
-    {
-      "date": "21-23 Octubre 2025 - Madrid, Espana",
-      "title": "Nuevos invariantes de tipo Kauffman para enlaces ligados anulares",
-      "venue": "XIII Encuentro de Jovenes Topologos - Universidad Politecnica de Madrid",
-      "type": "poster",
-      "typeClass": "tt-poster"
-    },
-    {
-      "date": "15-19 Julio 2024 - Sevilla, Espana",
-      "title": "Bracket Polynomials: Classical vs Tied",
-      "venue": "9 Congreso Europeo de Matematicas (ECM)",
-      "type": "poster",
-      "typeClass": "tt-poster"
-    },
-    {
-      "date": "20-21 Junio 2024 - Nebraska, EE.UU.",
-      "title": "Bracket Polynomials for classical and tied links",
-      "venue": "Trisectors Workshop - Universidad de Nebraska",
-      "type": "oral",
-      "typeClass": "tt-oral"
-    },
-    {
-      "date": "18-21 Diciembre 2023 - Santiago, Chile",
-      "title": "En camino a una version ligada de la Homologia de Khovanov",
-      "venue": "XCI Encuentro Anual de la Sociedad de Matematica de Chile (SOMACHI)",
-      "type": "oral",
-      "typeClass": "tt-oral"
-    },
-    {
-      "date": "18-20 Octubre 2023 - Sevilla, Espana",
-      "title": "Bracket Polynomials for tied links",
-      "venue": "XII Encuentro de Jovenes Topologos - Universidad de Sevilla",
-      "type": "oral",
-      "typeClass": "tt-oral"
-    },
-    {
-      "date": "Junio 2022 - Bilbao, Espana",
-      "title": "Tied links and their bracket polynomial",
-      "venue": "XI Encuentro de Jovenes Topologos - Universidad del Pais Vasco",
-      "type": "minicurso",
-      "typeClass": "tt-mini"
-    }
-  ],
-
-  "teaching": {
-    "professor": [
-      {
-        "title": "Calculo I",
-        "description": "Limites, derivadas e integrales. Primer curso de analisis para ingenieria y ciencias.",
-        "institution": "Universidad de Valparaiso - 2020-2022"
-      },
-      {
-        "title": "Fundamentos de la Matematica",
-        "description": "Logica, conjuntos, relaciones y estructuras basicas.",
-        "institution": "UV - PUCV - 2020-2022"
-      },
-      {
-        "title": "Matematica Discreta",
-        "description": "Grafos, combinatoria, logica proposicional y teoria de numeros.",
-        "institution": "UTFSM - 2017-2022"
-      }
-    ],
-    "assistant": [
-      {
-        "title": "Variable Compleja",
-        "description": "Funciones analiticas, teorema de Cauchy, series de Laurent y residuos.",
-        "institution": "UTFSM - 2016-2020"
-      },
-      {
-        "title": "Teoria de Cuerpos y Galois",
-        "description": "Extensiones de cuerpos, grupos de Galois y resolubilidad por radicales.",
-        "institution": "UTFSM - 2017-2020"
-      }
-    ],
-    "minicourses": [
-      {
-        "title": "Minicurso: Teoria de Nudos",
-        "description": "Invariantes y generalizaciones. Introduccion a la investigacion en topologia.",
-        "institution": "Universidad de Valparaiso - 2020-2024"
-      },
-      {
-        "title": "Minicurso: Teoria de Grafos",
-        "description": "Conexidad, coloracion y aplicaciones. Formato online.",
-        "institution": "UV - 2021-2022"
-      },
-      {
-        "title": "Minicurso: Teoria de Juegos",
-        "description": "Juegos de suma cero, equilibrios de Nash y aplicaciones.",
-        "institution": "UV - 2022-2024"
-      }
-    ]
-  },
-
   "students": [
     {
-      "year": "2025 - Argentina",
-      "name": "Mateo Alessi",
-      "institution": "Universidad Nacional de Cuyo",
-      "topic": "Clasificacion de nudos hasta 8 cruces: invariantes combinatorios y polinomiales.",
-      "award": "Mencion de honor - Union Matematica Argentina"
-    },
-    {
-      "year": "2025 - Colombia",
-      "name": "Johann Telus Antelo",
-      "institution": "Universidad del Atlantico",
-      "topic": "Algoritmos para calcular la p-coloracion y el polinomio de Jones.",
-      "award": ""
-    },
-    {
-      "year": "2026 - Argentina",
+      "year": "2026 · Argentina",
       "name": "Pilar Scollo",
       "institution": "Universidad Nacional de Mar del Plata",
-      "topic": "Una introduccion a grafos temporales: El mundo dinamico.",
-      "award": "Beca Fluence - Centro de Innovacion Atlantis"
+      "topic": "Una introducción a grafos temporales: El mundo dinámico.",
+      "award": "Beca Fluence 2026 para una versión preliminar del proyecto"
     },
     {
-      "year": "2024 - Mexico",
-      "name": "Kevin Messina Rodriguez",
-      "institution": "Universidad Autonoma de Guerrero",
-      "topic": "Graficas llamativas: conexidad, coloracion y teorema de Cayley.",
-      "award": ""
-    },
-    {
-      "year": "2023 - Colombia",
-      "name": "Emmanuel Silva Amaya",
-      "institution": "Universidad Nacional de Colombia",
-      "topic": "Una introduccion a la Teoria de Juegos: utilidad y equilibrios.",
-      "award": ""
-    },
-    {
-      "year": "2026 - Argentina",
+      "year": "2026 · Argentina",
       "name": "Rodrigo Cortinez",
       "institution": "Universidad Nacional de Cuyo",
-      "topic": "Teoria de Juegos: modelos de competencia imperfecta y oligopolios.",
+      "topic": "Una introducción a la Teoría de Juegos.",
+      "award": ""
+    },
+    {
+      "year": "2025 · Argentina",
+      "name": "Mateo Alessi",
+      "institution": "Universidad Nacional de Cuyo",
+      "topic": "Clasificación de nudos hasta 8 cruces.",
+      "award": "Mención de honor en el concurso de monografías de la Unión Matemática Argentina"
+    },
+    {
+      "year": "2025 · Colombia",
+      "name": "Johann Telus Antelo",
+      "institution": "Universidad del Atlántico",
+      "topic": "Algoritmos para calcular la p-coloración y el polinomio de Jones.",
+      "award": ""
+    },
+    {
+      "year": "2024 · México",
+      "name": "Kevin Messina Rodríguez",
+      "institution": "Universidad Autónoma de Guerrero",
+      "topic": "Gráficas llamativas.",
+      "award": ""
+    },
+    {
+      "year": "2023 · Colombia",
+      "name": "Emmanuel Silva Amaya",
+      "institution": "Universidad Nacional de Colombia",
+      "topic": "Una introducción a la Teoría de Juegos.",
+      "award": ""
+    },
+    {
+      "year": "2021 · Chile",
+      "name": "Marcia Aguilera y Emilio Oyanedel",
+      "institution": "UTFSM · Laboratorio de Modelación I",
+      "topic": "Implementación de un algoritmo para obtener el polinomio HOMFLYPT en Python.",
+      "award": ""
+    },
+    {
+      "year": "2017 · Chile",
+      "name": "Ricardo Ávalos",
+      "institution": "UTFSM · Laboratorio de Modelación I",
+      "topic": "Estudio de endolisinas.",
       "award": ""
     }
   ],
-
   "outreach": [
     {
       "emoji": "mic",
-      "title": "Matematicas Latin@s Alrededor del Mundo",
-      "description": "Panelista en Pares Ordenados, compartiendo experiencias de la carrera academica.",
-      "year": "2025 - virtual"
+      "title": "Matemátic@s Latin@s/Hispan@s Alrededor del Mundo",
+      "description": "Panelista en Pares Ordenados, compartiendo experiencias académicas.",
+      "year": "2025 · Virtual"
     },
     {
       "emoji": "satellite",
-      "title": "Contagiando Matematicas",
-      "description": "Coorganizador del ciclo de charlas abiertas al publico en Zoom durante la pandemia.",
-      "year": "Oct-Dic 2020 - UV"
+      "title": "Contagiando Matemáticas",
+      "description": "Coorganizador y moderador del ciclo de charlas abiertas al público durante la pandemia.",
+      "year": "Octubre-diciembre 2020 · UV"
     },
     {
       "emoji": "tent",
       "title": "Campamento STEM",
-      "description": "Monitor en el campamento STEM de la UTFSM. Minitalleres sobre Nudos y Criptografia.",
-      "year": "2017-2019 - UTFSM"
+      "description": "Monitor y monitor coordinador. Talleres de nudos, trenzas y criptografía para estudiantes de enseñanza media.",
+      "year": "2017-2019 · UTFSM"
     },
     {
       "emoji": "circus",
-      "title": "Festival de Matematica: Nudos y Redes de Pesca",
-      "description": "Exposicion interactiva sobre topologia con redes de pesca.",
-      "year": "Sep 2017 - San Antonio"
+      "title": "Festival de Matemática: Teoría de Nudos y Redes de Pesca",
+      "description": "Exposición interactiva mediante la construcción de redes de pesca.",
+      "year": "Septiembre 2017 · San Antonio"
+    },
+    {
+      "emoji": "circus",
+      "title": "Festival de Matemática: Cúpulas de da Vinci",
+      "description": "Exposición y construcción participativa de cúpulas.",
+      "year": "Diciembre 2016 · Valparaíso"
     },
     {
       "emoji": "school",
       "title": "Preuniversitario Solidario UV",
-      "description": "Profesor y Coordinador durante mas de una decada apoyando la preparacion universitaria.",
-      "year": "2012-2024 - UV"
+      "description": "Profesor de Matemática (2012-2024), coordinador del Departamento de Matemática (2017-2024) y secretario general (enero-septiembre 2024).",
+      "year": "2012-2024 · UV"
+    },
+    {
+      "emoji": "school",
+      "title": "Preuniversitario Universidad Católica de Valparaíso",
+      "description": "Profesor de Matemática.",
+      "year": "Agosto-diciembre 2019"
     },
     {
       "emoji": "books",
-      "title": "Minicursos en linea",
-      "description": "Minicursos de Nudos, Juegos y Grafos para la comunidad universitaria de Valparaiso.",
-      "year": "2020-2024 - UV"
+      "title": "Minicursos en línea",
+      "description": "Minicursos de teoría de nudos, grafos y juegos.",
+      "year": "2020-2021 · UV"
     }
   ]
 }
