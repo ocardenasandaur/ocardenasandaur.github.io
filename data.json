@@ -18,6 +18,20 @@
     "orcid": "https://orcid.org/0009-0001-1728-0382",
     "website_uv": "https://www.uv.cl"
   },
+  "bioEn": {
+    "role": "Mathematician · Knot Theory and Low-dimensional Topology",
+    "institution": "Viña del Mar, Chile · PhD, University of Seville",
+    "summary": "I research <strong style='color:var(--teal-light)'>knot theory</strong> and its generalizations, with special interest in <em>tied links</em>, polynomial invariants, and skein modules.",
+    "about": "I am a Chilean mathematician, Doctor in Mathematics from the University of Seville (2026), Master in Mathematics from the University of Valparaíso, and Civil Mathematical Engineer and Bachelor in Mathematics from the Federico Santa María Technical University.<br><br>My research focuses on low-dimensional topology, with an emphasis on tied links, Jones and Kauffman type invariants, diagrammatic algebras, and links in the solid torus. I am also interested in extending these techniques to singular links and their computational implementation.<br><br>I have taught at UV, UTFSM, and PUCV. I participate in the Latin American directed reading program <em>Pares Ordenados</em>, supporting students in their first research projects. I believe in teaching that combines motivation, historical context, concrete examples, and problem-solving.<br><br>I currently live in Chile with a workspace at the University of Valparaíso.",
+    "badges": [
+      "Knot theory",
+      "Tied links",
+      "Polynomial invariants",
+      "Skein modules",
+      "Solid torus",
+      "Singular links"
+    ]
+  },
   "formation": [
     {
       "years": "2021-2026",
@@ -84,42 +98,49 @@
   ],
   "research": [
     {
+      "category": "math",
       "title": "Corchete de Aicardi-Juyumaya para tied links",
       "description": "Estudio del corchete para enlaces ligados y deducción de fórmulas explícitas. Proyecto Topología, grupos y representaciones.",
       "tag": "I+D+i · Universidad de Sevilla · Desde 2025",
       "tagClass": "tag-violet"
     },
     {
+      "category": "math",
       "title": "Invariantes de tipo Kauffman en el toro sólido",
       "description": "Construcción de invariantes para enlaces clásicos y ligados en el toro sólido y estudio de módulos skein, en colaboración con Álvaro del Valle Vílchez.",
       "tag": "Manuscrito en preparación",
       "tagClass": "tag-rose"
     },
     {
+      "category": "math",
       "title": "Invariantes polinomiales y álgebras de diagramas",
       "description": "Receta de Jones, método de Kauffman y herramientas algebraicas y computacionales para nudos y trenzas. Proyecto Métodos homotópicos y de teoría de grupos en topología.",
       "tag": "I+D+i · Universidad de Sevilla · 2022-2024",
       "tagClass": "tag-teal"
     },
     {
+      "category": "math",
       "title": "Enlaces singulares e invariantes computacionales",
       "description": "Comparación de invariantes polinomiales para enlaces singulares y desarrollo de algoritmos para su cálculo a partir de trenzas singulares.",
       "tag": "Línea de investigación en desarrollo",
       "tagClass": "tag-amber"
     },
     {
+      "category": "math",
       "title": "Homología de Khovanov y enlaces ligados",
       "description": "Estudio de posibles extensiones de la homología de Khovanov al contexto de los enlaces ligados.",
       "tag": "Línea explorada",
       "tagClass": "tag-amber"
     },
     {
+      "category": "aplicaciones",
       "title": "Análisis metagenómico de coexistencia fago-bacteria",
       "description": "Métricas de coexistencia, variantes del índice de Jaccard, automatización y validación estadística.",
       "tag": "UTFSM-UPLA · 2017-2019",
       "tagClass": "tag-teal"
     },
     {
+      "category": "aplicaciones",
       "title": "Propiedades fractales de árboles eléctricos",
       "description": "Dimensión fractal y de correlación, análisis de descargas parciales e implementación de algoritmos.",
       "tag": "UTFSM · 2016-2017",
@@ -527,7 +548,8 @@
       "emoji": "🎤",
       "title": "Matemátic@s Latin@s/Hispan@s Alrededor del Mundo",
       "description": "Panelista en Pares Ordenados, compartiendo experiencias académicas.",
-      "year": "2025 · Virtual"
+      "year": "2025 · Virtual",
+      "url": "https://sites.google.com/view/23paresordenados/inicio"
     },
     {
       "emoji": "📡",
