@@ -15,8 +15,7 @@
     ],
     "email": "obryan.cardenas@uv.cl",
     "arxiv": "https://arxiv.org/search/?searchtype=author&query=Cardenas-Andaur",
-    "scholar": "",
-    "orcid": "",
+    "orcid": "https://orcid.org/0009-0001-1728-0382",
     "website_uv": "https://www.uv.cl"
   },
   "formation": [
@@ -335,31 +334,36 @@
         "title": "Cálculo I",
         "description": "Docencia de pregrado.",
         "institution": "Universidad de Valparaíso · 2020-2022",
-        "current": false
+        "current": false,
+        "materialsUrl": ""
       },
       {
         "title": "Fundamentos de la Matemática",
         "description": "Docencia de pregrado.",
         "institution": "Universidad de Valparaíso · 2020-2022",
-        "current": false
+        "current": false,
+        "materialsUrl": ""
       },
       {
         "title": "Fundamentos de Matemática",
         "description": "Cátedra y taller.",
         "institution": "PUCV · marzo-julio 2022",
-        "current": false
+        "current": false,
+        "materialsUrl": ""
       },
       {
         "title": "Matemática Discreta",
         "description": "Docencia de pregrado.",
         "institution": "UTFSM · marzo-julio 2022",
-        "current": false
+        "current": false,
+        "materialsUrl": ""
       },
       {
         "title": "Matemática III",
         "description": "Docencia de pregrado.",
         "institution": "UTFSM · marzo-julio 2022",
-        "current": false
+        "current": false,
+        "materialsUrl": ""
       }
     ],
     "assistant": [
@@ -567,5 +571,74 @@
       "description": "Minicursos de teoría de nudos, grafos y juegos.",
       "year": "2020-2021 · UV"
     }
-  ]
+  ],
+  "collaborators": [
+    {
+      "name": "Juan González-Meneses",
+      "alias": "J. González-Meneses",
+      "url": "https://personal.us.es/meneses/",
+      "linkLabel": "Página personal"
+    },
+    {
+      "name": "Marithania Silvero",
+      "alias": "M. Silvero",
+      "url": "https://marithania.github.io/",
+      "linkLabel": "Página personal"
+    },
+    {
+      "name": "Álvaro del Valle Vílchez",
+      "alias": "Á. del Valle Vílchez",
+      "url": "https://cafeconciencia.fundaciondescubre.es/protagonistas/alvaro-del-valle-vilchez/",
+      "linkLabel": "Perfil de divulgación"
+    }
+  ],
+  "upcomingTalks": [
+    {
+      "date": "18 diciembre 2026 · 11:30 · Santiago, Chile",
+      "title": "De los módulos de madeja a invariantes polinomiales de enlaces ligados en el toro sólido",
+      "venue": "XCIV Encuentro Anual de la SOMACHI (15–18 diciembre) · Pontificia Universidad Católica de Chile · Sesión de Geometría",
+      "type": "oral",
+      "typeClass": "tt-oral",
+      "endDate": "2026-12-18",
+      "status": "Aceptada",
+      "url": "https://somachi2026.mat.uc.cl/"
+    },
+    {
+      "date": "19–22 enero 2027 · Talca, Chile",
+      "title": "De los módulos de madeja a invariantes polinomiales de enlaces ligados en el toro sólido",
+      "venue": "VIII Encuentro de Álgebra y Teoría de Nudos · Universidad de Talca",
+      "type": "oral",
+      "typeClass": "tt-oral",
+      "endDate": "2027-01-22",
+      "status": "Aceptada",
+      "url": "https://www.grupoatn.org/encuentro/viii/"
+    }
+  ],
+  "interests": [
+    {
+      "title": "Combate medieval",
+      "emoji": "⚔️",
+      "description": "Combate histórico, armaduras y entrenamiento en equipo.",
+      "photos": []
+    },
+    {
+      "title": "Entrenamiento de fuerza",
+      "emoji": "🏋️",
+      "description": "Entrenamiento con pesas y progresión en fuerza.",
+      "photos": []
+    },
+    {
+      "title": "Música electrónica",
+      "emoji": "🎶",
+      "description": "Hard techno, fiestas y cultura electrónica.",
+      "photos": []
+    },
+    {
+      "title": "Congresos y viajes",
+      "emoji": "🌍",
+      "description": "Encuentros matemáticos, viajes y experiencias compartidas con colegas en distintos lugares del mundo.",
+      "photos": []
+    }
+  ],
+  "blog": []
 }

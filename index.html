@@ -204,6 +204,28 @@
     footer { background: #0f172a; border-top: 1px solid rgba(255,255,255,0.05); padding: 1.4rem 2rem; text-align: center; }
     .footer-text { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
     .footer-motto { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: rgba(167,139,250,0.35); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.6rem; margin-top: 0.4rem; }
+    .author-link,.collab-link,.event-link { color:var(--violet-dark); text-decoration:underline; text-underline-offset:3px; }
+    .collab-grid,.interest-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;}
+    .collab-card {border:1px solid var(--border);border-radius:12px;padding:1rem;background:var(--bg);}
+    .collab-card p,.empty-note {font-size:.83rem;color:var(--slate-soft);}
+    .upcoming-block {margin-bottom:2.5rem;}
+    .event-status {display:inline-block;color:#0f766e;font-weight:600;font-size:.78rem;margin-top:.3rem;}
+    a.course-card {display:block;text-decoration:none;color:inherit;}
+    .materials-label {display:block;margin-top:.7rem;font-size:.8rem;color:var(--violet-dark);font-weight:600;}
+    .materials-pending {color:var(--slate-soft);font-weight:400;}
+    .interest-card {border:1px solid #ffffff25;border-radius:15px;padding:1.2rem;background:#ffffff0b;}
+    .interest-card h3 {font-size:1.05rem;margin-bottom:.5rem;}
+    .interest-card p {color:#e0e7ff;font-size:.88rem;}
+    .interest-photos {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;margin-top:1rem;}
+    .interest-photos figure {min-width:0;}
+    .interest-photos img {width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:9px;display:block;}
+    .interest-photos figcaption {font-size:.72rem;color:#e0e7ff;margin-top:.25rem;}
+    .photo-placeholder {margin-top:1rem;min-height:110px;display:grid;place-items:center;border:1px dashed #ffffff40;border-radius:10px;color:#c7d2fe;font-size:.8rem;text-align:center;padding:1rem;}
+    .blog-card {border:1px solid var(--border);background:white;border-radius:14px;padding:1.4rem;margin-bottom:1rem;}
+    .blog-card h3 {font-family:'Playfair Display',serif;font-size:1.25rem;margin:.4rem 0;}
+    .blog-card p {margin:.7rem 0;color:var(--slate-mid);white-space:pre-wrap;}
+    .blog-card summary {cursor:pointer;color:var(--violet-dark);font-weight:600;margin-top:1rem;}
+    a:focus-visible,button:focus-visible,summary:focus-visible {outline:3px solid var(--teal);outline-offset:3px;}
     @media (max-width: 720px) {
       .hero-inner { flex-direction: column; text-align: center; }
       #hero-badges, .hero-links { justify-content: center; }
@@ -239,6 +261,7 @@
     <button class="tab-btn" data-tab="docencia" onclick="switchTab('docencia')">Docencia</button>
     <button class="tab-btn" data-tab="tutorias-div" onclick="switchTab('tutorias-div')">Divulgación &amp; Tutorías</button>
     <button class="tab-btn" data-tab="mas-alla" onclick="switchTab('mas-alla')">Más allá</button>
+    <button class="tab-btn" data-tab="blog" onclick="switchTab('blog')">Blog</button>
     <button class="tab-btn" data-tab="contacto" onclick="switchTab('contacto')">Contacto</button>
   </div>
 </div>
@@ -266,12 +289,13 @@
   <div class="sec-inner">
     <div class="sec-header"><div class="sec-icon ic-teal">📚</div><div><h2>Publicaciones</h2><p>Artículos publicados, aceptados y en preparación</p></div></div>
     <div class="pub-list" id="pub-list"></div>
+    <div class="subsec-title" style="margin-top:2.5rem">Colaboradores y coautores</div><div class="collab-grid" id="collab-list"></div>
   </div>
 </div>
 <div id="tab-charlas" class="tab-panel sec" style="background:#f8fafc;">
   <div class="sec-inner">
     <div class="sec-header"><div class="sec-icon ic-amber">🎤</div><div><h2>Charlas &amp; Conferencias</h2><p>Presentaciones seleccionadas</p></div></div>
-    <div class="talks-timeline" id="talks-list"></div>
+    <div class="upcoming-block" id="upcoming-block"><div class="subsec-title">Próximas charlas</div><div class="talks-timeline" id="upcoming-list"></div></div><div class="subsec-title">Charlas anteriores</div><div class="talks-timeline" id="talks-list"></div>
   </div>
 </div>
 <div id="tab-docencia" class="tab-panel sec" style="background:white;">
@@ -310,26 +334,13 @@
 <div id="tab-mas-alla" class="tab-panel sec">
   <div class="sec-inner">
     <div class="sec-header"><div class="sec-icon ic-star">✨</div><div><h2>Más allá de los nudos</h2><p>El matemático fuera del pizarrón</p></div></div>
-    <div class="mas-layout">
-      <div class="intereses-list">
-        <div class="ii-item"><div class="ii-icon">🐍</div><div class="ii-text"><strong>Python &amp; LaTeX</strong>Programación matemática y escritura científica. Avanzado.</div></div>
-        <div class="ii-item"><div class="ii-icon">🎲</div><div class="ii-text"><strong>Teoría de Juegos</strong>La uso tanto en investigación como en divulgación.</div></div>
-        <div class="ii-item"><div class="ii-icon">🌍</div><div class="ii-text"><strong>Español · Inglés B2 · Francés A2</strong>Viajé entre Chile y España para el doctorado.</div></div>
-        <div class="ii-item"><div class="ii-icon">🎨</div><div class="ii-text"><strong>[Tu interés]</strong>Cuéntame qué va aquí 🙂</div></div>
-        <div class="ii-item"><div class="ii-icon">🎵</div><div class="ii-text"><strong>[Otro interés]</strong>Música, deporte, lectura...</div></div>
-      </div>
-      <div>
-        <div class="photo-grid">
-          <div class="photo-card"><div class="ph-bg ph-bg-1"></div><div class="ph-content"><span class="ph-emoji">🏕️</span><span class="ph-label">STEM Camp UTFSM</span></div></div>
-          <div class="photo-card"><div class="ph-bg ph-bg-2"></div><div class="ph-content"><span class="ph-emoji">🎪</span><span class="ph-label">Festival de Matemática</span></div></div>
-          <div class="photo-card"><div class="ph-bg ph-bg-3"></div><div class="ph-content"><span class="ph-emoji">✈️</span><span class="ph-label">Congreso en Europa</span></div></div>
-          <div class="photo-card"><div class="ph-bg ph-bg-4"></div><div class="ph-content"><span class="ph-emoji">📐</span><span class="ph-label">Pizarrón y nudos</span></div></div>
-          <div class="photo-card"><div class="ph-bg ph-bg-5"></div><div class="ph-content"><span class="ph-emoji">🌊</span><span class="ph-label">Viña del Mar</span></div></div>
-          <div class="photo-card"><div class="ph-bg ph-bg-6"></div><div class="ph-content"><span class="ph-emoji">📸</span><span class="ph-label">Tu foto aquí</span></div></div>
-        </div>
-        <p class="photo-note">Galería lista — cuéntame qué fotos quieres agregar</p>
-      </div>
-    </div>
+    <div class="interest-grid" id="interest-list"></div>
+  </div>
+</div>
+<div id="tab-blog" class="tab-panel sec">
+  <div class="sec-inner">
+    <div class="sec-header"><div class="sec-icon ic-violet">✍️</div><div><h2>Blog</h2><p>Notas, reflexiones y cosas que me gustaría compartir</p></div></div>
+    <div id="blog-list"></div>
   </div>
 </div>
 <div id="tab-contacto" class="tab-panel sec">
@@ -403,15 +414,18 @@ function switchTab(id) {
   }
   frame();
 })();
+const esc = s => String(s ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const httpUrl = s => { try { const u = new URL(s); return ['https:','http:'].includes(u.protocol) ? esc(u.href) : ''; } catch { return ''; } };
+const photoUrl = s => httpUrl(s) || (/^images\/[\w./%-]+$/i.test(s || '') && !s.includes('..') ? esc(s) : '');
 fetch('data.json')
-  .then(r=>r.json())
+  .then(r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json();})
   .then(d=>{
     document.getElementById('hero-name').textContent=d.bio.name;
     document.getElementById('hero-role').textContent=d.bio.role;
     document.getElementById('hero-inst').textContent=d.bio.institution;
     document.getElementById('hero-summary').innerHTML=d.bio.summary;
     document.getElementById('hero-badges').innerHTML=d.bio.badges.map(b=>`<span class="badge">${b}</span>`).join('');
-    document.getElementById('footer-name').textContent=`© 2026 ${d.bio.name} · Universidad de Valparaíso · Viña del Mar, Chile`;
+    document.getElementById('footer-name').textContent=`© ${new Date().getFullYear()} ${d.bio.name} · Viña del Mar, Chile`;
     document.getElementById('about-text').innerHTML=d.bio.about;
     document.getElementById('formation-list').innerHTML=d.formation.map(f=>`
       <div class="formation-item">
@@ -438,28 +452,33 @@ fetch('data.json')
         <p>${r.description}</p>
         <span class="rc-tag ${r.tagClass}">${r.tag}</span>
       </div>`).join('');
+    const collaborators=d.collaborators || [];
+    const renderAuthors=authors=>collaborators.reduce((s,c)=>httpUrl(c.url)?s.replace(c.alias,`<a class="author-link" href="${httpUrl(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.alias)}</a>`):s,authors);
+    document.getElementById('collab-list').innerHTML=collaborators.map(c=>`<article class="collab-card"><strong>${esc(c.name)}</strong><p>${httpUrl(c.url)?`<a class="collab-link" href="${httpUrl(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.linkLabel || 'Página web')} ↗</a>`:'Coautor'}</p></article>`).join('');
     document.getElementById('pub-list').innerHTML=d.publications.map(p=>`
       <div class="pub-item">
         <div class="pub-year ${p.yearClass}">${p.year}</div>
         <div class="pub-content">
           <h3>${p.title}</h3>
-          <div class="authors">${p.authors}</div>
+          <div class="authors">${renderAuthors(p.authors)}</div>
           <div class="journal">${p.journal}</div>
-          ${p.links.length?`<div class="pub-actions">${p.links.map(l=>`<a href="${l.url}" target="_blank" class="pub-link ${l.class}">${l.label}</a>`).join('')}</div>`:''}
+          ${p.links.length?`<div class="pub-actions">${p.links.filter(l=>l.url).map(l=>`<a href="${l.url}" target="_blank" class="pub-link ${l.class}">${l.label}</a>`).join('')}</div>`:''}
         </div>
       </div>`).join('');
-    document.getElementById('talks-list').innerHTML=d.talks.map(t=>`
-      <div class="talk-item">
-        <div class="talk-meta">${t.date}</div>
-        <h3>${t.title} <span class="talk-type ${t.typeClass}">${t.type}</span></h3>
-        <p>${t.venue}</p>
-      </div>`).join('');
-    const renderCourses=(arr,cls)=>arr.map(c=>`
-      <div class="course-card ${cls}">
-        <h3>${c.title}</h3>
-        <p>${c.description}</p>
-        <div class="course-univ">${c.institution}</div>
-      </div>`).join('');
+    const today = new Date();
+    const localDate = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
+    const future=d.upcomingTalks || [];
+    const pending=future.filter(t=>!t.endDate || t.endDate>=localDate).sort((a,b)=>(a.endDate||'').localeCompare(b.endDate||''));
+    const pastEvents=future.filter(t=>t.endDate && t.endDate<localDate).sort((a,b)=>b.endDate.localeCompare(a.endDate));
+    const renderTalk=(t,upcoming=false)=>`<div class="talk-item"><div class="talk-meta">${esc(t.date)}</div><h3>${esc(t.title)} <span class="talk-type ${esc(t.typeClass)}">${esc(t.type)}</span></h3><p>${esc(t.venue)}</p>${upcoming&&t.status?`<div class="event-status">${esc(t.status)}</div>`:''}${httpUrl(t.url)?`<p><a class="event-link" href="${httpUrl(t.url)}" target="_blank" rel="noopener noreferrer">Web del evento ↗</a></p>`:''}</div>`;
+    document.getElementById('upcoming-block').hidden=!pending.length;
+    document.getElementById('upcoming-list').innerHTML=pending.map(t=>renderTalk(t,true)).join('');
+    document.getElementById('talks-list').innerHTML=[...pastEvents,...d.talks].map(t=>renderTalk(t)).join('');
+    const renderCourses=(arr,cls)=>arr.map(c=>{
+      const url=cls==='profesor'?httpUrl(c.materialsUrl):'';
+      const body=`<h3>${esc(c.title)}</h3><p>${esc(c.description)}</p><div class="course-univ">${esc(c.institution)}</div>`;
+      return url?`<a class="course-card ${cls}" href="${url}" target="_blank" rel="noopener noreferrer">${body}<span class="materials-label">Material del curso ↗</span></a>`:`<div class="course-card ${cls}">${body}${cls==='profesor'?'<span class="materials-label materials-pending">Material por incorporar</span>':''}</div>`;
+    }).join('');
     const present=d.teaching.professor.filter(c=>c.current);
     const past=d.teaching.professor.filter(c=>!c.current);
     document.getElementById('teaching-present').style.display=present.length?'':'none';
@@ -484,19 +503,24 @@ fetch('data.json')
         <p>${o.description}</p>
         <div class="div-year">${o.year}</div>
       </div>`).join('');
+    document.getElementById('interest-list').innerHTML=(d.interests||[]).map(i=>{
+      const photos=(i.photos||[]).filter(p=>photoUrl(p.src));
+      return `<article class="interest-card"><h3>${esc(i.emoji)} ${esc(i.title)}</h3><p>${esc(i.description)}</p>${photos.length?`<div class="interest-photos">${photos.map(p=>`<figure><a href="${photoUrl(p.src)}" target="_blank" rel="noopener noreferrer"><img src="${photoUrl(p.src)}" alt="${esc(p.alt||i.title)}" loading="lazy"></a>${p.caption?`<figcaption>${esc(p.caption)}</figcaption>`:''}</figure>`).join('')}</div>`:'<div class="photo-placeholder">Galería próximamente</div>'}</article>`;
+    }).join('');
+    const posts=(d.blog||[]).filter(p=>p.published===true).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
+    document.getElementById('blog-list').innerHTML=posts.length?posts.map(p=>`<article class="blog-card"><div class="talk-meta">${esc(p.date)} · ${esc(p.category)}</div><h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p><details><summary>Leer entrada</summary>${(p.paragraphs||[]).map(x=>`<p>${esc(x)}</p>`).join('')}</details></article>`).join(''):'<p class="empty-note">Próximamente compartiré aquí notas y reflexiones.</p>';
     const links=[
       {icon:'📧',label:d.bio.email,url:`mailto:${d.bio.email}`},
       {icon:'📐',label:'arXiv (math.GT)',url:d.bio.arxiv},
-      {icon:'🎓',label:'Google Scholar',url:d.bio.scholar||'#'},
-      {icon:'🔗',label:'ORCID',url:d.bio.orcid||'#'},
+      {icon:'🔗',label:'ORCID',url:d.bio.orcid},
       {icon:'🏛️',label:'Universidad de Valparaíso',url:d.bio.website_uv},
     ];
-    document.getElementById('contact-links').innerHTML=links.map(l=>`
-      <a href="${l.url}" ${l.url.startsWith('mailto')?'':'target="_blank"'} class="contact-link">
+    document.getElementById('contact-links').innerHTML=links.filter(l=>l.url).map(l=>`
+      <a href="${l.url}" ${l.url.startsWith('mailto')?'':'target="_blank" rel="noopener noreferrer"'} class="contact-link">
         <div class="cicon">${l.icon}</div>${l.label}
       </a>`).join('');
   })
-  .catch(err=>console.error('Error cargando data.json:',err));
+  .catch(err=>{console.error('Error cargando data.json:',err);document.getElementById('hero-name').textContent="O’Bryan Cárdenas-Andaur";document.getElementById('hero-summary').textContent='No se pudo cargar el contenido. Intenta recargar la página.';});
 </script>
 </body>
 </html>
