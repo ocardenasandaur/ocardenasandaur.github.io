@@ -351,6 +351,8 @@
     .teaching-group .courses-grid {grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));}
     .teaching-group .course-card {min-width:0;overflow-wrap:anywhere;}
     @media(max-width:480px){.teaching-principles{grid-template-columns:1fr}.teaching-group{padding:.85rem}}
+
+    #mentor-content .subsec-title{margin-top:2rem;margin-bottom:1rem} #mentor-content .po-intro{max-width:none;margin-bottom:1rem} .mentor-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem} .mentor-area{font-size:.76rem;font-weight:600;color:#7c3aed;margin-top:.65rem}.mentor-area.graphs,.mentor-area.biology{color:#0d9488}.mentor-area.games{color:#b45309}.mentor-resources{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.6rem}.mentor-resources:empty{display:none}.mentor-resources a{font-size:.76rem;padding:.3rem .55rem;background:#ede9fe;color:#5b21b6;border-radius:6px;text-decoration:none}.mentor-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin:1rem 0}.mentor-stats div{background:white;border:1px solid var(--border);border-radius:12px;text-align:center;padding:.7rem .2rem}.mentor-stats strong{display:block;color:#7c3aed;font-size:1.45rem}.mentor-stats span{font-size:.75rem;color:var(--slate-soft)}.mentor-list{display:grid;gap:.8rem}.mentor-out{display:flex;gap:1rem;background:white;border:1px solid var(--border);border-radius:12px;padding:1rem;min-width:0}.mentor-out>div{flex:1;min-width:0}.mentor-out h3{font-size:.95rem;margin:.25rem 0;color:var(--slate)}.mentor-out p{font-size:.88rem;color:var(--slate-soft);line-height:1.6}.mentor-icon{width:36px;height:36px;flex:none;border-radius:8px;background:#ccfbf1;color:#0d9488;padding:7px}.mentor-icon svg{width:100%;height:100%}.mentor-timeline{display:grid;gap:.9rem;margin-top:1rem}.mentor-timeline strong,.mentor-timeline span{display:block;font-size:.8rem}.mentor-timeline span{color:var(--slate-soft)}.mentor-track{height:9px;background:#f1f5f9;border-radius:6px;position:relative;margin-top:.3rem}.mentor-track i{position:absolute;height:100%;border-radius:6px}.mentor-axis{display:flex;justify-content:space-between}.mentor-axis span{font-size:.68rem}@media(max-width:600px){.mentor-grid{grid-template-columns:1fr}.mentor-out{gap:.65rem;padding:.8rem}.mentor-stats span{font-size:.65rem}}
 </style>
 </head>
 <body>
@@ -377,7 +379,7 @@
     <button class="tab-btn" data-tab="publicaciones" data-es="Publicaciones" data-en="Publications" onclick="switchTab('publicaciones')">Publicaciones</button>
     <button class="tab-btn" data-tab="charlas" data-es="Charlas" data-en="Talks" onclick="switchTab('charlas')">Charlas</button>
     <button class="tab-btn" data-tab="docencia" data-es="Docencia" data-en="Teaching" onclick="switchTab('docencia')">Docencia</button>
-    <button class="tab-btn" data-tab="tutorias-div" data-es="Divulgación &amp; Tutorías" data-en="Outreach &amp; Mentoring" onclick="switchTab('tutorias-div')">Divulgación &amp; Tutorías</button>
+    <button class="tab-btn" data-tab="tutorias-div" data-es="Tutorías y Divulgación" data-en="Mentoring &amp; Outreach" onclick="switchTab('tutorias-div')">Tutorías y Divulgación</button>
     <button class="tab-btn" data-tab="mas-alla" data-es="Más allá" data-en="Beyond Math" onclick="switchTab('mas-alla')">Más allá</button>
     <button class="tab-btn" data-tab="blog" data-es="Blog" data-en="Blog" onclick="switchTab('blog')">Blog</button>
     <button class="tab-btn" data-tab="contacto" data-es="Contacto" data-en="Contact" onclick="switchTab('contacto')">Contacto</button>
@@ -448,17 +450,10 @@
   </div>
 </div>
 <div id="tab-tutorias-div" class="tab-panel sec" style="background:#f8fafc;">
-  <div class="sec-inner">
-    <div class="sec-header"><div class="sec-icon ic-indigo">🌎</div><div><h2>Tutorías y Supervisión</h2><p>Lectura dirigida y proyectos de investigación formativa</p></div></div>
-    <p class="po-intro" id="po-intro-text">Desde 2023 participo como tutor en el Programa Virtual de Lectura Dirigida <strong><a href="https://sites.google.com/view/23paresordenados/inicio" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">"Pares Ordenados"</a></strong>, acompañando proyectos de investigación formativa a estudiantes de universidades latinoamericanas en temas de teoría de nudos, grafos, juegos y algoritmos. Anteriormente, también participé en la supervisión y orientación de proyectos desarrollados en la asignatura <strong>Laboratorio de Modelación I</strong> de la Universidad Técnica Federico Santa María (UTFSM).</p>
-    <div class="subsec-title">🤝 Pares Ordenados</div>
-    <div class="students-grid" id="students-pares"></div>
-    <div class="subsec-title">🔬 Laboratorio de Modelación I · UTFSM</div>
-    <div class="students-grid" id="students-lab" style="margin-bottom:3rem;"></div>
-    <div class="sec-header" style="margin-top:1rem;"><div class="sec-icon ic-green">📢</div><div><h2>Divulgación &amp; Comunidad</h2><p>Matemáticas para todo el mundo</p></div></div>
-    <div class="div-grid" id="outreach-list"></div>
-  </div>
-</div>
+<div class="sec-inner">
+<div class="sec-header"><div class="sec-icon ic-indigo">🌎</div><div><h2 id="mentor-title">Tutorías y Divulgación</h2><p id="mentor-sub">Formación de estudiantes y compromiso con la comunidad matemática</p></div></div>
+<div id="mentor-content"></div>
+</div></div>
 <div id="tab-mas-alla" class="tab-panel sec">
   <div class="sec-inner">
     <div class="sec-header"><div class="sec-icon ic-star">✨</div><div><h2>Más allá de los nudos</h2><p>El matemático fuera del pizarrón</p></div></div>
@@ -550,7 +545,7 @@ function applyLang(d) {
     const key = lang === 'es' ? 'data-es' : 'data-en';
     if (btn.dataset[lang === 'es' ? 'es' : 'en']) btn.textContent = btn.dataset[lang === 'es' ? 'es' : 'en'];
   });
-  document.getElementById('po-intro-text').innerHTML = t.poIntro;
+
   document.querySelector('#tab-investigacion .sec-header h2').textContent = t.researchTitle;
   document.querySelector('#tab-investigacion .sec-header p').textContent = t.researchSub;
   const researchLabels = [['intro','Intereses de investigación','Research interests'],['lines','Principales líneas de investigación','Main research areas'],['other','Otros intereses de investigación','Other research interests'],['projects','Proyectos de investigación','Research projects'],['previous','Investigación interdisciplinaria previa','Previous interdisciplinary research']];
@@ -588,11 +583,7 @@ function applyLang(d) {
     ['.footer-motto','Este sitio es invariante bajo isotopía ambiente 🪢','This site is invariant under ambient isotopy 🪢']
   ];
   staticLabels.forEach(([selector,es,en])=>{const el=document.querySelector(selector);if(el)el.textContent=lang==='en'?en:es;});
-  const mentorHeaders=document.querySelectorAll('#tab-tutorias-div .sec-header');
-  if(mentorHeaders.length===2){const labels=lang==='en'?[['Mentoring and supervision','Directed reading and formative research projects'],['Outreach & Community','Mathematics for everyone']]:[['Tutorías y Supervisión','Lectura dirigida y proyectos de investigación formativa'],['Divulgación & Comunidad','Matemáticas para todo el mundo']];mentorHeaders.forEach((el,i)=>{el.querySelector('h2').textContent=labels[i][0];el.querySelector('p').textContent=labels[i][1];});}
-  const mentorLabels=document.querySelectorAll('#tab-tutorias-div .subsec-title');
-  if(mentorLabels.length===2)mentorLabels[1].textContent=lang==='en'?'🔬 Mathematical Modelling Lab I · UTFSM':'🔬 Laboratorio de Modelación I · UTFSM';
-  
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -772,23 +763,21 @@ function renderData(d){
     const mini=[...d.teaching.minicourses].sort((a,b)=>Object.keys(areas).indexOf(a.area||'other')-Object.keys(areas).indexOf(b.area||'other'));
     document.getElementById('courses-mini').innerHTML=groupCourses(mini,'minicurso',c=>c.area||'other',k=>areas[k]||k);
     document.getElementById('courses-assistant').innerHTML=renderCourses(d.teaching.assistant,'ayudante');
-    const renderStudent=s=>`
-      <div class="student-card">
-        <div class="student-year">${s.year}</div>
-        <h3>${s.name}</h3>
-        <div class="student-univ">${s.institution}</div>
-        <div class="student-topic">${s.topic}</div>
-        ${s.award?`<div class="student-award">${s.award}</div>`:''}
-      </div>`;
-    document.getElementById('students-pares').innerHTML=d.students.filter(s=>s.program==='pares-ordenados').map(renderStudent).join('');
-    document.getElementById('students-lab').innerHTML=d.students.filter(s=>s.program==='lab-modelacion').map(renderStudent).join('');
-    document.getElementById('outreach-list').innerHTML=[...d.outreach].sort((a,b)=>(b.sortDate||'').localeCompare(a.sortDate||'')).map(o=>`
-      <div class="div-card">
-        <div class="div-emoji">${o.emoji}</div>
-        <h3>${httpUrl(o.url)?`<a href="${httpUrl(o.url)}" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">${esc(o.title)}</a>`:esc(o.title)}</h3>
-        <p>${esc(o.description)}</p>
-        <div class="div-year">${esc(o.year)}</div>
-      </div>`).join('');
+    const m=(es,eng)=>en?eng:es;
+    const areaNames={graphs:m('Teoría de grafos','Graph theory'),games:m('Teoría de juegos','Game theory'),knots:m('Teoría de nudos','Knot theory'),biology:m('Modelación matemática · Biología','Mathematical modelling · Biology')};
+    const resourceNames={project:m('Proyecto','Project'),presentation:m('Presentación','Presentation'),code:'Google Colab',folder:m('Proyecto y presentación','Project and presentation')};
+    const flags={'Argentina':'🇦🇷','Colombia':'🇨🇴','México':'🇲🇽','Mexico':'🇲🇽','Chile':'🇨🇱'};
+    const renderStudent=s=>`<article class="student-card"><div class="student-year">${flags[s.year.split(' · ')[1]]||''} ${esc(s.year)}</div><h3>${esc(s.name)}</h3><div class="student-univ">${esc(s.institution)}</div><div class="student-topic">${esc(s.topic)}</div><div class="mentor-area ${esc(s.area)}">${esc(areaNames[s.area]||'')}</div>${s.award?`<div class="student-award">${esc(s.award)}</div>`:''}<div class="mentor-resources">${(s.resources||[]).filter(r=>httpUrl(r.url)).map(r=>`<a href="${httpUrl(r.url)}" target="_blank" rel="noopener noreferrer">${esc(resourceNames[r.type])} ↗</a>`).join('')}</div></article>`;
+    const pares=d.students.filter(s=>s.program==='pares-ordenados');
+    const lab=d.students.filter(s=>s.program==='lab-modelacion');
+    const outreach=[...d.outreach].sort((a,b)=>(b.sortDate||'').localeCompare(a.sortDate||''));
+    const title=o=>httpUrl(o.url)?`<a href="${httpUrl(o.url)}" target="_blank" rel="noopener noreferrer">${esc(o.title)} ↗</a>`:esc(o.title);
+    const iconPaths=['<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 8h8M8 12h8"/>','<path d="M12 3v18M3 12h18M5 5l14 14M19 5L5 19"/>','<circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16"/>'];
+    const renderOut=(o,i)=>`<article class="mentor-out"><span class="mentor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">${iconPaths[i%3]}</svg></span><div><div class="student-year">${esc(o.year)}</div><h3>${title(o)}</h3><p>${esc(o.description)}</p></div></article>`;
+    const renderEducation=o=>`<article class="mentor-out education"><div><div class="student-year">${esc(o.year)}</div><h3>${title(o)}</h3>${o.roles?`<p>${m('Participación en una iniciativa educativa solidaria orientada a la preparación para el ingreso a la educación superior.','Participation in a solidarity-based educational initiative preparing students for higher education.')}</p><div class="mentor-timeline" aria-label="${m('Cronología de responsabilidades','Timeline of responsibilities')}">${o.roles.map((r,i)=>`<div><strong>${esc(r.title)}</strong><span>${esc(r.period)}</span><div class="mentor-track"><i style="left:${(r.start-2012)/13*100}%;width:${(r.end-r.start)/13*100}%;background:${['#8b5cf6','#0d9488','#d97706'][i]}"></i></div></div>`).join('')}<div class="mentor-axis"><span>2012</span><span>2016</span><span>2020</span><span>2024</span></div></div>`:`<p>${esc(o.description)}</p>`}</div></article>`;
+    document.getElementById('mentor-title').textContent=m('Tutorías y Divulgación','Mentoring & Outreach');
+    document.getElementById('mentor-sub').textContent=m('Formación de estudiantes y compromiso con la comunidad matemática','Student mentoring and engagement with the mathematical community');
+    document.getElementById('mentor-content').innerHTML=`<h3 class="subsec-title">${m('Formación y acompañamiento de estudiantes','Student mentoring')}</h3><p class="po-intro">${m('Considero que acompañar a estudiantes en sus primeras experiencias de investigación es una parte fundamental de la actividad matemática. A través de proyectos de lectura dirigida y modelación matemática, busco fomentar su curiosidad, autonomía y capacidad para explorar problemas que van más allá de los contenidos habituales de sus asignaturas.','I consider mentoring students in their first research experiences a fundamental part of mathematical activity. Through directed reading and mathematical modelling projects, I seek to foster their curiosity, independence and ability to explore problems beyond their usual coursework.')}</p><h3 class="subsec-title">Pares Ordenados</h3><p class="po-intro">${m('Desde 2023 participo como tutor en este programa latinoamericano de lectura dirigida, acompañando a estudiantes universitarios en la exploración de temas matemáticos.','Since 2023 I have mentored university students exploring mathematical topics through this Latin American directed reading programme.')} <a href="https://sites.google.com/view/23paresordenados/inicio" target="_blank" rel="noopener noreferrer">${m('Web del programa','Programme website')} ↗</a></p><div class="mentor-stats">${[[pares.length,m('Proyectos','Projects')],[new Set(pares.map(s=>s.year.split(' · ')[1])).size,m('Países','Countries')],[pares.filter(s=>s.award).length,m('Reconocimientos','Recognitions')]].map(([v,l])=>`<div><strong>${v}</strong><span>${l}</span></div>`).join('')}</div><div class="students-grid mentor-grid">${pares.map(renderStudent).join('')}</div><h3 class="subsec-title">${m('Laboratorio de Modelación I · UTFSM','Mathematical Modelling Lab I · UTFSM')}</h3><div class="students-grid mentor-grid">${lab.map(renderStudent).join('')}</div><h3 class="subsec-title">${m('Divulgación matemática','Mathematical outreach')}</h3><p class="po-intro">${m('Me interesa acercar las matemáticas a públicos diversos y contribuir a la construcción de una comunidad matemática abierta y participativa. A lo largo de mi trayectoria he participado en festivales, talleres, ciclos de charlas y otras iniciativas de divulgación y formación.','I am interested in bringing mathematics to diverse audiences and contributing to an open and participatory mathematical community. Throughout my career I have participated in festivals, workshops, lecture series and other outreach and educational initiatives.')}</p><div class="mentor-list">${outreach.filter(o=>o.category!=='education').map(renderOut).join('')}</div><h3 class="subsec-title">${m('Compromiso educativo','Educational engagement')}</h3><div class="mentor-list">${outreach.filter(o=>o.category==='education').map(renderEducation).join('')}</div>`;
     document.getElementById('interest-list').innerHTML=(d.interests||[]).map(i=>{
       const photos=(i.photos||[]).filter(p=>photoUrl(p.src));
       return `<article class="interest-card"><h3>${esc(i.emoji)} ${esc(i.title)}</h3><p>${esc(i.description)}</p>${photos.length?`<div class="interest-photos">${photos.map(p=>`<figure><a href="${photoUrl(p.src)}" target="_blank" rel="noopener noreferrer"><img src="${photoUrl(p.src)}" alt="${esc(p.alt||i.title)}" loading="lazy"></a>${p.caption?`<figcaption>${esc(p.caption)}</figcaption>`:''}</figure>`).join('')}</div>`:`<div class="photo-placeholder">${currentLang==='en'?'Gallery coming soon':'Galería próximamente'}</div>`}</article>`;

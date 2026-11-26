@@ -864,7 +864,18 @@
       "institutionEn": "Universidad Nacional de Mar del Plata",
       "topicEn": "An introduction to temporal graphs: the dynamic world.",
       "awardEn": "2026 Fluence Grant for a preliminary version of the project",
-      "yearEn": "2026 · Argentina"
+      "yearEn": "2026 · Argentina",
+      "area": "graphs",
+      "resources": [
+        {
+          "type": "project",
+          "url": "https://drive.google.com/file/d/1HALQvSsJesI_pOLVu7me6c9IJGyZKU-o/view"
+        },
+        {
+          "type": "presentation",
+          "url": "https://drive.google.com/file/d/1ecbnjfFC5Jc0frS6FjMsQsVAD-Q8x90K/view"
+        }
+      ]
     },
     {
       "year": "2026 · Argentina",
@@ -876,7 +887,18 @@
       "institutionEn": "Universidad Nacional de Cuyo",
       "topicEn": "An introduction to game theory.",
       "awardEn": "",
-      "yearEn": "2026 · Argentina"
+      "yearEn": "2026 · Argentina",
+      "area": "games",
+      "resources": [
+        {
+          "type": "project",
+          "url": "https://drive.google.com/file/d/1dt1OhoWUW0YUjOhdvns-_JrxsPJYmXbL/view"
+        },
+        {
+          "type": "presentation",
+          "url": "https://drive.google.com/file/d/1MjR3Vhdk4Ou_hVKz691S1eufpNw5aDg4/view"
+        }
+      ]
     },
     {
       "year": "2025 · Argentina",
@@ -888,7 +910,18 @@
       "institutionEn": "Universidad Nacional de Cuyo",
       "topicEn": "Classification of knots with up to eight crossings.",
       "awardEn": "Honourable mention in the Argentine Mathematical Union monograph competition",
-      "yearEn": "2025 · Argentina"
+      "yearEn": "2025 · Argentina",
+      "area": "knots",
+      "resources": [
+        {
+          "type": "project",
+          "url": "https://drive.google.com/file/d/1EHtjEIiLJubH-Q39mqPUh_BhismRBUCn/view"
+        },
+        {
+          "type": "presentation",
+          "url": "https://drive.google.com/file/d/1S0Hs38Dh5Hia-nrag88U0-ZA2hTAvpNw/view"
+        }
+      ]
     },
     {
       "year": "2025 · Colombia",
@@ -900,11 +933,18 @@
       "institutionEn": "Universidad del Atlántico",
       "topicEn": "Algorithms for computing p-colourings and the Jones polynomial.",
       "awardEn": "",
-      "yearEn": "2025 · Colombia"
+      "yearEn": "2025 · Colombia",
+      "area": "knots",
+      "resources": [
+        {
+          "type": "code",
+          "url": "https://colab.research.google.com/drive/1VRdai75q6ByD97thUfMBRIIrmsacrueX?usp=sharing"
+        }
+      ]
     },
     {
       "year": "2024 · México",
-      "name": "Kevin Messina Rodríguez",
+      "name": "Kevin Gerardo Messina Rodríguez",
       "institution": "Universidad Autónoma de Guerrero",
       "topic": "Gráficas llamativas.",
       "award": "",
@@ -912,11 +952,18 @@
       "institutionEn": "Universidad Autónoma de Guerrero",
       "topicEn": "Eye-catching graphs.",
       "awardEn": "",
-      "yearEn": "2024 · Mexico"
+      "yearEn": "2024 · Mexico",
+      "area": "graphs",
+      "resources": [
+        {
+          "type": "folder",
+          "url": "https://drive.google.com/drive/folders/1Y6aEcHMCeu5n-TF0GcrzhZ3D6oydVPcY?usp=sharing"
+        }
+      ]
     },
     {
       "year": "2023 · Colombia",
-      "name": "Emmanuel Silva Amaya",
+      "name": "Emmanuel David Silva Amaya",
       "institution": "Universidad Nacional de Colombia",
       "topic": "Una introducción a la Teoría de Juegos.",
       "award": "",
@@ -924,7 +971,14 @@
       "institutionEn": "Universidad Nacional de Colombia",
       "topicEn": "An introduction to game theory.",
       "awardEn": "",
-      "yearEn": "2023 · Colombia"
+      "yearEn": "2023 · Colombia",
+      "area": "games",
+      "resources": [
+        {
+          "type": "project",
+          "url": "https://drive.google.com/file/d/1DSr7c9dke_91rUEn_cVvEXSImk5Djeaq/view"
+        }
+      ]
     },
     {
       "year": "2021 · Chile",
@@ -936,7 +990,8 @@
       "institutionEn": "UTFSM · Mathematical Modelling Lab I",
       "topicEn": "Implementation of an algorithm to compute the HOMFLYPT polynomial in Python.",
       "awardEn": "",
-      "yearEn": "2021 · Chile"
+      "yearEn": "2021 · Chile",
+      "area": "knots"
     },
     {
       "year": "2017 · Chile",
@@ -948,7 +1003,8 @@
       "institutionEn": "UTFSM · Mathematical Modelling Lab I",
       "topicEn": "Study of endolysins.",
       "awardEn": "",
-      "yearEn": "2017 · Chile"
+      "yearEn": "2017 · Chile",
+      "area": "biology"
     }
   ],
   "outreach": [
@@ -961,7 +1017,8 @@
       "titleEn": "Latin American and Hispanic mathematicians around the world",
       "descriptionEn": "Panel speaker in Pares Ordenados, sharing academic experiences.",
       "yearEn": "2025 · Online",
-      "sortDate": "2025"
+      "sortDate": "2025",
+      "category": "outreach"
     },
     {
       "emoji": "🏫",
@@ -971,17 +1028,43 @@
       "titleEn": "UV Solidarity Pre-university Programme",
       "descriptionEn": "Mathematics teacher (2012–2024), mathematics department coordinator (2017–2024) and general secretary (January–September 2024).",
       "yearEn": "2012-2024 · UV",
-      "sortDate": "2024"
+      "sortDate": "2024",
+      "category": "education",
+      "roles": [
+        {
+          "title": "Profesor de Matemática",
+          "titleEn": "Mathematics teacher",
+          "period": "2012–2024",
+          "start": 2012,
+          "end": 2024.75
+        },
+        {
+          "title": "Coordinador del Departamento de Matemática",
+          "titleEn": "Mathematics department coordinator",
+          "period": "2017–2024",
+          "start": 2017,
+          "end": 2024.75
+        },
+        {
+          "title": "Secretario general",
+          "titleEn": "General secretary",
+          "period": "Enero–septiembre 2024",
+          "periodEn": "January–September 2024",
+          "start": 2024,
+          "end": 2024.75
+        }
+      ]
     },
     {
       "emoji": "📚",
-      "title": "Minicursos en línea",
-      "description": "Minicursos de teoría de nudos, grafos y juegos.",
+      "title": "Minicursos en línea durante la pandemia",
+      "description": "Minicursos introductorios de teoría de nudos, grafos y juegos.",
       "year": "2020-2021 · UV",
-      "titleEn": "Online mini-courses",
-      "descriptionEn": "Mini-courses on knot theory, graph theory and game theory.",
+      "titleEn": "Online mini-courses during the pandemic",
+      "descriptionEn": "Introductory mini-courses on knot theory, graph theory and game theory.",
       "yearEn": "2020-2021 · UV",
-      "sortDate": "2021"
+      "sortDate": "2021",
+      "category": "outreach"
     },
     {
       "emoji": "📡",
@@ -991,7 +1074,8 @@
       "titleEn": "Contagiando Matemáticas",
       "descriptionEn": "Co-organiser and moderator of a public lecture series during the pandemic.",
       "yearEn": "October-December 2020 · UV",
-      "sortDate": "2020-12"
+      "sortDate": "2020-12",
+      "category": "outreach"
     },
     {
       "emoji": "🏫",
@@ -1001,7 +1085,8 @@
       "titleEn": "Catholic University of Valparaíso Pre-university Programme",
       "descriptionEn": "Mathematics teacher.",
       "yearEn": "August-December 2019",
-      "sortDate": "2019-12"
+      "sortDate": "2019-12",
+      "category": "education"
     },
     {
       "emoji": "⛺",
@@ -1011,7 +1096,8 @@
       "titleEn": "STEM Camp",
       "descriptionEn": "Instructor and coordinator. Workshops on knots, braids and cryptography for secondary school students.",
       "yearEn": "2017-2019 · UTFSM",
-      "sortDate": "2019-01"
+      "sortDate": "2019-01",
+      "category": "outreach"
     },
     {
       "emoji": "🎪",
@@ -1021,7 +1107,8 @@
       "titleEn": "Mathematics Festival: Knot theory and fishing nets",
       "descriptionEn": "Interactive exhibition involving the construction of fishing nets.",
       "yearEn": "September 2017 · San Antonio",
-      "sortDate": "2017-09"
+      "sortDate": "2017-09",
+      "category": "outreach"
     },
     {
       "emoji": "🎪",
@@ -1031,7 +1118,8 @@
       "titleEn": "Mathematics Festival: Da Vinci domes",
       "descriptionEn": "Exhibition and participatory construction of domes.",
       "yearEn": "December 2016 · Valparaíso",
-      "sortDate": "2016-12"
+      "sortDate": "2016-12",
+      "category": "outreach"
     }
   ],
   "collaborators": [
