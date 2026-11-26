@@ -604,7 +604,11 @@
         "materialsUrl": "",
         "titleEn": "Calculus I",
         "institutionEn": "University of Valparaíso · 2020-2022",
-        "descriptionEn": "Undergraduate teaching."
+        "descriptionEn": "Undergraduate teaching.",
+        "university": "Universidad de Valparaíso",
+        "universityEn": "University of Valparaíso",
+        "period": "2020-2022",
+        "periodEn": "2020-2022"
       },
       {
         "title": "Fundamentos de la Matemática",
@@ -614,7 +618,11 @@
         "materialsUrl": "",
         "titleEn": "Foundations of Mathematics",
         "institutionEn": "University of Valparaíso · 2020-2022",
-        "descriptionEn": "Undergraduate teaching."
+        "descriptionEn": "Undergraduate teaching.",
+        "university": "Universidad de Valparaíso",
+        "universityEn": "University of Valparaíso",
+        "period": "2020-2022",
+        "periodEn": "2020-2022"
       },
       {
         "title": "Fundamentos de Matemática",
@@ -624,7 +632,11 @@
         "materialsUrl": "",
         "titleEn": "Foundations of Mathematics",
         "institutionEn": "PUCV · March-July 2022",
-        "descriptionEn": "Lectures and workshops."
+        "descriptionEn": "Lectures and workshops.",
+        "university": "Pontificia Universidad Católica de Valparaíso",
+        "universityEn": "Pontifical Catholic University of Valparaíso",
+        "period": "marzo-julio 2022",
+        "periodEn": "March-July 2022"
       },
       {
         "title": "Matemática Discreta",
@@ -634,7 +646,11 @@
         "materialsUrl": "",
         "titleEn": "Discrete Mathematics",
         "institutionEn": "UTFSM · March-July 2022",
-        "descriptionEn": "Undergraduate teaching."
+        "descriptionEn": "Undergraduate teaching.",
+        "university": "Universidad Técnica Federico Santa María",
+        "universityEn": "Federico Santa María Technical University",
+        "period": "marzo-julio 2022",
+        "periodEn": "March-July 2022"
       },
       {
         "title": "Matemática III",
@@ -644,7 +660,11 @@
         "materialsUrl": "",
         "titleEn": "Mathematics III",
         "institutionEn": "UTFSM · March-July 2022",
-        "descriptionEn": "Undergraduate teaching."
+        "descriptionEn": "Undergraduate teaching.",
+        "university": "Universidad Técnica Federico Santa María",
+        "universityEn": "Federico Santa María Technical University",
+        "period": "marzo-julio 2022",
+        "periodEn": "March-July 2022"
       }
     ],
     "assistant": [
@@ -736,7 +756,8 @@
         "institution": "26 julio-11 septiembre 2024 · Valparaíso, Chile",
         "titleEn": "Vassiliev-type invariants",
         "institutionEn": "26 July-11 September 2024 · Valparaíso, Chile",
-        "descriptionEn": "Seminario AtN - University of Valparaíso"
+        "descriptionEn": "Seminario AtN - University of Valparaíso",
+        "area": "knots"
       },
       {
         "title": "Teoría de Juegos",
@@ -744,7 +765,8 @@
         "institution": "29 abril-1 julio 2021 · Virtual",
         "titleEn": "Game theory",
         "institutionEn": "29 April-1 July 2021 · Online",
-        "descriptionEn": "University of Valparaíso"
+        "descriptionEn": "University of Valparaíso",
+        "area": "games"
       },
       {
         "title": "Teoría de Nudos: Invariantes y Generalizaciones",
@@ -752,7 +774,8 @@
         "institution": "4-6 enero 2021 · Valparaíso, Chile",
         "titleEn": "Knot theory: invariants and generalisations",
         "institutionEn": "4-6 January 2021 · Valparaíso, Chile",
-        "descriptionEn": "2nd Meeting on Algebra and Knot Theory"
+        "descriptionEn": "2nd Meeting on Algebra and Knot Theory",
+        "area": "knots"
       },
       {
         "title": "Teoría de Nudos",
@@ -760,7 +783,8 @@
         "institution": "11 junio-2 julio 2020 · Virtual",
         "titleEn": "Knot theory",
         "institutionEn": "11 June-2 July 2020 · Online",
-        "descriptionEn": "University of Valparaíso"
+        "descriptionEn": "University of Valparaíso",
+        "area": "knots"
       },
       {
         "title": "Teoría de Juegos",
@@ -768,7 +792,8 @@
         "institution": "14 mayo-4 junio 2020 · Virtual",
         "titleEn": "Game theory",
         "institutionEn": "14 May-4 June 2020 · Online",
-        "descriptionEn": "University of Valparaíso"
+        "descriptionEn": "University of Valparaíso",
+        "area": "games"
       },
       {
         "title": "Teoría de Grafos",
@@ -776,7 +801,8 @@
         "institution": "23 abril-7 mayo 2020 · Virtual",
         "titleEn": "Graph theory",
         "institutionEn": "23 April-7 May 2020 · Online",
-        "descriptionEn": "University of Valparaíso"
+        "descriptionEn": "University of Valparaíso",
+        "area": "graphs"
       },
       {
         "title": "Introducción a la Teoría de Nudos",
@@ -784,9 +810,48 @@
         "institution": "2-16 noviembre 2017 · Valparaíso, Chile",
         "titleEn": "Introduction to knot theory",
         "institutionEn": "2-16 November 2017 · Valparaíso, Chile",
-        "descriptionEn": "UTFSM"
+        "descriptionEn": "UTFSM",
+        "area": "knots"
       }
-    ]
+    ],
+    "philosophy": {
+      "intro": "Entiendo la enseñanza de las matemáticas como una oportunidad para despertar la curiosidad, desarrollar el pensamiento crítico y comprender las ideas que se esconden detrás de los conceptos y resultados matemáticos.",
+      "introEn": "I see mathematics teaching as an opportunity to spark curiosity, develop critical thinking, and understand the ideas behind mathematical concepts and results.",
+      "principles": [
+        {
+          "icon": "💡",
+          "color": "amber",
+          "title": "Motivación y curiosidad",
+          "titleEn": "Motivation and curiosity",
+          "description": "Comenzar con preguntas que den sentido a los conceptos matemáticos.",
+          "descriptionEn": "Start with questions that give meaning to mathematical concepts."
+        },
+        {
+          "icon": "📖",
+          "color": "violet",
+          "title": "Comprensión conceptual",
+          "titleEn": "Conceptual understanding",
+          "description": "Comprender las ideas y su contexto histórico, más allá de los procedimientos.",
+          "descriptionEn": "Understand ideas and their historical context, beyond procedures."
+        },
+        {
+          "icon": "🧩",
+          "color": "teal",
+          "title": "Resolución de problemas",
+          "titleEn": "Problem-solving",
+          "description": "Explorar ejemplos y desarrollar diferentes estrategias de resolución.",
+          "descriptionEn": "Explore examples and develop different problem-solving strategies."
+        },
+        {
+          "icon": "💬",
+          "color": "rose",
+          "title": "Diálogo y autonomía",
+          "titleEn": "Dialogue and autonomy",
+          "description": "Fomentar las preguntas, la discusión y el pensamiento independiente.",
+          "descriptionEn": "Encourage questions, discussion and independent thinking."
+        }
+      ]
+    }
   },
   "students": [
     {
