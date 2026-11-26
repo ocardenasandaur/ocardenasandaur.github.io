@@ -381,8 +381,8 @@
     .artist-info {display:flex;flex-direction:column;gap:.35rem;min-width:0;}
     .artist-genres {font-size:.78rem;color:#c7d2fe;line-height:1.45;}
     @media(max-width:760px){.album-artists{grid-template-columns:repeat(2,minmax(0,1fr));}}
-    .album-artists a {display:flex;flex-wrap:wrap;justify-content:space-between;gap:.4rem;padding:.75rem 1rem;background:#ffffff10;border:1px solid #ffffff25;border-radius:10px;color:#fff;text-decoration:none;overflow-wrap:anywhere;}
-    .album-artists a small {color:#fdba74;}
+    .album-artists a {display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:.5rem;padding:.75rem 1rem;background:#ffffff10;border:1px solid #ffffff25;border-radius:10px;color:#fff;text-decoration:none;overflow-wrap:anywhere;}
+    .album-artists a small {color:#fdba74;margin-top:auto;align-self:flex-start;}
     .album-artists a:hover {border-color:#fb923c;}
     .album-media-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;}
     .album-media-tile {position:relative;display:block;aspect-ratio:4/3;overflow:hidden;border:1px solid #ffffff20;border-radius:10px;background:#1e1b4b;color:white;cursor:pointer;padding:0;min-width:0;}
