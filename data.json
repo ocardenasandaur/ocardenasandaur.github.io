@@ -1187,49 +1187,147 @@
   ],
   "interests": [
     {
-      "title": "Combate medieval",
+      "title": "Ferias medievales",
       "emoji": "⚔️",
-      "description": "Combate histórico, armaduras y entrenamiento en equipo.",
+      "description": "De templarios, espadas y castillos.",
       "photos": [],
-      "titleEn": "Medieval combat",
-      "descriptionEn": "Historical combat, armour and team training.",
-      "folder": "images/combate-medieval/"
+      "titleEn": "Medieval fairs",
+      "descriptionEn": "Of Templars, swords and castles.",
+      "id": "combate-medieval",
+      "folder": "images/combate-medieval/",
+      "color": "#b45309",
+      "paragraphs": [
+        "Aunque pueda parecer poco habitual, en Chile también se realizan ferias medievales y comencé a asistir a ellas en 2014. Con el tiempo, esta afición fue creciendo: fui adquiriendo espadas, yelmos y otras piezas de equipamiento, construí mi propia cota de malla y preparé un atuendo que hoy me permite asistir caracterizado como templario.",
+        "Durante mi etapa en Europa tuve la oportunidad de visitar lugares como el castillo de Almodóvar del Río, Toledo y el parque temático histórico Puy du Fou, experiencias que me permitieron disfrutar aún más de mi afición por el mundo medieval.",
+        "Disfruto especialmente de la ambientación de estas ferias, en las que también son bienvenidos visitantes de otras épocas y mundos, desde vikingos y samuráis hasta personajes de videojuegos.",
+        "Una de las cosas que más disfruto es el entusiasmo de quienes se acercan a tomarse fotos conmigo, aunque mi atuendo no pretenda ser una recreación históricamente exacta."
+      ],
+      "paragraphsEn": [
+        "Although it may seem unusual, medieval fairs take place in Chile too, and I started attending them in 2014. Over time, this hobby grew: I acquired swords, helmets and other equipment, made my own chainmail and put together an outfit that allows me to attend dressed as a Templar.",
+        "During my time in Europe, I had the chance to visit places such as Almodóvar del Río Castle, Toledo and the historical theme park Puy du Fou, experiences that deepened my enjoyment of the medieval world.",
+        "I particularly enjoy the atmosphere of these fairs, where visitors from other eras and worlds are also welcome, from Vikings and samurai to video game characters.",
+        "One of my favourite things is the enthusiasm of people who come up to take photos with me, even though my outfit is not intended to be a historically accurate reconstruction."
+      ]
     },
     {
       "title": "Entrenamiento de fuerza",
       "emoji": "🏋️",
-      "description": "Entrenamiento con pesas y progresión en fuerza.",
+      "description": "Cada día más fuerte y moviendo más pesado.",
       "photos": [],
       "titleEn": "Strength training",
-      "descriptionEn": "Weight training and strength development.",
-      "folder": "images/entrenamiento/"
+      "descriptionEn": "Getting stronger and lifting heavier every day.",
+      "id": "entrenamiento",
+      "folder": "images/entrenamiento/",
+      "color": "#0d9488",
+      "paragraphs": [
+        "Comencé a entrenar (seriamente) durante mi doctorado en Sevilla y, desde entonces, el entrenamiento de fuerza se ha convertido en una parte importante de mi rutina. Disfruto especialmente del desafío de levantar cada vez más peso y descubrir hasta dónde puedo llegar con constancia y disciplina (y también del postureo, obviamente).",
+        "Una parte muy especial de este camino fue mi etapa en Senzu, de la mano de Toni. Allí descubrí cuánto me gustaba entrenar, aprendí, mejoré y tuve la oportunidad de compartir esta afición con personas increíbles.",
+        "Tras mi regreso a Chile, continúo entrenando en Bunker Gym junto a Kyrbi, mi actual entrenador, disfrutando del proceso y planteándome nuevos desafíos."
+      ],
+      "paragraphsEn": [
+        "I started training (seriously) during my PhD in Seville, and strength training has since become an important part of my routine. I particularly enjoy the challenge of lifting increasingly heavy weights and discovering how far consistency and discipline can take me (and, of course, a little showing off).",
+        "A very special part of this journey was my time at Senzu, guided by Toni. There I discovered how much I enjoyed training, learned, improved and had the chance to share this passion with amazing people.",
+        "Since returning to Chile, I have continued training at Bunker Gym with Kyrbi, my current coach, enjoying the process and setting myself new challenges."
+      ]
     },
     {
       "title": "Música electrónica",
       "emoji": "🎶",
-      "description": "Hard techno, fiestas y cultura electrónica.",
+      "description": "Entre altos BPM, música y comunidad.",
       "photos": [],
       "titleEn": "Electronic music",
-      "descriptionEn": "Hard techno, parties and electronic music culture.",
-      "folder": "images/musica/"
+      "descriptionEn": "High BPMs, music and community.",
+      "id": "musica",
+      "folder": "images/musica/",
+      "color": "#7c3aed",
+      "paragraphs": [
+        "Siempre me gustó la música electrónica, pero no fue hasta 2024, cuando comencé a reunirme con Techlovers y a asistir a fiestas y festivales, que descubrí cuánto me encantaba.",
+        "Disfruto especialmente del hard techno y el schranz, aunque también de otros géneros como el industrial, el psytrance y el hardgroove. La energía de la pista de baile, los altos BPM y el sentimiento de comunidad hacen que cada experiencia sea única.",
+        "Tanto en Chile como en España, la música electrónica me ha permitido compartir grandes momentos. Guardo un especial cariño por Techlovers en Chile y Hardfire en Sevilla, dos comunidades con las que he vivido buena parte de estas experiencias."
+      ],
+      "paragraphsEn": [
+        "I have always liked electronic music, but it was not until 2024, when I started meeting up with Techlovers and going to parties and festivals, that I discovered how much I loved it.",
+        "I especially enjoy hard techno and schranz, as well as other genres such as industrial, psytrance and hardgroove. The energy of the dance floor, high BPMs and the sense of community make every experience unique.",
+        "In both Chile and Spain, electronic music has given me wonderful moments to share. I am particularly fond of Techlovers in Chile and Hardfire in Seville, two communities with whom I have shared many of these experiences."
+      ],
+      "artists": [
+        {
+          "name": "Franzzite",
+          "url": "https://on.soundcloud.com/Fa1N8AKzH1vNxPRwR"
+        },
+        {
+          "name": "bytu_c",
+          "url": "https://on.soundcloud.com/RhMbAjSmpDnVVUlFV"
+        },
+        {
+          "name": "4SMØDEUS",
+          "url": "https://on.soundcloud.com/8TlPdHk7jlMziIKrhMRN"
+        },
+        {
+          "name": "KNVLLV",
+          "url": "https://on.soundcloud.com/Iyo2napXTHpjafuiHr"
+        },
+        {
+          "name": "Death Sheriff",
+          "url": "https://on.soundcloud.com/mC2qxavdeCWJQjcBzC"
+        },
+        {
+          "name": "lizi.tech",
+          "url": "https://on.soundcloud.com/PzOvOBMponWZBD51MJ"
+        },
+        {
+          "name": "La Preti",
+          "url": "https://on.soundcloud.com/eDWSWnRN5VnZtrteww"
+        },
+        {
+          "name": "ZALEZ",
+          "url": "https://on.soundcloud.com/XuDxO9PzaWskmX00rd"
+        }
+      ]
     },
     {
-      "title": "Congresos",
-      "titleEn": "Conferences",
+      "title": "Congresos y encuentros matemáticos",
+      "titleEn": "Conferences and mathematical meetings",
       "emoji": "🎤",
-      "description": "Encuentros matemáticos y experiencias compartidas con colegas.",
-      "descriptionEn": "Mathematical meetings and shared experiences with colleagues.",
+      "description": "La matemática es un viaje, pero también ayuda a viajar.",
+      "descriptionEn": "Mathematics is a journey, but it also takes you places.",
       "photos": [],
-      "folder": "images/congresos/"
+      "folder": "images/congresos/",
+      "id": "congresos",
+      "color": "#4f46e5",
+      "paragraphs": [
+        "Para mí, los congresos y encuentros matemáticos son espacios para compartir ideas, descubrir en qué trabajan otros investigadores y dar a conocer mi propia investigación. Son oportunidades para enseñar y aprender, intercambiar perspectivas y explorar nuevas preguntas matemáticas.",
+        "Sin embargo, su importancia va mucho más allá de lo académico. Son también ocasiones para reencontrarme con colegas y amigos que, por trabajar en polos opuestos del planeta, tengo pocas oportunidades de ver, así como para conocer a otros investigadores y establecer vínculos que pueden dar lugar a futuras colaboraciones.",
+        "Las conversaciones entre ponencias, las cenas, los paseos y las experiencias compartidas forman una parte tan especial de estos encuentros como las propias matemáticas. En este espacio reúno algunos recuerdos de ambas facetas."
+      ],
+      "paragraphsEn": [
+        "For me, conferences and mathematical meetings are places to share ideas, discover what other researchers are working on and present my own research. They offer opportunities to teach and learn, exchange perspectives and explore new mathematical questions.",
+        "Their importance, however, goes well beyond academia. They are also occasions to reconnect with colleagues and friends whom I rarely see because we work on opposite sides of the planet, as well as to meet other researchers and build connections that may lead to future collaborations.",
+        "Conversations between talks, dinners, walks and shared experiences are as special a part of these meetings as the mathematics itself. Here I collect some memories of both sides."
+      ]
     },
     {
       "title": "Viajes",
-      "titleEn": "Travel",
+      "titleEn": "Travels",
       "emoji": "🌍",
-      "description": "Lugares, culturas y experiencias de viaje.",
-      "descriptionEn": "Places, cultures and travel experiences.",
+      "description": "Lugares, personas y recuerdos que forman parte de mi historia.",
+      "descriptionEn": "Places, people and memories that are part of my story.",
       "photos": [],
-      "folder": "images/viajes/"
+      "folder": "images/viajes/",
+      "id": "viajes",
+      "color": "#0891b2",
+      "paragraphs": [
+        "Disfruto viajando, descubriendo nuevos lugares y conociendo su historia, su cultura y su gastronomía. Me gusta explorar las particularidades de cada destino y disfrutar de aquello que lo hace único.",
+        "Realizar mi doctorado en Sevilla me brindó la oportunidad de conocer muchos lugares de Europa, reencontrarme con amigos que habían construido su vida allí y conocer a nuevas personas que, con el tiempo, se volvieron parte importante de la mía.",
+        "Más allá de los lugares que he visitado, viajar me ha permitido descubrir distintas formas de vivir y ampliar mi manera de entender el mundo.",
+        "Además, estar lejos siempre es una forma de valorar más lo que tenemos cerca."
+      ],
+      "paragraphsEn": [
+        "I enjoy travelling, discovering new places and getting to know their history, culture and cuisine. I like exploring what makes each destination distinctive and enjoying what makes it unique.",
+        "Pursuing my PhD in Seville gave me the chance to explore many places in Europe, reconnect with friends who had built their lives there and meet new people who, over time, became an important part of mine.",
+        "Beyond the places I have visited, travelling has allowed me to discover different ways of living and broaden my understanding of the world.",
+        "Being far away is also a way of appreciating what we have close to home."
+      ]
     }
   ],
   "blog": [],
@@ -1392,5 +1490,13 @@
         ]
       }
     ]
-  }
+  },
+  "beyondIntro": [
+    "Aunque la matemática ocupa una parte importante de mi vida, mis intereses van mucho más allá de ella. Disfruto de los eventos con temática medieval, del entrenamiento de fuerza, de la música electrónica y de los viajes.",
+    "A través de estas aficiones he tenido la oportunidad de conocer personas increíbles, descubrir nuevos lugares y formar parte de comunidades muy diferentes, muchas de las cuales guardo con especial cariño. Aquí comparto algunos momentos y recuerdos de esas otras facetas de mi vida."
+  ],
+  "beyondIntroEn": [
+    "Although mathematics is an important part of my life, my interests extend well beyond it. I enjoy medieval-themed events, strength training, electronic music and travelling.",
+    "Through these interests I have had the chance to meet amazing people, discover new places and become part of very different communities, many of which I hold dear. Here I share some moments and memories from these other sides of my life."
+  ]
 }

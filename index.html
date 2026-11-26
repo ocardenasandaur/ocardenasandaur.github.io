@@ -353,6 +353,53 @@
     @media(max-width:480px){.teaching-principles{grid-template-columns:1fr}.teaching-group{padding:.85rem}}
 
     #mentor-content .subsec-title{margin-top:2rem;margin-bottom:1rem} #mentor-content .po-intro{max-width:none;margin-bottom:1rem} .mentor-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem} .mentor-area{font-size:.76rem;font-weight:600;color:#7c3aed;margin-top:.65rem}.mentor-area.graphs,.mentor-area.biology{color:#0d9488}.mentor-area.games{color:#b45309}.mentor-resources{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.6rem}.mentor-resources:empty{display:none}.mentor-resources a{font-size:.76rem;padding:.3rem .55rem;background:#ede9fe;color:#5b21b6;border-radius:6px;text-decoration:none}.mentor-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin:1rem 0}.mentor-stats div{background:white;border:1px solid var(--border);border-radius:12px;text-align:center;padding:.7rem .2rem}.mentor-stats strong{display:block;color:#7c3aed;font-size:1.45rem}.mentor-stats span{font-size:.75rem;color:var(--slate-soft)}.mentor-list{display:grid;gap:.8rem}.mentor-out{display:flex;gap:1rem;background:white;border:1px solid var(--border);border-radius:12px;padding:1rem;min-width:0}.mentor-out>div{flex:1;min-width:0}.mentor-out h3{font-size:.95rem;margin:.25rem 0;color:var(--slate)}.mentor-out p{font-size:.88rem;color:var(--slate-soft);line-height:1.6}.mentor-icon{width:36px;height:36px;flex:none;border-radius:8px;background:#ccfbf1;color:#0d9488;padding:7px}.mentor-icon svg{width:100%;height:100%}.mentor-timeline{display:grid;gap:.9rem;margin-top:1rem}.mentor-timeline strong,.mentor-timeline span{display:block;font-size:.8rem}.mentor-timeline span{color:var(--slate-soft)}.mentor-track{height:9px;background:#f1f5f9;border-radius:6px;position:relative;margin-top:.3rem}.mentor-track i{position:absolute;height:100%;border-radius:6px}.mentor-axis{display:flex;justify-content:space-between}.mentor-axis span{font-size:.68rem}@media(max-width:600px){.mentor-grid{grid-template-columns:1fr}.mentor-out{gap:.65rem;padding:.8rem}.mentor-stats span{font-size:.65rem}}
+    #interest-list {display:block;scroll-margin-top:90px;}
+    .beyond-intro,.album-description {max-width:850px;line-height:1.8;color:#e0e7ff;}
+    .beyond-intro p,.album-description p {margin-bottom:.85rem;}
+    .beyond-heading {font-size:1.12rem;margin:1.7rem 0 .8rem;color:#fff;}
+    .album-grid {display:grid;gap:1rem;align-items:stretch;}
+    .album-grid-three {grid-template-columns:repeat(3,minmax(0,1fr));}
+    .album-grid-two {grid-template-columns:repeat(2,minmax(0,1fr));}
+    .album-card {display:flex;flex-direction:column;text-align:left;overflow:hidden;border:1px solid #ffffff30;background:#ffffff0d;color:white;border-radius:16px;font:inherit;cursor:pointer;transition:transform .2s,border-color .2s;min-width:0;}
+    .album-card:hover {transform:translateY(-3px);border-color:#c4b5fd;}
+    .album-cover {position:relative;aspect-ratio:4/3;width:100%;background:linear-gradient(135deg,var(--album-accent),#1e1b4b);display:grid;place-items:center;overflow:hidden;}
+    .album-grid-two .album-cover {aspect-ratio:16/9;}
+    .album-cover img {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;}
+    .album-icon {font-size:3rem;}
+    .album-card-body {padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.5rem;flex:1;}
+    .album-card-body h3 {font-size:1.05rem;color:white;line-height:1.35;}
+    .album-card-body p {color:#dbeafe;font-size:.88rem;}
+    .album-card-body>span {color:#c4b5fd;font-size:.82rem;font-weight:600;margin-top:auto;}
+    .album-back {background:transparent;border:1px solid #ffffff45;border-radius:8px;color:#e0e7ff;padding:.45rem .85rem;font:inherit;font-size:.85rem;cursor:pointer;margin-bottom:1rem;}
+    .album-detail {border:1px solid #ffffff25;border-radius:16px;background:#ffffff09;padding:clamp(1rem,3vw,2rem);}
+    .album-detail>h3 {font-family:'Playfair Display',serif;font-size:clamp(1.35rem,3vw,2rem);color:white;}
+    .album-tagline {color:#c4b5fd;font-style:italic;margin:.25rem 0 1.2rem;}
+    .album-extra {margin:1.5rem 0;}
+    .album-extra h4 {font-size:1.05rem;margin-bottom:.5rem;}
+    .album-extra p {color:#e0e7ff;font-size:.9rem;margin-bottom:.8rem;}
+    .album-artists {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;}
+    .album-artists a {display:flex;flex-wrap:wrap;justify-content:space-between;gap:.4rem;padding:.75rem 1rem;background:#ffffff10;border:1px solid #ffffff25;border-radius:10px;color:#fff;text-decoration:none;overflow-wrap:anywhere;}
+    .album-artists a small {color:#fdba74;}
+    .album-artists a:hover {border-color:#fb923c;}
+    .album-media-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;}
+    .album-media-tile {position:relative;display:block;aspect-ratio:4/3;overflow:hidden;border:1px solid #ffffff20;border-radius:10px;background:#1e1b4b;color:white;cursor:pointer;padding:0;min-width:0;}
+    .album-media-tile img,.album-media-tile video {display:block;width:100%;height:100%;object-fit:cover;pointer-events:none;}
+    .album-video-badge {position:absolute;inset:0;display:grid;place-content:center;background:#0002;font-weight:600;text-shadow:0 1px 5px black;}
+    .album-caption {position:absolute;bottom:0;left:0;right:0;background:#000b;padding:.4rem;font-size:.75rem;}
+    .album-empty {color:#c7d2fe;font-size:.9rem;padding:1rem;border:1px dashed #ffffff35;border-radius:10px;}
+    #album-lightbox {position:fixed;inset:0;margin:auto;width:min(96vw,1100px);max-height:95dvh;overflow:auto;border:1px solid #ffffff35;border-radius:14px;background:#14112c;color:#fff;padding:1rem;}
+    #album-lightbox::backdrop {background:#080616e6;}
+    .album-lightbox-bar {display:flex;align-items:center;justify-content:space-between;gap:.7rem;margin-bottom:.5rem;}
+    .album-lightbox-bar button {border:1px solid #ffffff45;background:#ffffff12;color:white;border-radius:8px;font-size:1.2rem;min-width:44px;min-height:44px;cursor:pointer;}
+    .album-lightbox-bar button:disabled {opacity:.3;cursor:default;}
+    #album-lightbox-content {display:grid;place-items:center;min-height:100px;}
+    #album-lightbox-content img,#album-lightbox-content video {max-width:100%;max-height:76dvh;object-fit:contain;}
+    #album-lightbox-caption {text-align:center;color:#e0e7ff;font-size:.85rem;margin-top:.5rem;}
+    .album-card:focus-visible,.album-back:focus-visible,.album-media-tile:focus-visible,.album-artists a:focus-visible,#album-lightbox button:focus-visible {outline:3px solid #5eead4;outline-offset:3px;}
+    @media(max-width:700px){.album-grid-three,.album-grid-two{grid-template-columns:repeat(2,minmax(0,1fr));}.album-media-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+    @media(max-width:460px){.album-grid-three,.album-grid-two,.album-artists{grid-template-columns:1fr;}.album-cover,.album-grid-two .album-cover{aspect-ratio:16/9;}.album-card-body{padding:.9rem;}}
+    @media(prefers-reduced-motion:reduce){.album-card{transition:none;}.album-card:hover{transform:none;}}
+
 </style>
 </head>
 <body>
@@ -380,7 +427,7 @@
     <button class="tab-btn" data-tab="charlas" data-es="Charlas" data-en="Talks" onclick="switchTab('charlas')">Charlas</button>
     <button class="tab-btn" data-tab="docencia" data-es="Docencia" data-en="Teaching" onclick="switchTab('docencia')">Docencia</button>
     <button class="tab-btn" data-tab="tutorias-div" data-es="Tutorías y Divulgación" data-en="Mentoring &amp; Outreach" onclick="switchTab('tutorias-div')">Tutorías y Divulgación</button>
-    <button class="tab-btn" data-tab="mas-alla" data-es="Más allá" data-en="Beyond Math" onclick="switchTab('mas-alla')">Más allá</button>
+    <button class="tab-btn" data-tab="mas-alla" data-es="Más allá" data-en="Beyond Knots" onclick="switchTab('mas-alla')">Más allá</button>
     <button class="tab-btn" data-tab="blog" data-es="Blog" data-en="Blog" onclick="switchTab('blog')">Blog</button>
     <button class="tab-btn" data-tab="contacto" data-es="Contacto" data-en="Contact" onclick="switchTab('contacto')">Contacto</button>
   </div>
@@ -457,7 +504,7 @@
 <div id="tab-mas-alla" class="tab-panel sec">
   <div class="sec-inner">
     <div class="sec-header"><div class="sec-icon ic-star">✨</div><div><h2>Más allá de los nudos</h2><p>El matemático fuera del pizarrón</p></div></div>
-    <div class="interest-grid" id="interest-list"></div>
+    <div id="interest-list"></div>
   </div>
 </div>
 <div id="tab-blog" class="tab-panel sec">
@@ -487,6 +534,7 @@
   <div class="footer-text" id="footer-name"></div>
   <div class="footer-motto">Este sitio es invariante bajo isotopía ambiente 🪢</div>
 </footer>
+<dialog id="album-lightbox" aria-label="Media gallery / Galería multimedia"><div class="album-lightbox-bar"><button type="button" id="album-prev" aria-label="Anterior">‹</button><span id="album-lightbox-count" aria-live="polite"></span><button type="button" id="album-next" aria-label="Siguiente">›</button><button type="button" id="album-close" aria-label="Cerrar">×</button></div><div id="album-lightbox-content"></div><p id="album-lightbox-caption"></p></dialog>
 <script>
 let currentLang = 'es';
 try { if(localStorage.getItem('site-language')==='en') currentLang='en'; } catch {}
@@ -572,8 +620,8 @@ function applyLang(d) {
     ['#teaching-past .doc-block-title','Cursos anteriores','Past courses'],
     ['#teaching-mini .doc-block-title','🪢 Minicursos y cursillos','🪢 Short courses'],
     ['#teaching-assistant .doc-block-title','📐 Ayudantías','📐 Teaching assistantships'],
-    ['#tab-mas-alla .sec-header h2','Más allá de los nudos','Beyond knots'],
-    ['#tab-mas-alla .sec-header p','El matemático fuera del pizarrón','The mathematician beyond the blackboard'],
+    ['#tab-mas-alla .sec-header h2','Más allá de los nudos','Beyond Knots'],
+    ['#tab-mas-alla .sec-header p','Intereses, experiencias y recuerdos','Interests, experiences and memories'],
     ['#tab-blog .sec-header p','Notas, reflexiones y cosas que me gustaría compartir','Notes, reflections and things I would like to share'],
     ['#tab-contacto .sec-header h2','Contacto','Contact'],
     ['#tab-contacto .sec-header p','Colaboraciones, consultas académicas o estudiantes de tesis','Collaborations, academic enquiries and thesis students'],
@@ -778,10 +826,7 @@ function renderData(d){
     document.getElementById('mentor-title').textContent=m('Tutorías y Divulgación','Mentoring & Outreach');
     document.getElementById('mentor-sub').textContent=m('Formación de estudiantes y compromiso con la comunidad matemática','Student mentoring and engagement with the mathematical community');
     document.getElementById('mentor-content').innerHTML=`<h3 class="subsec-title">${m('Formación y acompañamiento de estudiantes','Student mentoring')}</h3><p class="po-intro">${m('Considero que acompañar a estudiantes en sus primeras experiencias de investigación es una parte fundamental de la actividad matemática. A través de proyectos de lectura dirigida y modelación matemática, busco fomentar su curiosidad, autonomía y capacidad para explorar problemas que van más allá de los contenidos habituales de sus asignaturas.','I consider mentoring students in their first research experiences a fundamental part of mathematical activity. Through directed reading and mathematical modelling projects, I seek to foster their curiosity, independence and ability to explore problems beyond their usual coursework.')}</p><h3 class="subsec-title">Pares Ordenados</h3><p class="po-intro">${m('Desde 2023 participo como tutor en este programa latinoamericano de lectura dirigida, acompañando a estudiantes universitarios en la exploración de temas matemáticos.','Since 2023 I have mentored university students exploring mathematical topics through this Latin American directed reading programme.')} <a href="https://sites.google.com/view/23paresordenados/inicio" target="_blank" rel="noopener noreferrer">${m('Web del programa','Programme website')} ↗</a></p><div class="mentor-stats">${[[pares.length,m('Proyectos','Projects')],[new Set(pares.map(s=>s.year.split(' · ')[1])).size,m('Países','Countries')],[pares.filter(s=>s.award).length,m('Reconocimientos','Recognitions')]].map(([v,l])=>`<div><strong>${v}</strong><span>${l}</span></div>`).join('')}</div><div class="students-grid mentor-grid">${pares.map(renderStudent).join('')}</div><h3 class="subsec-title">${m('Laboratorio de Modelación I · UTFSM','Mathematical Modelling Lab I · UTFSM')}</h3><div class="students-grid mentor-grid">${lab.map(renderStudent).join('')}</div><h3 class="subsec-title">${m('Divulgación matemática','Mathematical outreach')}</h3><p class="po-intro">${m('Me interesa acercar las matemáticas a públicos diversos y contribuir a la construcción de una comunidad matemática abierta y participativa. A lo largo de mi trayectoria he participado en festivales, talleres, ciclos de charlas y otras iniciativas de divulgación y formación.','I am interested in bringing mathematics to diverse audiences and contributing to an open and participatory mathematical community. Throughout my career I have participated in festivals, workshops, lecture series and other outreach and educational initiatives.')}</p><div class="mentor-list">${outreach.filter(o=>o.category!=='education').map(renderOut).join('')}</div><h3 class="subsec-title">${m('Compromiso educativo','Educational engagement')}</h3><div class="mentor-list">${outreach.filter(o=>o.category==='education').map(renderEducation).join('')}</div>`;
-    document.getElementById('interest-list').innerHTML=(d.interests||[]).map(i=>{
-      const photos=(i.photos||[]).filter(p=>photoUrl(p.src));
-      return `<article class="interest-card"><h3>${esc(i.emoji)} ${esc(i.title)}</h3><p>${esc(i.description)}</p>${photos.length?`<div class="interest-photos">${photos.map(p=>`<figure><a href="${photoUrl(p.src)}" target="_blank" rel="noopener noreferrer"><img src="${photoUrl(p.src)}" alt="${esc(p.alt||i.title)}" loading="lazy"></a>${p.caption?`<figcaption>${esc(p.caption)}</figcaption>`:''}</figure>`).join('')}</div>`:`<div class="photo-placeholder">${currentLang==='en'?'Gallery coming soon':'Galería próximamente'}</div>`}</article>`;
-    }).join('');
+    renderBeyond();
     const posts=(d.blog||[]).filter(p=>p.published===true).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
     document.getElementById('blog-list').innerHTML=posts.length?posts.map(p=>`<article class="blog-card"><div class="talk-meta">${esc(p.date)} · ${esc(p.category)}</div><h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p><details><summary>${currentLang==='en'?'Read post':'Leer entrada'}</summary>${(p.paragraphs||[]).map(x=>`<p>${esc(x)}</p>`).join('')}</details></article>`).join(''):`<p class="empty-note">${currentLang==='en'?'Notes and reflections coming soon.':'Próximamente compartiré aquí notas y reflexiones.'}</p>`;
     const links=[
@@ -796,6 +841,64 @@ function renderData(d){
       </a>`).join('');
     applyLang(d);
 }
+let beyondIndex = {};
+let activeAlbum = null;
+let activeMedia = 0;
+const beyondText=(es,en)=>currentLang==='en'?en:es;
+const beyondAlbums=()=>{const d=cachedData||{};return (currentLang==='en'?localize(d):d).interests||[];};
+const mediaPath=s=>{if(typeof s!=='string'||!s.startsWith('images/')||s.split('/').some(x=>!x||x==='.'||x==='..'||/[\\\u0000-\u001f]/.test(x)))return '';return esc(s.split('/').map(encodeURIComponent).join('/'));};
+function albumMedia(a){
+  const indexed=Array.isArray(beyondIndex[a.id]);
+  const metadata=new Map((a.photos||[]).filter(p=>p&&p.src).map(p=>[p.src,p]));
+  const found=indexed?beyondIndex[a.id]:(a.photos||[]);
+  const byPath=new Map();
+  for(const raw of found){
+    const item=raw&&{...raw,...metadata.get(raw.src)};
+    if(!item||typeof item.src!=='string'||!item.src.startsWith(a.folder)||!mediaPath(item.src))continue;
+    const type=/\.(mp4|webm)$/i.test(item.src)?'video':/\.(jpe?g|png|webp|gif|avif)$/i.test(item.src)?'image':null;
+    if(type)byPath.set(item.src,{...byPath.get(item.src),...item,type});
+  }
+  const items=[...byPath.values()];
+  const cover=items.find(p=>p.type==='image'&&/^portada\.(jpe?g|png|webp|gif|avif)$/i.test(p.src.split('/').pop()))||items.find(p=>p.type==='image');
+  return cover?[cover,...items.filter(p=>p!==cover)]:items;
+}
+function albumCard(a){
+  const cover=albumMedia(a).find(p=>p.type==='image');
+  return `<button type="button" class="album-card" data-album="${esc(a.id)}"><div class="album-cover" style="--album-accent:${esc(a.color)}">${cover?`<img src="${mediaPath(cover.src)}" alt="" loading="lazy" onerror="this.remove()">`:''}<span class="album-icon" aria-hidden="true">${esc(a.emoji)}</span></div><div class="album-card-body"><h3>${esc(a.title)}</h3>${a.description?`<p>${esc(a.description)}</p>`:''}<span>${beyondText('Ver álbum','View album')} →</span></div></button>`;
+}
+function renderBeyond(){
+  const target=document.getElementById('interest-list');if(!target||!cachedData)return;
+  const albums=beyondAlbums(),d=currentLang==='en'?localize(cachedData):cachedData;
+  const a=albums.find(x=>x.id===activeAlbum);
+  if(!a){activeAlbum=null;target.innerHTML=`<div class="beyond-intro">${(d.beyondIntro||[]).map(p=>`<p>${esc(p)}</p>`).join('')}</div><h3 class="beyond-heading">${beyondText('Mis aficiones','My interests')}</h3><div class="album-grid album-grid-three">${albums.slice(0,3).map(albumCard).join('')}</div><h3 class="beyond-heading">${beyondText('Experiencias y recuerdos','Experiences and memories')}</h3><div class="album-grid album-grid-two">${albums.slice(3).map(albumCard).join('')}</div>`;return;}
+  const media=albumMedia(a);
+  const artists=(a.artists||[]).filter(x=>httpUrl(x.url));
+  target.innerHTML=`<button class="album-back" type="button" data-back>← ${beyondText('Volver a los álbumes','Back to albums')}</button><article class="album-detail"><h3>${esc(a.emoji)} ${esc(a.title)}</h3><p class="album-tagline">${esc(a.description)}</p><div class="album-description">${(a.paragraphs||[]).map(p=>`<p>${esc(p)}</p>`).join('')}</div>${artists.length?`<section class="album-extra"><h4>${beyondText('Artistas que recomiendo','Artists I recommend')}</h4><p>${beyondText('Algunos artistas que he tenido la oportunidad de conocer gracias a la música electrónica y cuyo trabajo me gustaría compartir:','Some artists I have had the chance to meet through electronic music and whose work I would like to share:')}</p><div class="album-artists">${artists.map(x=>`<a href="${httpUrl(x.url)}" target="_blank" rel="noopener noreferrer"><span>${esc(x.name)}</span><small>SoundCloud ↗</small></a>`).join('')}</div></section>`:''}${a.id==='congresos'?`<p><button type="button" class="album-back" data-talks>${beyondText('Consultar charlas y presentaciones','Browse talks and presentations')} →</button></p>`:''}<h4 class="beyond-heading">${beyondText('Galería multimedia','Media gallery')}</h4>${media.length?`<div class="album-media-grid">${media.map((p,i)=>`<button type="button" class="album-media-tile" data-media="${i}" aria-label="${esc(p.caption||beyondText('Abrir archivo','Open media')+' '+(i+1))}">${p.type==='video'?`<video src="${mediaPath(p.src)}#t=0.1" ${mediaPath(p.poster)?`poster="${mediaPath(p.poster)}"`:""} preload="none" muted playsinline aria-hidden="true"></video><span class="album-video-badge">▶ ${beyondText('Vídeo','Video')}</span>`:`<img src="${mediaPath(p.src)}" alt="${esc(p.alt||p.caption||a.title)}" loading="lazy">`}${p.caption?`<span class="album-caption">${esc(p.caption)}</span>`:''}</button>`).join('')}</div>`:`<p class="album-empty">${beyondText('Próximamente compartiré fotografías y vídeos de este álbum.','Photos and videos from this album will be shared soon.')}</p>`}</article>`;
+}
+function showAlbum(id){activeAlbum=id;renderBeyond();document.getElementById('interest-list').scrollIntoView({block:'start',behavior:'smooth'});document.querySelector('#interest-list [data-back]')?.focus({preventScroll:true});}
+const albumDialog=document.getElementById('album-lightbox');
+let albumTrigger=null;
+function renderLightbox(){
+ const a=beyondAlbums().find(x=>x.id===activeAlbum);if(!a)return;
+ const items=albumMedia(a);if(!items.length)return;
+ activeMedia=(activeMedia+items.length)%items.length;const p=items[activeMedia];
+ document.getElementById('album-lightbox-content').innerHTML=p.type==='video'?`<video src="${mediaPath(p.src)}" controls playsinline preload="metadata" aria-label="${esc(p.caption||a.title)}"></video>`:`<img src="${mediaPath(p.src)}" alt="${esc(p.alt||p.caption||a.title)}">`;
+ document.getElementById('album-lightbox-caption').textContent=[p.caption,p.location,p.year].filter(Boolean).join(' · ');
+ document.getElementById('album-lightbox-count').textContent=`${activeMedia+1} / ${items.length}`;
+ for(const [id,es,en] of [['album-close','Cerrar','Close'],['album-prev','Anterior','Previous'],['album-next','Siguiente','Next']])document.getElementById(id).setAttribute('aria-label',beyondText(es,en));
+ document.getElementById('album-prev').disabled=items.length<2;document.getElementById('album-next').disabled=items.length<2;
+}
+function openMedia(i,trigger){activeMedia=i;albumTrigger=trigger;renderLightbox();if(!albumDialog.open)albumDialog.showModal();document.getElementById('album-close').focus();}
+function moveMedia(n){activeMedia+=n;renderLightbox();}
+document.getElementById('interest-list').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.album)showAlbum(b.dataset.album);else if(b.hasAttribute('data-back')){const id=activeAlbum;activeAlbum=null;renderBeyond();document.querySelector(`[data-album="${id}"]`)?.focus({preventScroll:true});document.getElementById('interest-list').scrollIntoView({block:'start',behavior:'smooth'});}else if(b.hasAttribute('data-media'))openMedia(Number(b.dataset.media),b);else if(b.hasAttribute('data-talks'))switchTab('charlas');});
+document.getElementById('album-close').addEventListener('click',()=>albumDialog.close());
+document.getElementById('album-prev').addEventListener('click',()=>moveMedia(-1));
+document.getElementById('album-next').addEventListener('click',()=>moveMedia(1));
+albumDialog.addEventListener('close',()=>{document.getElementById('album-lightbox-content').replaceChildren();albumTrigger?.focus({preventScroll:true});});
+albumDialog.addEventListener('click',e=>{if(e.target===albumDialog)albumDialog.close();});
+albumDialog.addEventListener('keydown',e=>{if(e.target.tagName==='VIDEO')return;if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();moveMedia(e.key==='ArrowLeft'?-1:1);}});
+fetch('media-index.json',{cache:'no-cache'}).then(r=>r.ok?r.json():{}).then(d=>{beyondIndex=d&&typeof d==='object'?d:{};renderBeyond();}).catch(()=>{});
+
 </script>
 </body>
 </html>
