@@ -1,0 +1,12 @@
+{
+  "nudos": ["Teoría de nudos", "Knot theory", "#7c3aed"],
+  "divulgacion": ["Divulgación matemática", "Mathematical outreach", "#b45309"],
+  "historia": ["Historia de la matemática", "History of mathematics", "#4f46e5"],
+  "computacion": ["Matemática computacional", "Computational mathematics", "#0f766e"],
+  "problemas": ["Problemas y desafíos", "Problems and challenges", "#be123c"],
+  "reflexiones": ["Reflexiones y opiniones", "Reflections and opinions", "#0369a1"],
+  "libros": ["Libros y recomendaciones", "Books and recommendations", "#7c3aed"],
+  "viajes": ["Viajes", "Travel", "#0f766e"],
+  "fotografia": ["Fotografía", "Photography", "#4f46e5"],
+  "personal": ["Personal y cotidiano", "Personal and everyday life", "#64748b"]
+}
