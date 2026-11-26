@@ -1192,7 +1192,8 @@
       "description": "Combate histórico, armaduras y entrenamiento en equipo.",
       "photos": [],
       "titleEn": "Medieval combat",
-      "descriptionEn": "Historical combat, armour and team training."
+      "descriptionEn": "Historical combat, armour and team training.",
+      "folder": "images/combate-medieval/"
     },
     {
       "title": "Entrenamiento de fuerza",
@@ -1200,7 +1201,8 @@
       "description": "Entrenamiento con pesas y progresión en fuerza.",
       "photos": [],
       "titleEn": "Strength training",
-      "descriptionEn": "Weight training and strength development."
+      "descriptionEn": "Weight training and strength development.",
+      "folder": "images/entrenamiento/"
     },
     {
       "title": "Música electrónica",
@@ -1208,7 +1210,8 @@
       "description": "Hard techno, fiestas y cultura electrónica.",
       "photos": [],
       "titleEn": "Electronic music",
-      "descriptionEn": "Hard techno, parties and electronic music culture."
+      "descriptionEn": "Hard techno, parties and electronic music culture.",
+      "folder": "images/musica/"
     },
     {
       "title": "Congresos",
