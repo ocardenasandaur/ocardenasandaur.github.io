@@ -24,9 +24,17 @@ jobs:
           mkdir -p _site
           git archive HEAD | tar -x -C _site
           rm -rf _site/.github _site/scripts
-          rm -f _site/INSTRUCCIONES.md
+          rm -f _site/INSTRUCCIONES.md _site/INSTRUCCIONES_BLOG.md
       - name: Generate gallery index
         run: python3 scripts/build_media_index.py --root _site
+      - name: Set up Python for the blog
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install blog dependencies
+        run: python -m pip install -r scripts/blog-requirements.txt
+      - name: Generate blog
+        run: python scripts/build_blog.py --root _site
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
