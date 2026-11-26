@@ -272,7 +272,11 @@
       "titleEn": "Jones and Kauffman polynomials for annular tied links",
       "venueEn": "UV Seminar – Puerto de Matemática, University of Valparaíso",
       "dateEn": "8 September 2026 · Valparaíso, Chile",
-      "typeEn": "Talk"
+      "typeEn": "Talk",
+      "startDate": "2026-09-08",
+      "eventStatus": "completed",
+      "kind": "seminar",
+      "resources": []
     },
     {
       "date": "22 enero 2026 · Alicante, España",
@@ -283,7 +287,11 @@
       "titleEn": "Some results on bracket polynomials",
       "venueEn": "Biennial Congress of the Royal Spanish Mathematical Society (RSME)",
       "dateEn": "22 January 2026 · Alicante, Spain",
-      "typeEn": "Talk"
+      "typeEn": "Talk",
+      "startDate": "2026-01-22",
+      "eventStatus": "completed",
+      "kind": "oral",
+      "resources": []
     },
     {
       "date": "7-9 enero 2026 · Buenos Aires, Argentina",
@@ -294,7 +302,11 @@
       "titleEn": "Some results on the bracket polynomial for tied links",
       "venueEn": "7th Meeting on Algebra and Knot Theory – University of San Andrés",
       "dateEn": "7-9 January 2026 · Buenos Aires, Argentina",
-      "typeEn": "Talk"
+      "typeEn": "Talk",
+      "startDate": "2026-01-07",
+      "eventStatus": "completed",
+      "kind": "oral",
+      "resources": []
     },
     {
       "date": "21-23 octubre 2025 · Madrid, España",
@@ -305,7 +317,11 @@
       "titleEn": "New Kauffman-type invariants for annular tied links",
       "venueEn": "13th Meeting of Young Topologists – Technical University of Madrid",
       "dateEn": "21-23 October 2025 · Madrid, Spain",
-      "typeEn": "Poster"
+      "typeEn": "Poster",
+      "startDate": "2025-10-21",
+      "eventStatus": "completed",
+      "kind": "poster",
+      "resources": []
     },
     {
       "date": "25 febrero 2025 · Sevilla, España",
@@ -316,7 +332,11 @@
       "titleEn": "Ties in topology? A story of knots and links",
       "venueEn": "IMUS Seminar",
       "dateEn": "25 February 2025 · Seville, Spain",
-      "typeEn": "Talk"
+      "typeEn": "Talk",
+      "startDate": "2025-02-25",
+      "eventStatus": "completed",
+      "kind": "seminar",
+      "resources": []
     },
     {
       "date": "22-26 octubre 2024 · Salamanca, España",
@@ -327,7 +347,11 @@
       "titleEn": "Bracket polynomials: classical vs. tied",
       "venueEn": "12th Meeting of Young Topologists",
       "dateEn": "22-26 October 2024 · Salamanca, Spain",
-      "typeEn": "Poster"
+      "typeEn": "Poster",
+      "startDate": "2024-10-22",
+      "eventStatus": "completed",
+      "kind": "poster",
+      "resources": []
     },
     {
       "date": "26 julio-11 septiembre 2024 · Valparaíso, Chile",
@@ -338,7 +362,11 @@
       "titleEn": "Vassiliev-type invariants",
       "venueEn": "AtN Seminar – University of Valparaíso",
       "dateEn": "26 July-11 September 2024 · Valparaíso, Chile",
-      "typeEn": "Short course"
+      "typeEn": "Short course",
+      "startDate": "2024-07-26",
+      "eventStatus": "completed",
+      "kind": "course",
+      "resources": []
     },
     {
       "date": "15-19 julio 2024 · Sevilla, España",
@@ -349,7 +377,11 @@
       "titleEn": "Bracket Polynomials: Classical vs Tied",
       "venueEn": "9th European Congress of Mathematics",
       "dateEn": "15-19 July 2024 · Seville, Spain",
-      "typeEn": "Poster"
+      "typeEn": "Poster",
+      "startDate": "2024-07-15",
+      "eventStatus": "completed",
+      "kind": "poster",
+      "resources": []
     },
     {
       "date": "20-21 junio 2024 · Nebraska, EE. UU.",
@@ -360,7 +392,11 @@
       "titleEn": "Bracket Polynomials for classical and tied links",
       "venueEn": "Trisectors Workshop – University of Nebraska",
       "dateEn": "20-21 June 2024 · Nebraska, USA",
-      "typeEn": "Talk"
+      "typeEn": "Talk",
+      "startDate": "2024-06-20",
+      "eventStatus": "completed",
+      "kind": "oral",
+      "resources": []
     },
     {
       "date": "18-21 diciembre 2023 · Santiago, Chile",
@@ -371,7 +407,11 @@
       "titleEn": "Towards a tied version of Khovanov homology",
       "venueEn": "91st Annual Meeting of SOMACHI",
       "dateEn": "18-21 December 2023 · Santiago, Chile",
-      "typeEn": "Talk"
+      "typeEn": "Talk",
+      "startDate": "2023-12-18",
+      "eventStatus": "completed",
+      "kind": "oral",
+      "resources": []
     },
     {
       "date": "6-10 febrero 2023 · León, España",
@@ -382,7 +422,11 @@
       "titleEn": "Khovanov homology and tied links",
       "venueEn": "6th Congress of Young Researchers of the RSME",
       "dateEn": "6-10 February 2023 · León, Spain",
-      "typeEn": "Talk"
+      "typeEn": "Talk",
+      "startDate": "2023-02-06",
+      "eventStatus": "completed",
+      "kind": "oral",
+      "resources": []
     },
     {
       "date": "18-21 octubre 2022 · Zaragoza, España",
@@ -393,7 +437,11 @@
       "titleEn": "Khovanov homology and tied links",
       "venueEn": "10th Meeting of Young Topologists",
       "dateEn": "18-21 October 2022 · Zaragoza, Spain",
-      "typeEn": "Talk"
+      "typeEn": "Talk",
+      "startDate": "2022-10-18",
+      "eventStatus": "completed",
+      "kind": "oral",
+      "resources": []
     },
     {
       "date": "19-23 octubre 2021 · Sevilla, España",
@@ -404,7 +452,11 @@
       "titleEn": "Polynomial invariants for tied links",
       "venueEn": "9th Meeting of Young Topologists",
       "dateEn": "19-23 October 2021 · Seville, Spain",
-      "typeEn": "Talk"
+      "typeEn": "Talk",
+      "startDate": "2021-10-19",
+      "eventStatus": "completed",
+      "kind": "oral",
+      "resources": []
     },
     {
       "date": "24 agosto 2021 · México (virtual)",
@@ -415,7 +467,11 @@
       "titleEn": "Invariants for tied links",
       "venueEn": "Virtual Algebraic Topology Seminar – CIMAT",
       "dateEn": "24 August 2021 · Mexico (online)",
-      "typeEn": "Talk"
+      "typeEn": "Talk",
+      "startDate": "2021-08-24",
+      "eventStatus": "completed",
+      "kind": "seminar",
+      "resources": []
     },
     {
       "date": "29 abril-1 julio 2021 · Virtual",
@@ -426,7 +482,11 @@
       "titleEn": "Game theory",
       "venueEn": "University of Valparaíso",
       "dateEn": "29 April-1 July 2021 · Online",
-      "typeEn": "Mini-course"
+      "typeEn": "Mini-course",
+      "startDate": "2021-04-29",
+      "eventStatus": "completed",
+      "kind": "course",
+      "resources": []
     },
     {
       "date": "4-6 enero 2021 · Valparaíso, Chile",
@@ -437,7 +497,11 @@
       "titleEn": "Knot theory: invariants and generalisations",
       "venueEn": "2nd Meeting on Algebra and Knot Theory",
       "dateEn": "4-6 January 2021 · Valparaíso, Chile",
-      "typeEn": "Short course"
+      "typeEn": "Short course",
+      "startDate": "2021-01-04",
+      "eventStatus": "completed",
+      "kind": "course",
+      "resources": []
     },
     {
       "date": "26 noviembre 2020 · Virtual",
@@ -448,7 +512,11 @@
       "titleEn": "From metro stations to social networks: graph theory in everyday life",
       "venueEn": "Contagiando Matemáticas – University of Valparaíso",
       "dateEn": "26 November 2020 · Online",
-      "typeEn": "Talk"
+      "typeEn": "Talk",
+      "startDate": "2020-11-26",
+      "eventStatus": "completed",
+      "kind": "outreach",
+      "resources": []
     },
     {
       "date": "11 junio-2 julio 2020 · Virtual",
@@ -459,7 +527,11 @@
       "titleEn": "Knot theory",
       "venueEn": "University of Valparaíso",
       "dateEn": "11 June-2 July 2020 · Online",
-      "typeEn": "Mini-course"
+      "typeEn": "Mini-course",
+      "startDate": "2020-06-11",
+      "eventStatus": "completed",
+      "kind": "course",
+      "resources": []
     },
     {
       "date": "14 mayo-4 junio 2020 · Virtual",
@@ -470,7 +542,11 @@
       "titleEn": "Game theory",
       "venueEn": "University of Valparaíso",
       "dateEn": "14 May-4 June 2020 · Online",
-      "typeEn": "Mini-course"
+      "typeEn": "Mini-course",
+      "startDate": "2020-05-14",
+      "eventStatus": "completed",
+      "kind": "course",
+      "resources": []
     },
     {
       "date": "23 abril-7 mayo 2020 · Virtual",
@@ -481,7 +557,11 @@
       "titleEn": "Graph theory",
       "venueEn": "University of Valparaíso",
       "dateEn": "23 April-7 May 2020 · Online",
-      "typeEn": "Mini-course"
+      "typeEn": "Mini-course",
+      "startDate": "2020-04-23",
+      "eventStatus": "completed",
+      "kind": "course",
+      "resources": []
     },
     {
       "date": "5-19 julio 2018 · Valparaíso, Chile",
@@ -492,7 +572,11 @@
       "titleEn": "Knots, links and braids: classifying 3-manifolds",
       "venueEn": "AtN Seminar – University of Valparaíso",
       "dateEn": "5-19 July 2018 · Valparaíso, Chile",
-      "typeEn": "Talk"
+      "typeEn": "Talk",
+      "startDate": "2018-07-05",
+      "eventStatus": "completed",
+      "kind": "seminar",
+      "resources": []
     },
     {
       "date": "2-16 noviembre 2017 · Valparaíso, Chile",
@@ -503,7 +587,11 @@
       "titleEn": "Introduction to knot theory",
       "venueEn": "UTFSM",
       "dateEn": "2-16 November 2017 · Valparaíso, Chile",
-      "typeEn": "Mini-course"
+      "typeEn": "Mini-course",
+      "startDate": "2017-11-02",
+      "eventStatus": "completed",
+      "kind": "course",
+      "resources": []
     }
   ],
   "teaching": {
@@ -918,7 +1006,11 @@
       "venueEn": "94th Annual Meeting of SOMACHI (15–18 December) · Pontifical Catholic University of Chile · Geometry Session",
       "statusEn": "Accepted",
       "dateEn": "18 December 2026 · 11:30 · Santiago, Chile",
-      "typeEn": "Talk"
+      "typeEn": "Talk",
+      "startDate": "2026-12-18",
+      "eventStatus": "confirmed",
+      "kind": "oral",
+      "resources": []
     },
     {
       "date": "19–22 enero 2027 · Talca, Chile",
@@ -933,7 +1025,11 @@
       "venueEn": "8th Meeting on Algebra and Knot Theory · University of Talca",
       "statusEn": "Accepted",
       "dateEn": "19–22 January 2027 · Talca, Chile",
-      "typeEn": "Talk"
+      "typeEn": "Talk",
+      "startDate": "2027-01-19",
+      "eventStatus": "confirmed",
+      "kind": "oral",
+      "resources": []
     }
   ],
   "interests": [
