@@ -1252,36 +1252,137 @@
       ],
       "artists": [
         {
-          "name": "Franzzite",
-          "url": "https://on.soundcloud.com/Fa1N8AKzH1vNxPRwR"
+          "name": "4SMØDEUS",
+          "url": "https://soundcloud.com/4smodeus_dj",
+          "genres": [
+            "Hard techno",
+            "Schranz"
+          ]
         },
         {
           "name": "bytu_c",
-          "url": "https://on.soundcloud.com/RhMbAjSmpDnVVUlFV"
-        },
-        {
-          "name": "4SMØDEUS",
-          "url": "https://on.soundcloud.com/8TlPdHk7jlMziIKrhMRN"
-        },
-        {
-          "name": "KNVLLV",
-          "url": "https://on.soundcloud.com/Iyo2napXTHpjafuiHr"
+          "url": "https://soundcloud.com/victor-morales-736483456",
+          "genres": [
+            "Jacking",
+            "Funky",
+            "Disco house",
+            "Hardbounce",
+            "Drum and bass"
+          ]
         },
         {
           "name": "Death Sheriff",
-          "url": "https://on.soundcloud.com/mC2qxavdeCWJQjcBzC"
+          "url": "https://soundcloud.com/deathsheriffdj",
+          "genres": [
+            "Hard techno",
+            "Schranz",
+            "Industrial techno"
+          ]
         },
         {
-          "name": "lizi.tech",
-          "url": "https://on.soundcloud.com/PzOvOBMponWZBD51MJ"
+          "name": "DjLeonor",
+          "url": "https://soundcloud.com/s-nora2000",
+          "genres": [
+            "Hardgroove"
+          ]
+        },
+        {
+          "name": "Franzzite",
+          "url": "https://soundcloud.com/franzzite",
+          "genres": [
+            "Psytrance"
+          ]
+        },
+        {
+          "name": "Gøta.dj",
+          "url": "https://soundcloud.com/gota_dj",
+          "genres": [
+            "Hard techno",
+            "Hardgroove",
+            "Techno",
+            "Drum and bass"
+          ]
+        },
+        {
+          "name": "Ian Scott",
+          "url": "https://soundcloud.com/ianscott_mp3",
+          "genres": [
+            "Hardgroove",
+            "Hard trance",
+            "Bounce",
+            "Techno",
+            "Minimal",
+            "Guaracha"
+          ]
+        },
+        {
+          "name": "Javi Bet",
+          "url": "https://soundcloud.com/javibet",
+          "genres": [
+            "Hard techno",
+            "Hard trance"
+          ]
+        },
+        {
+          "name": "JHØNMAKER",
+          "url": "https://soundcloud.com/jhonmaker",
+          "genres": [
+            "Hard techno",
+            "Schranz",
+            "Industrial techno"
+          ]
+        },
+        {
+          "name": "KNVLLV",
+          "url": "https://soundcloud.com/user-490385348",
+          "genres": [
+            "Hard techno",
+            "Schranz",
+            "Acid",
+            "Hardgroove"
+          ]
         },
         {
           "name": "La Preti",
-          "url": "https://on.soundcloud.com/eDWSWnRN5VnZtrteww"
+          "url": "https://soundcloud.com/la-preti",
+          "genres": [
+            "Acid techno",
+            "Hardcore"
+          ]
+        },
+        {
+          "name": "lizi.tech",
+          "url": "https://soundcloud.com/liset-peris-ramirez",
+          "genres": [
+            "Hardbounce",
+            "Hardgroove",
+            "Trance"
+          ]
+        },
+        {
+          "name": "Mara Ghodoy",
+          "url": "https://soundcloud.com/mara-ghodoy",
+          "genres": [
+            "Hardgroove",
+            "Hypnotic techno"
+          ]
+        },
+        {
+          "name": "Yeraco",
+          "url": "https://soundcloud.com/yeraco",
+          "genres": [
+            "Techno",
+            "Hardgroove"
+          ]
         },
         {
           "name": "ZALEZ",
-          "url": "https://on.soundcloud.com/XuDxO9PzaWskmX00rd"
+          "url": "https://soundcloud.com/rafael-gonzalez-martin-700083175",
+          "genres": [
+            "Hardgroove",
+            "Hardbounce",
+            "Makina"
+          ]
         }
       ]
     },
