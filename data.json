@@ -69,7 +69,8 @@
       "title": "Tied links and polynomial invariants",
       "institution": "Universidad de Sevilla, España",
       "advisor": "Dir.: Juan González-Meneses y Marithania Silvero",
-      "year": "2026"
+      "year": "2026",
+      "pdf": "Tesis_Doctorado.pdf"
     },
     {
       "type": "Tesis de magíster",
@@ -77,7 +78,8 @@
       "title": "Invariantes polinomiales para Tied-Links",
       "institution": "Universidad de Valparaíso, Chile",
       "advisor": "",
-      "year": "2021"
+      "year": "2021",
+      "pdf": "Tesis_Magíster.pdf"
     },
     {
       "type": "Memoria de ingeniería",
@@ -85,7 +87,8 @@
       "title": "Diseño de una malla curricular balanceada para Ingeniería Civil Matemática en la UTFSM usando algoritmos basados en heurísticas",
       "institution": "Universidad Técnica Federico Santa María, Chile",
       "advisor": "",
-      "year": "2021"
+      "year": "2021",
+      "pdf": "Memoria_Ingenieria.pdf"
     },
     {
       "type": "Trabajo de grado",
@@ -93,7 +96,8 @@
       "title": "Nudos, links y trenzas: Clasificando 3-variedades",
       "institution": "Universidad Técnica Federico Santa María, Chile",
       "advisor": "",
-      "year": "2018"
+      "year": "2018",
+      "pdf": "Trabajo_Licenciatura.pdf"
     }
   ],
   "research": [

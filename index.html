@@ -256,6 +256,21 @@
       .hero-text h1 { font-size: 1.9rem; }
       .hero-photo { width: 130px; height: 130px; }
     }
+    [hidden] { display:none !important; }
+    .hero-text,.pub-content,.fi-body {min-width:0;overflow-wrap:anywhere;}
+    .tab-panel {overflow-wrap:anywhere;}
+    #load-error {color:#9f1239;margin-bottom:1rem;}
+    @media(max-width:720px){
+      #hero {padding:2rem 1rem;}
+      .hero-inner {gap:1.2rem;}
+      .sec {padding:2rem 1rem;}
+      .tab-bar {scrollbar-width:thin;}
+      .tab-bar::-webkit-scrollbar {display:block;height:4px;}
+      .formation-item {gap:.7rem;}
+      .fi-year {width:70px;}
+      .pub-item {padding:1rem;gap:.7rem;}
+      .thesis-grid,.research-grid,.courses-grid,.students-grid,.div-grid,.collab-grid,.interest-grid {grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));}
+    }
   </style>
 </head>
 <body>
@@ -263,10 +278,10 @@
   <div class="hero-inner">
     <canvas id="trefoil-main" width="160" height="160"></canvas>
     <div class="hero-text">
-      <h1 id="hero-name">…</h1>
-      <div id="hero-role"></div>
-      <div id="hero-inst"></div>
-      <p id="hero-summary"></p>
+      <h1 id="hero-name">O’Bryan Cárdenas-Andaur</h1>
+      <div id="hero-role">Doctor en Matemáticas · Teoría de nudos y topología de baja dimensión</div>
+      <div id="hero-inst">Viña del Mar, Chile · Doctorado por la Universidad de Sevilla</div>
+      <p id="hero-summary">Investigación en teoría de nudos, enlaces ligados e invariantes polinomiales.</p>
       <div id="hero-badges"></div>
       <div class="hero-links">
         <a href="#" class="btn btn-white" onclick="switchTab('publicaciones');return false;">📄 Publicaciones</a>
@@ -292,7 +307,8 @@
 <div id="tab-perfil" class="tab-panel active sec" style="background:white;">
   <div class="sec-inner">
     <div class="sec-header"><div class="sec-icon ic-violet">🧑‍🔬</div><div><h2>Sobre mí</h2><p>Matemático, docente y divulgador</p></div></div>
-    <p id="about-text"></p>
+    <p id="about-text">Matemático chileno, doctor en Matemáticas por la Universidad de Sevilla. Investigación en topología de baja dimensión.</p>
+    <p id="load-error" hidden role="alert"></p><noscript>Activa JavaScript para consultar el contenido completo. Contacto: <a href="mailto:obryan.cardenas@uv.cl">obryan.cardenas@uv.cl</a>.</noscript>
     <div style="margin-bottom:2.5rem;">
       <div class="subsec-title">🎓 Formación académica</div>
       <div class="formation-grid" id="formation-list"></div>
@@ -305,7 +321,7 @@
 </div>
 <div id="tab-investigacion" class="tab-panel sec" style="background:#f8fafc;">
   <div class="sec-inner">
-    <div class="sec-header"><div class="sec-icon ic-violet">🪢</div><div><h2>Investigación</h2><p>Proyectos y líneas de trabajo activos</p></div></div>
+    <div class="sec-header"><div class="sec-icon ic-violet">🪢</div><div><h2>Investigación</h2><p>Líneas de investigación y proyectos</p></div></div>
     <div id="research-math-section" class="research-category">
       <div class="research-cat-title">🪢 Investigación en Matemática</div>
       <div class="research-grid" id="research-math-list"></div>
@@ -398,19 +414,20 @@
 </footer>
 <script>
 let currentLang = 'es';
+try { if(localStorage.getItem('site-language')==='en') currentLang='en'; } catch {}
 let cachedData = null;
 
 const i18n = {
   es: {
-    researchTitle: 'Investigación', researchSub: 'Proyectos y líneas de trabajo activos',
+    researchTitle: 'Investigación', researchSub: 'Líneas de investigación y proyectos',
     researchMath: '🪢 Investigación en Matemática', researchAplic: '🌱 Aplicaciones',
     upcomingLabel: 'Próximas charlas', pastLabel: 'Charlas anteriores',
     contactText: 'Estoy abierto a colaboraciones en investigación sobre teoría de nudos, enlaces ligados e invariantes de baja dimensión, así como a dirigir trabajos de pre y postgrado en estas áreas.',
     poIntro: 'Desde 2023 participo como tutor en el Programa Virtual de Lectura Dirigida <strong><a href="https://sites.google.com/view/23paresordenados/inicio" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">"Pares Ordenados"</a></strong>, acompañando proyectos de investigación formativa a estudiantes de universidades latinoamericanas en temas de teoría de nudos, grafos, juegos y algoritmos. Anteriormente, también participé en la supervisión y orientación de proyectos desarrollados en la asignatura <strong>Laboratorio de Modelación I</strong> de la Universidad Técnica Federico Santa María (UTFSM).',
   },
   en: {
-    researchTitle: 'Research', researchSub: 'Active projects and research lines',
-    researchMath: '🪢 Mathematics Research', researchAplic: '🌱 Applications',
+    researchTitle: 'Research', researchSub: 'Research interests and projects',
+    researchMath: '🪢 Mathematical Research', researchAplic: '🌱 Applications',
     upcomingLabel: 'Upcoming talks', pastLabel: 'Past talks',
     contactText: 'I am open to research collaborations in knot theory, tied links and low-dimensional invariants, as well as supervising undergraduate and graduate theses in these areas.',
     poIntro: 'Since 2023 I have been a tutor in the Virtual Directed Reading Program <strong><a href="https://sites.google.com/view/23paresordenados/inicio" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">"Pares Ordenados"</a></strong>, accompanying research projects by students from Latin American universities on knot theory, graphs, games, and algorithms. Previously, I also supervised projects in the <strong>Mathematical Modelling Lab I</strong> course at UTFSM.',
@@ -418,6 +435,7 @@ const i18n = {
 };
 
 function switchTab(id) {
+  if (!document.getElementById('tab-'+id)) return;
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   const panel = document.getElementById('tab-' + id);
@@ -431,11 +449,14 @@ function switchTab(id) {
 function toggleLang() {
   currentLang = currentLang === 'es' ? 'en' : 'es';
   document.getElementById('lang-toggle').textContent = currentLang === 'es' ? 'EN / ES' : 'ES / EN';
-  if (cachedData) applyLang(cachedData);
+  if (cachedData) renderData(cachedData);
+  try { localStorage.setItem('site-language',currentLang); } catch {}
 }
 
-function applyLand(d) {
+function applyLang(d) {
   const lang = currentLang;
+  document.documentElement.lang=lang;
+  document.getElementById('lang-toggle').textContent=lang==='es'?'EN / ES':'ES / EN';
   const bio = lang === 'en' && d.bioEn ? d.bioEn : d.bio;
   document.getElementById('hero-role').textContent = bio.role || d.bio.role;
   document.getElementById('hero-inst').textContent = bio.institution || d.bio.institution;
@@ -445,7 +466,7 @@ function applyLand(d) {
   const t = i18n[lang];
   document.querySelectorAll('.tab-btn').forEach(btn => {
     const key = lang === 'es' ? 'data-es' : 'data-en';
-    if (btn.dataset[lang === 'es' ? 'es' : 'en']) btn.innerHTML = btn.dataset[lang === 'es' ? 'es' : 'en'];
+    if (btn.dataset[lang === 'es' ? 'es' : 'en']) btn.textContent = btn.dataset[lang === 'es' ? 'es' : 'en'];
   });
   document.getElementById('po-intro-text').innerHTML = t.poIntro;
   document.querySelector('#tab-investigacion .sec-header h2').textContent = t.researchTitle;
@@ -455,6 +476,40 @@ function applyLand(d) {
   document.querySelector('#tab-charlas .upcoming-block .subsec-title').textContent = t.upcomingLabel;
   document.querySelector('#tab-charlas > .sec-inner > .subsec-title').textContent = t.pastLabel;
   document.querySelector('.contact-info p').textContent = t.contactText;
+  const staticLabels=[
+    ['#tab-perfil .sec-header h2','Sobre mí','About me'],
+    ['#tab-perfil .sec-header p','Matemático, docente y divulgador','Mathematician, teacher and science communicator'],
+    ['#tab-perfil .subsec-title:nth-of-type(1)','🎓 Formación académica','🎓 Education'],
+    ['#tab-publicaciones .sec-header h2','Publicaciones','Publications'],
+    ['#tab-publicaciones .sec-header p','Artículos publicados, aceptados y en preparación','Published, accepted and in-progress papers'],
+    ['#tab-publicaciones .subsec-title','Colaboradores y coautores','Collaborators and coauthors'],
+    ['#tab-charlas .sec-header h2','Charlas & Conferencias','Talks & Conferences'],
+    ['#tab-charlas .sec-header p','Presentaciones seleccionadas','Selected presentations'],
+    ['#tab-docencia .sec-header h2','Docencia','Teaching'],
+    ['#tab-docencia .sec-header p','Cursos impartidos, minicursos y ayudantías','Courses, short courses and teaching assistantships'],
+    ['#teaching-present .doc-block-title','🏫 Cursos impartidos · Presentes','🏫 Current courses'],
+    ['#teaching-past .doc-block-title','🏫 Cursos impartidos · Anteriores','🏫 Past courses'],
+    ['#teaching-mini .doc-block-title','🪢 Minicursos','🪢 Short courses'],
+    ['#teaching-assistant .doc-block-title','📐 Ayudantías','📐 Teaching assistantships'],
+    ['#tab-mas-alla .sec-header h2','Más allá de los nudos','Beyond knots'],
+    ['#tab-mas-alla .sec-header p','El matemático fuera del pizarrón','The mathematician beyond the blackboard'],
+    ['#tab-blog .sec-header p','Notas, reflexiones y cosas que me gustaría compartir','Notes, reflections and things I would like to share'],
+    ['#tab-contacto .sec-header h2','Contacto','Contact'],
+    ['#tab-contacto .sec-header p','Colaboraciones, consultas académicas o estudiantes de tesis','Collaborations, academic enquiries and thesis students'],
+    ['.cv-box p','CV completo con publicaciones, proyectos, docencia, tutorías y trayectoria académica.','Full CV with publications, projects, teaching, mentoring and academic experience.'],
+    ['.cv-box .btn-teal','Descargar CV (PDF)','Download CV (PDF)'],
+    ['.hero-links a:nth-child(1)','📄 Publicaciones','📄 Publications'],
+    ['.hero-links a:nth-child(2)','✉️ Contacto','✉️ Contact'],
+    ['.footer-motto','Este sitio es invariante bajo isotopía ambiente 🪢','This site is invariant under ambient isotopy 🪢']
+  ];
+  staticLabels.forEach(([selector,es,en])=>{const el=document.querySelector(selector);if(el)el.textContent=lang==='en'?en:es;});
+  const profileLabels=document.querySelectorAll('#tab-perfil .subsec-title');
+  if(profileLabels.length===2){profileLabels[0].textContent=lang==='en'?'🎓 Education':'🎓 Formación académica';profileLabels[1].textContent=lang==='en'?'📜 Theses':'📜 Trabajos de tesis';}
+  const mentorHeaders=document.querySelectorAll('#tab-tutorias-div .sec-header');
+  if(mentorHeaders.length===2){const labels=lang==='en'?[['Mentoring and supervision','Directed reading and formative research projects'],['Outreach & Community','Mathematics for everyone']]:[['Tutorías y Supervisión','Lectura dirigida y proyectos de investigación formativa'],['Divulgación & Comunidad','Matemáticas para todo el mundo']];mentorHeaders.forEach((el,i)=>{el.querySelector('h2').textContent=labels[i][0];el.querySelector('p').textContent=labels[i][1];});}
+  const mentorLabels=document.querySelectorAll('#tab-tutorias-div .subsec-title');
+  if(mentorLabels.length===2)mentorLabels[1].textContent=lang==='en'?'🔬 Mathematical Modelling Lab I · UTFSM':'🔬 Laboratorio de Modelación I · UTFSM';
+  
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -483,6 +538,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const canvas=document.getElementById('trefoil-main');
   if(!canvas)return;
   const ctx=canvas.getContext('2d'),W=160,H=160,cx=W/2,cy=H/2;
+  if(!ctx)return;
   let angle=0;
   function frame(){
     ctx.clearRect(0,0,W,H);
@@ -498,17 +554,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const grad=ctx.createLinearGradient(cx-56,cy-56,cx+56,cy+56);
     grad.addColorStop(0,'#c4b5fd');grad.addColorStop(0.4,'#8b5cf6');grad.addColorStop(1,'#5eead4');
     drawKnot(ctx,pts,grad,'#1f1270',8,16,3);
-    angle+=0.004;requestAnimationFrame(frame);
+    angle+=0.004;if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(frame);
   }
   frame();
 })();
 const esc = s => String(s ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const httpUrl = s => { try { const u = new URL(s); return ['https:','http:'].includes(u.protocol) ? esc(u.href) : ''; } catch { return ''; } };
-const photoUrl = s => httpUrl(s) || (/^images\/[\w./%-]+$/i.test(s || '') && !s.includes('..') ? esc(s) : '');
-fetch('data.json')
+const pdfUrl = s => typeof s==='string' && /^[\p{L}\p{N}_ -]+\.pdf$/u.test(s) ? esc(encodeURIComponent(s)) : '';
+const photoUrl = s => httpUrl(s) || (typeof s==='string' && /^images\/[\p{L}\p{N} _./-]+$/u.test(s) && !s.split('/').some(x=>x==='..'||x==='.'||!x) ? esc(s.split('/').map(encodeURIComponent).join('/')) : '');
+fetch('data.json', {cache:'no-cache'})
   .then(r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json();})
-  .then(d=>{
-    cachedData = d;
+  .then(d=>{ cachedData=d; renderData(d); })
+  .catch(err=>{console.error('Error cargando data.json:',err); const notice=document.getElementById('load-error'); notice.hidden=false; notice.textContent='No se pudo cargar el contenido completo. Recarga la página.';});
+function renderData(d){
     document.getElementById('hero-name').textContent=d.bio.name;
     document.getElementById('hero-role').textContent=d.bio.role;
     document.getElementById('hero-inst').textContent=d.bio.institution;
@@ -533,7 +591,8 @@ fetch('data.json')
         <h3>${t.title}</h3>
         <div class="tc-univ">${t.institution}</div>
         <div class="tc-adv">${t.advisor}</div>
-        <div class="tc-year">${t.year}</div>
+        <div class="tc-year">${esc(t.year)}</div>
+        ${pdfUrl(t.pdf)?`<div class="pub-actions"><a class="pub-link doi" href="${pdfUrl(t.pdf)}" target="_blank" rel="noopener noreferrer">${currentLang==='en'?'Read thesis (PDF)':'Consultar tesis (PDF)'}</a></div>`:''}
       </div>`).join('');
     const renderResearchCard = r => `<div class="research-card"><h3>${r.title}</h3><p>${r.description}</p><span class="rc-tag ${r.tagClass}">${r.tag}</span></div>`;
     document.getElementById('research-math-list').innerHTML = d.research.filter(r=>r.category==='math').map(renderResearchCard).join('');
@@ -548,7 +607,7 @@ fetch('data.json')
           <h3>${p.title}</h3>
           <div class="authors">${renderAuthors(p.authors)}</div>
           <div class="journal">${p.journal}</div>
-          ${p.links.length?`<div class="pub-actions">${p.links.filter(l=>l.url).map(l=>`<a href="${l.url}" target="_blank" class="pub-link ${l.class}">${l.label}</a>`).join('')}</div>`:''}
+          ${p.links.length?`<div class="pub-actions">${p.links.filter(l=>httpUrl(l.url)).map(l=>`<a href="${httpUrl(l.url)}" target="_blank" rel="noopener noreferrer" class="pub-link ${esc(l.class)}">${esc(l.label)}</a>`).join('')}</div>`:''}
         </div>
       </div>`).join('');
     const today = new Date();
@@ -556,14 +615,14 @@ fetch('data.json')
     const future=d.upcomingTalks || [];
     const pending=future.filter(t=>!t.endDate || t.endDate>=localDate).sort((a,b)=>(a.endDate||'').localeCompare(b.endDate||''));
     const pastEvents=future.filter(t=>t.endDate && t.endDate<localDate).sort((a,b)=>b.endDate.localeCompare(a.endDate));
-    const renderTalk=(t,upcoming=false)=>`<div class="talk-item${upcoming?' upcoming':''}"><div class="talk-meta">${esc(t.date)}</div><h3>${esc(t.title)} <span class="talk-type ${esc(t.typeClass)}">${esc(t.type)}</span></h3><p>${esc(t.venue)}</p>${upcoming&&t.status?`<div class="event-status">✓ ${esc(t.status)}</div>`:''}${httpUrl(t.url)?`<p><a class="event-link" href="${httpUrl(t.url)}" target="_blank" rel="noopener noreferrer">Web del evento ↗</a></p>`:''}</div>`;
+    const renderTalk=(t,upcoming=false)=>`<div class="talk-item${upcoming?' upcoming':''}"><div class="talk-meta">${esc(t.date)}</div><h3>${esc(t.title)} <span class="talk-type ${esc(t.typeClass)}">${esc(t.type)}</span></h3><p>${esc(t.venue)}</p>${upcoming&&t.status?`<div class="event-status">✓ ${esc(t.status)}</div>`:''}${httpUrl(t.url)?`<p><a class="event-link" href="${httpUrl(t.url)}" target="_blank" rel="noopener noreferrer">${currentLang==='en'?'Event website':'Web del evento'} ↗</a></p>`:''}</div>`;
     document.getElementById('upcoming-block').hidden=!pending.length;
     document.getElementById('upcoming-list').innerHTML=pending.map(t=>renderTalk(t,true)).join('');
     document.getElementById('talks-list').innerHTML=[...pastEvents,...d.talks].map(t=>renderTalk(t)).join('');
     const renderCourses=(arr,cls)=>arr.map(c=>{
       const url=cls==='profesor'?httpUrl(c.materialsUrl):'';
       const body=`<h3>${esc(c.title)}</h3><p>${esc(c.description)}</p><div class="course-univ">${esc(c.institution)}</div>`;
-      return url?`<a class="course-card ${cls}" href="${url}" target="_blank" rel="noopener noreferrer">${body}<span class="materials-label">Material del curso ↗</span></a>`:`<div class="course-card ${cls}">${body}${cls==='profesor'?'<span class="materials-label materials-pending">Material por incorporar</span>':''}</div>`;
+      return url?`<a class="course-card ${cls}" href="${url}" target="_blank" rel="noopener noreferrer">${body}<span class="materials-label">${currentLang==='en'?'Course materials':'Material del curso'} ↗</span></a>`:`<div class="course-card ${cls}">${body}</div>`;
     }).join('');
     const present=d.teaching.professor.filter(c=>c.current);
     const past=d.teaching.professor.filter(c=>!c.current);
@@ -580,7 +639,7 @@ fetch('data.json')
         <div class="student-topic">${s.topic}</div>
         ${s.award?`<div class="student-award">${s.award}</div>`:''}
       </div>`;
-    document.getElementById('students-pares').innerHTML=d.students.filter(s=>s.program==='pares-ordenador').map(renderStudent).join('');
+    document.getElementById('students-pares').innerHTML=d.students.filter(s=>s.program==='pares-ordenados').map(renderStudent).join('');
     document.getElementById('students-lab').innerHTML=d.students.filter(s=>s.program==='lab-modelacion').map(renderStudent).join('');
     document.getElementById('outreach-list').innerHTML=d.outreach.map(o=>`
       <div class="div-card">
@@ -591,10 +650,10 @@ fetch('data.json')
       </div>`).join('');
     document.getElementById('interest-list').innerHTML=(d.interests||[]).map(i=>{
       const photos=(i.photos||[]).filter(p=>photoUrl(p.src));
-      return `<article class="interest-card"><h3>${esc(i.emoji)} ${esc(i.title)}</h3><p>${esc(i.description)}</p>${photos.length?`<div class="interest-photos">${photos.map(p=>`<figure><a href="${photoUrl(p.src)}" target="_blank" rel="noopener noreferrer"><img src="${photoUrl(p.src)}" alt="${esc(p.alt||i.title)}" loading="lazy"></a>${p.caption?`<figcaption>${esc(p.caption)}</figcaption>`:''}</figure>`).join('')}</div>`:'<div class="photo-placeholder">Galería próximamente</div>'}</article>`;
+      return `<article class="interest-card"><h3>${esc(i.emoji)} ${esc(i.title)}</h3><p>${esc(i.description)}</p>${photos.length?`<div class="interest-photos">${photos.map(p=>`<figure><a href="${photoUrl(p.src)}" target="_blank" rel="noopener noreferrer"><img src="${photoUrl(p.src)}" alt="${esc(p.alt||i.title)}" loading="lazy"></a>${p.caption?`<figcaption>${esc(p.caption)}</figcaption>`:''}</figure>`).join('')}</div>`:`<div class="photo-placeholder">${currentLang==='en'?'Gallery coming soon':'Galería próximamente'}</div>`}</article>`;
     }).join('');
     const posts=(d.blog||[]).filter(p=>p.published===true).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
-    document.getElementById('blog-list').innerHTML=posts.length?posts.map(p=>`<article class="blog-card"><div class="talk-meta">${esc(p.date)} · ${esc(p.category)}</div><h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p><details><summary>Leer entrada</summary>${(p.paragraphs||[]).map(x=>`<p>${esc(x)}</p>`).join('')}</details></article>`).join(''):'<p class="empty-note">Próximamente compartiré aquí notas y reflexiones.</p>';
+    document.getElementById('blog-list').innerHTML=posts.length?posts.map(p=>`<article class="blog-card"><div class="talk-meta">${esc(p.date)} · ${esc(p.category)}</div><h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p><details><summary>${currentLang==='en'?'Read post':'Leer entrada'}</summary>${(p.paragraphs||[]).map(x=>`<p>${esc(x)}</p>`).join('')}</details></article>`).join(''):`<p class="empty-note">${currentLang==='en'?'Notes and reflections coming soon.':'Próximamente compartiré aquí notas y reflexiones.'}</p>`;
     const links=[
       {icon:'📧',label:d.bio.email,url:`mailto:${d.bio.email}`},
       {icon:'📐',label:'arXiv (math.GT)',url:d.bio.arxiv},
@@ -605,8 +664,8 @@ fetch('data.json')
       <a href="${l.url}" ${l.url.startsWith('mailto')?'':'target="_blank" rel="noopener noreferrer"'} class="contact-link">
         <div class="cicon">${l.icon}</div>${l.label}
       </a>`).join('');
-  })
-  .catch(err=>{console.error('Error cargando data.json:',err);document.getElementById('hero-name').textContent="O'Bryan Cárdenas-Andaur";document.getElementById('hero-summary').textContent='No se pudo cargar el contenido. Intenta recargar la página.';});
+    applyLang(d);
+}
 </script>
 </body>
 </html>
