@@ -19,10 +19,10 @@
     "website_uv": "https://www.uv.cl"
   },
   "bioEn": {
-    "role": "Mathematician · Knot Theory and Low-dimensional Topology",
+    "role": "PhD in Mathematics · Knot theory and low-dimensional topology",
     "institution": "Viña del Mar, Chile · PhD, University of Seville",
     "summary": "I research <strong style='color:var(--teal-light)'>knot theory</strong> and its generalizations, with special interest in <em>tied links</em>, polynomial invariants, and skein modules.",
-    "about": "I am a Chilean mathematician, Doctor in Mathematics from the University of Seville (2026), Master in Mathematics from the University of Valparaíso, and Civil Mathematical Engineer and Bachelor in Mathematics from the Federico Santa María Technical University.<br><br>My research focuses on low-dimensional topology, with an emphasis on tied links, Jones and Kauffman type invariants, diagrammatic algebras, and links in the solid torus. I am also interested in extending these techniques to singular links and their computational implementation.<br><br>I have taught at UV, UTFSM, and PUCV. I participate in the Latin American directed reading program <em>Pares Ordenados</em>, supporting students in their first research projects. I believe in teaching that combines motivation, historical context, concrete examples, and problem-solving.<br><br>I currently live in Chile with a workspace at the University of Valparaíso.",
+    "about": "I am a Chilean mathematician, with a PhD in Mathematics from the University of Seville (2026), a master’s degree in Mathematics from the University of Valparaíso, and degrees in Mathematical Engineering and Mathematics from the Federico Santa María Technical University.<br><br>My research focuses on low-dimensional topology, with an emphasis on tied links, Jones and Kauffman type invariants, diagrammatic algebras, and links in the solid torus. I am also interested in extending these techniques to singular links and their computational implementation.<br><br>I have taught at UV, UTFSM, and PUCV. I participate in the Latin American directed reading program <em>Pares Ordenados</em>, supporting students in their first research projects. I believe in teaching that combines motivation, historical context, concrete examples, and problem-solving.<br><br>I currently live in Chile with a workspace at the University of Valparaíso.",
     "badges": [
       "Knot theory",
       "Tied links",
@@ -38,28 +38,44 @@
       "degree": "Doctorado en Matemáticas",
       "institution": "Universidad de Sevilla, España",
       "description": "Tesis: <em>Tied links and polynomial invariants</em>. Directores: Juan González-Meneses y Marithania Silvero.",
-      "tag": "PhD"
+      "tag": "PhD",
+      "institutionEn": "University of Seville, Spain",
+      "degreeEn": "PhD in Mathematics",
+      "descriptionEn": "Thesis: <em>Tied links and polynomial invariants</em>. Supervisors: Juan González-Meneses and Marithania Silvero.",
+      "tagEn": "PhD"
     },
     {
       "years": "2019-2021",
       "degree": "Magíster en Matemáticas",
       "institution": "Universidad de Valparaíso, Chile",
       "description": "Tesis: <em>Invariantes polinomiales para Tied-Links</em>.",
-      "tag": "Magíster"
+      "tag": "Magíster",
+      "institutionEn": "University of Valparaíso, Chile",
+      "degreeEn": "Master’s degree in Mathematics",
+      "descriptionEn": "Thesis: <em>Invariantes polinomiales para Tied-Links</em>.",
+      "tagEn": "Master’s"
     },
     {
       "years": "2012-2021",
       "degree": "Ingeniería Civil Matemática",
       "institution": "Universidad Técnica Federico Santa María, Chile",
       "description": "Mención en Inteligencia Artificial y Redes Neuronales Artificiales. Memoria sobre diseño de mallas curriculares mediante algoritmos heurísticos.",
-      "tag": "Ingeniería Civil"
+      "tag": "Ingeniería Civil",
+      "institutionEn": "Federico Santa María Technical University, Chile",
+      "degreeEn": "Degree in Mathematical Engineering",
+      "descriptionEn": "Specialisation in artificial intelligence and artificial neural networks. Graduation project on curriculum design using heuristic algorithms.",
+      "tagEn": "Engineering"
     },
     {
       "years": "2016-2018",
       "degree": "Licenciatura en Matemática",
       "institution": "Universidad Técnica Federico Santa María, Chile",
       "description": "Trabajo de grado: <em>Nudos, links y trenzas: Clasificando 3-variedades</em>.",
-      "tag": "Licenciatura"
+      "tag": "Licenciatura",
+      "institutionEn": "Federico Santa María Technical University, Chile",
+      "degreeEn": "Bachelor’s degree in Mathematics",
+      "descriptionEn": "Graduation project: <em>Nudos, links y trenzas: Clasificando 3-variedades</em>.",
+      "tagEn": "Bachelor’s"
     }
   ],
   "thesis": [
@@ -70,7 +86,10 @@
       "institution": "Universidad de Sevilla, España",
       "advisor": "Dir.: Juan González-Meneses y Marithania Silvero",
       "year": "2026",
-      "pdf": "Tesis_Doctorado.pdf"
+      "pdf": "Tesis_Doctorado.pdf",
+      "institutionEn": "University of Seville, Spain",
+      "typeEn": "Doctoral thesis",
+      "advisorEn": "Supervisors: Juan González-Meneses and Marithania Silvero"
     },
     {
       "type": "Tesis de magíster",
@@ -79,7 +98,10 @@
       "institution": "Universidad de Valparaíso, Chile",
       "advisor": "",
       "year": "2021",
-      "pdf": "Tesis_Magíster.pdf"
+      "pdf": "Tesis_Magíster.pdf",
+      "institutionEn": "University of Valparaíso, Chile",
+      "typeEn": "Master’s thesis",
+      "advisorEn": ""
     },
     {
       "type": "Memoria de ingeniería",
@@ -88,7 +110,10 @@
       "institution": "Universidad Técnica Federico Santa María, Chile",
       "advisor": "",
       "year": "2021",
-      "pdf": "Memoria_Ingenieria.pdf"
+      "pdf": "Memoria_Ingenieria.pdf",
+      "institutionEn": "Federico Santa María Technical University, Chile",
+      "typeEn": "Engineering graduation project",
+      "advisorEn": ""
     },
     {
       "type": "Trabajo de grado",
@@ -97,7 +122,10 @@
       "institution": "Universidad Técnica Federico Santa María, Chile",
       "advisor": "",
       "year": "2018",
-      "pdf": "Trabajo_Licenciatura.pdf"
+      "pdf": "Trabajo_Licenciatura.pdf",
+      "institutionEn": "Federico Santa María Technical University, Chile",
+      "typeEn": "Undergraduate graduation project",
+      "advisorEn": ""
     }
   ],
   "research": [
@@ -106,49 +134,70 @@
       "title": "Corchete de Aicardi-Juyumaya para tied links",
       "description": "Estudio del corchete para enlaces ligados y deducción de fórmulas explícitas. Proyecto Topología, grupos y representaciones.",
       "tag": "I+D+i · Universidad de Sevilla · Desde 2025",
-      "tagClass": "tag-violet"
+      "tagClass": "tag-violet",
+      "titleEn": "Aicardi–Juyumaya bracket for tied links",
+      "descriptionEn": "Study of the bracket for tied links and derivation of explicit formulae. Project: Topology, groups and representations.",
+      "tagEn": "R&D · University of Seville · Since 2025"
     },
     {
       "category": "math",
       "title": "Invariantes de tipo Kauffman en el toro sólido",
       "description": "Construcción de invariantes para enlaces clásicos y ligados en el toro sólido y estudio de módulos skein, en colaboración con Álvaro del Valle Vílchez.",
       "tag": "Manuscrito en preparación",
-      "tagClass": "tag-rose"
+      "tagClass": "tag-rose",
+      "titleEn": "Kauffman-type invariants in the solid torus",
+      "descriptionEn": "Construction of invariants for classical and tied links in the solid torus and study of skein modules, in collaboration with Álvaro del Valle Vílchez.",
+      "tagEn": "Manuscript in preparation"
     },
     {
       "category": "math",
       "title": "Invariantes polinomiales y álgebras de diagramas",
       "description": "Receta de Jones, método de Kauffman y herramientas algebraicas y computacionales para nudos y trenzas. Proyecto Métodos homotópicos y de teoría de grupos en topología.",
       "tag": "I+D+i · Universidad de Sevilla · 2022-2024",
-      "tagClass": "tag-teal"
+      "tagClass": "tag-teal",
+      "titleEn": "Polynomial invariants and diagram algebras",
+      "descriptionEn": "Jones recipe, Kauffman method, and algebraic and computational tools for knots and braids. Project: Homotopy and group-theoretic methods in topology.",
+      "tagEn": "R&D · University of Seville · 2022–2024"
     },
     {
       "category": "math",
       "title": "Enlaces singulares e invariantes computacionales",
       "description": "Comparación de invariantes polinomiales para enlaces singulares y desarrollo de algoritmos para su cálculo a partir de trenzas singulares.",
       "tag": "Línea de investigación en desarrollo",
-      "tagClass": "tag-amber"
+      "tagClass": "tag-amber",
+      "titleEn": "Singular links and computational invariants",
+      "descriptionEn": "Comparison of polynomial invariants for singular links and development of algorithms to compute them from singular braids.",
+      "tagEn": "Ongoing research"
     },
     {
       "category": "math",
       "title": "Homología de Khovanov y enlaces ligados",
       "description": "Estudio de posibles extensiones de la homología de Khovanov al contexto de los enlaces ligados.",
       "tag": "Línea explorada",
-      "tagClass": "tag-amber"
+      "tagClass": "tag-amber",
+      "titleEn": "Khovanov homology and tied links",
+      "descriptionEn": "Study of possible extensions of Khovanov homology to tied links.",
+      "tagEn": "Explored research topic"
     },
     {
       "category": "aplicaciones",
       "title": "Análisis metagenómico de coexistencia fago-bacteria",
       "description": "Métricas de coexistencia, variantes del índice de Jaccard, automatización y validación estadística.",
       "tag": "UTFSM-UPLA · 2017-2019",
-      "tagClass": "tag-teal"
+      "tagClass": "tag-teal",
+      "titleEn": "Metagenomic analysis of phage–bacteria coexistence",
+      "descriptionEn": "Coexistence metrics, variants of the Jaccard index, automation and statistical validation.",
+      "tagEn": "UTFSM-UPLA · 2017–2019"
     },
     {
       "category": "aplicaciones",
       "title": "Propiedades fractales de árboles eléctricos",
       "description": "Dimensión fractal y de correlación, análisis de descargas parciales e implementación de algoritmos.",
       "tag": "UTFSM · 2016-2017",
-      "tagClass": "tag-violet"
+      "tagClass": "tag-violet",
+      "titleEn": "Fractal properties of electrical trees",
+      "descriptionEn": "Fractal and correlation dimensions, partial discharge analysis and algorithm implementation.",
+      "tagEn": "UTFSM · 2016–2017"
     }
   ],
   "publications": [
@@ -164,7 +213,9 @@
           "url": "https://doi.org/10.1142/S0218216525500877",
           "class": "doi"
         }
-      ]
+      ],
+      "yearEn": "2026",
+      "journalEn": "Journal of Knot Theory and Its Ramifications, 35 (2026), 2550087"
     },
     {
       "year": "aceptado",
@@ -178,7 +229,9 @@
           "url": "https://arxiv.org/abs/2510.02075",
           "class": "arxiv"
         }
-      ]
+      ],
+      "yearEn": "accepted",
+      "journalEn": "Journal of Algebraic Combinatorics · Accepted for publication"
     },
     {
       "year": "prep.",
@@ -186,7 +239,9 @@
       "title": "New Kauffman type invariants for (tied) links in the solid torus",
       "authors": "<strong>O. Cárdenas-Andaur</strong> &amp; Á. del Valle Vílchez",
       "journal": "Manuscrito en preparación",
-      "links": []
+      "links": [],
+      "yearEn": "in prep.",
+      "journalEn": "Manuscript in preparation"
     },
     {
       "year": "2017",
@@ -194,7 +249,9 @@
       "title": "Electrical tree growth and partial discharges analyzed by fractal and correlation dimensions",
       "authors": "R. Schurch, P. Donoso, P. Aguirre, <strong>O. Cárdenas</strong>, M. Zuñiga &amp; S. Rowland",
       "journal": "IEEE Conference on Electrical Insulation and Dielectric Phenomena (CEIDP), 2017",
-      "links": []
+      "links": [],
+      "yearEn": "2017",
+      "journalEn": "IEEE Conference on Electrical Insulation and Dielectric Phenomena (CEIDP), 2017"
     }
   ],
   "talks": [
@@ -203,154 +260,242 @@
       "title": "Polinomios de Jones y Kauffman para enlaces ligado-anulares",
       "venue": "Seminario UV - Puerto de Matemática, Universidad de Valparaíso",
       "type": "oral",
-      "typeClass": "tt-oral"
+      "typeClass": "tt-oral",
+      "titleEn": "Jones and Kauffman polynomials for annular tied links",
+      "venueEn": "UV Seminar – Puerto de Matemática, University of Valparaíso",
+      "dateEn": "8 September 2026 · Valparaíso, Chile",
+      "typeEn": "Talk"
     },
     {
       "date": "22 enero 2026 · Alicante, España",
       "title": "Algunos resultados sobre polinomios corchete",
       "venue": "Congreso Bienal de la Real Sociedad Matemática Española (RSME)",
       "type": "oral",
-      "typeClass": "tt-oral"
+      "typeClass": "tt-oral",
+      "titleEn": "Some results on bracket polynomials",
+      "venueEn": "Biennial Congress of the Royal Spanish Mathematical Society (RSME)",
+      "dateEn": "22 January 2026 · Alicante, Spain",
+      "typeEn": "Talk"
     },
     {
       "date": "7-9 enero 2026 · Buenos Aires, Argentina",
       "title": "Algunos resultados sobre polinomio corchete para enlaces ligados",
       "venue": "VII Encuentro de Álgebra y Teoría de Nudos - Universidad de San Andrés",
       "type": "oral",
-      "typeClass": "tt-oral"
+      "typeClass": "tt-oral",
+      "titleEn": "Some results on the bracket polynomial for tied links",
+      "venueEn": "7th Meeting on Algebra and Knot Theory – University of San Andrés",
+      "dateEn": "7-9 January 2026 · Buenos Aires, Argentina",
+      "typeEn": "Talk"
     },
     {
       "date": "21-23 octubre 2025 · Madrid, España",
       "title": "Nuevos invariantes de tipo Kauffman para enlaces ligados anulares",
       "venue": "XIII Encuentro de Jóvenes Topólogos - Universidad Politécnica de Madrid",
       "type": "póster",
-      "typeClass": "tt-poster"
+      "typeClass": "tt-poster",
+      "titleEn": "New Kauffman-type invariants for annular tied links",
+      "venueEn": "13th Meeting of Young Topologists – Technical University of Madrid",
+      "dateEn": "21-23 October 2025 · Madrid, Spain",
+      "typeEn": "Poster"
     },
     {
       "date": "25 febrero 2025 · Sevilla, España",
       "title": "¿Ligar en topología? Una historia de nudos y enlaces",
       "venue": "Seminario del IMUS",
       "type": "oral",
-      "typeClass": "tt-oral"
+      "typeClass": "tt-oral",
+      "titleEn": "Ties in topology? A story of knots and links",
+      "venueEn": "IMUS Seminar",
+      "dateEn": "25 February 2025 · Seville, Spain",
+      "typeEn": "Talk"
     },
     {
       "date": "22-26 octubre 2024 · Salamanca, España",
       "title": "Polinomios corchete: Caso Clásico vs Ligado",
       "venue": "XII Encuentro de Jóvenes Topólogos",
       "type": "póster",
-      "typeClass": "tt-poster"
+      "typeClass": "tt-poster",
+      "titleEn": "Bracket polynomials: classical vs. tied",
+      "venueEn": "12th Meeting of Young Topologists",
+      "dateEn": "22-26 October 2024 · Salamanca, Spain",
+      "typeEn": "Poster"
     },
     {
       "date": "26 julio-11 septiembre 2024 · Valparaíso, Chile",
       "title": "Invariantes de Tipo Vassiliev",
       "venue": "Seminario AtN - Universidad de Valparaíso",
       "type": "cursillo",
-      "typeClass": "tt-mini"
+      "typeClass": "tt-mini",
+      "titleEn": "Vassiliev-type invariants",
+      "venueEn": "AtN Seminar – University of Valparaíso",
+      "dateEn": "26 July-11 September 2024 · Valparaíso, Chile",
+      "typeEn": "Short course"
     },
     {
       "date": "15-19 julio 2024 · Sevilla, España",
       "title": "Bracket Polynomials: Classical vs Tied",
       "venue": "9.º Congreso Europeo de Matemática",
       "type": "póster",
-      "typeClass": "tt-poster"
+      "typeClass": "tt-poster",
+      "titleEn": "Bracket Polynomials: Classical vs Tied",
+      "venueEn": "9th European Congress of Mathematics",
+      "dateEn": "15-19 July 2024 · Seville, Spain",
+      "typeEn": "Poster"
     },
     {
       "date": "20-21 junio 2024 · Nebraska, EE. UU.",
       "title": "Bracket Polynomials for classical and tied links",
       "venue": "Trisectors Workshop - Universidad de Nebraska",
       "type": "oral",
-      "typeClass": "tt-oral"
+      "typeClass": "tt-oral",
+      "titleEn": "Bracket Polynomials for classical and tied links",
+      "venueEn": "Trisectors Workshop – University of Nebraska",
+      "dateEn": "20-21 June 2024 · Nebraska, USA",
+      "typeEn": "Talk"
     },
     {
       "date": "18-21 diciembre 2023 · Santiago, Chile",
       "title": "En camino a una versión «ligada» de la Homología de Khovanov",
       "venue": "XCI Encuentro Anual de la SOMACHI",
       "type": "oral",
-      "typeClass": "tt-oral"
+      "typeClass": "tt-oral",
+      "titleEn": "Towards a tied version of Khovanov homology",
+      "venueEn": "91st Annual Meeting of SOMACHI",
+      "dateEn": "18-21 December 2023 · Santiago, Chile",
+      "typeEn": "Talk"
     },
     {
       "date": "6-10 febrero 2023 · León, España",
       "title": "Homología de Khovanov y Enlaces Ligados",
       "venue": "VI Congreso de Jóvenes Investigadores de la RSME",
       "type": "oral",
-      "typeClass": "tt-oral"
+      "typeClass": "tt-oral",
+      "titleEn": "Khovanov homology and tied links",
+      "venueEn": "6th Congress of Young Researchers of the RSME",
+      "dateEn": "6-10 February 2023 · León, Spain",
+      "typeEn": "Talk"
     },
     {
       "date": "18-21 octubre 2022 · Zaragoza, España",
       "title": "Homología de Khovanov y tied links",
       "venue": "X Encuentro de Jóvenes Topólogos",
       "type": "oral",
-      "typeClass": "tt-oral"
+      "typeClass": "tt-oral",
+      "titleEn": "Khovanov homology and tied links",
+      "venueEn": "10th Meeting of Young Topologists",
+      "dateEn": "18-21 October 2022 · Zaragoza, Spain",
+      "typeEn": "Talk"
     },
     {
       "date": "19-23 octubre 2021 · Sevilla, España",
       "title": "Invariantes polinomiales para tied links",
       "venue": "IX Encuentro de Jóvenes Topólogos",
       "type": "oral",
-      "typeClass": "tt-oral"
+      "typeClass": "tt-oral",
+      "titleEn": "Polynomial invariants for tied links",
+      "venueEn": "9th Meeting of Young Topologists",
+      "dateEn": "19-23 October 2021 · Seville, Spain",
+      "typeEn": "Talk"
     },
     {
       "date": "24 agosto 2021 · México (virtual)",
       "title": "Invariantes para tied links",
       "venue": "Seminario Virtual de Topología Algebraica - CIMAT",
       "type": "oral",
-      "typeClass": "tt-oral"
+      "typeClass": "tt-oral",
+      "titleEn": "Invariants for tied links",
+      "venueEn": "Virtual Algebraic Topology Seminar – CIMAT",
+      "dateEn": "24 August 2021 · Mexico (online)",
+      "typeEn": "Talk"
     },
     {
       "date": "29 abril-1 julio 2021 · Virtual",
       "title": "Teoría de Juegos",
       "venue": "Universidad de Valparaíso",
       "type": "minicurso",
-      "typeClass": "tt-mini"
+      "typeClass": "tt-mini",
+      "titleEn": "Game theory",
+      "venueEn": "University of Valparaíso",
+      "dateEn": "29 April-1 July 2021 · Online",
+      "typeEn": "Mini-course"
     },
     {
       "date": "4-6 enero 2021 · Valparaíso, Chile",
       "title": "Teoría de Nudos: Invariantes y Generalizaciones",
       "venue": "II Encuentro de Álgebra y Teoría de Nudos",
       "type": "cursillo",
-      "typeClass": "tt-mini"
+      "typeClass": "tt-mini",
+      "titleEn": "Knot theory: invariants and generalisations",
+      "venueEn": "2nd Meeting on Algebra and Knot Theory",
+      "dateEn": "4-6 January 2021 · Valparaíso, Chile",
+      "typeEn": "Short course"
     },
     {
       "date": "26 noviembre 2020 · Virtual",
       "title": "De estaciones de metro a redes sociales: Teoría de Grafos en el día a día",
       "venue": "Contagiando Matemáticas - Universidad de Valparaíso",
       "type": "oral",
-      "typeClass": "tt-oral"
+      "typeClass": "tt-oral",
+      "titleEn": "From metro stations to social networks: graph theory in everyday life",
+      "venueEn": "Contagiando Matemáticas – University of Valparaíso",
+      "dateEn": "26 November 2020 · Online",
+      "typeEn": "Talk"
     },
     {
       "date": "11 junio-2 julio 2020 · Virtual",
       "title": "Teoría de Nudos",
       "venue": "Universidad de Valparaíso",
       "type": "minicurso",
-      "typeClass": "tt-mini"
+      "typeClass": "tt-mini",
+      "titleEn": "Knot theory",
+      "venueEn": "University of Valparaíso",
+      "dateEn": "11 June-2 July 2020 · Online",
+      "typeEn": "Mini-course"
     },
     {
       "date": "14 mayo-4 junio 2020 · Virtual",
       "title": "Teoría de Juegos",
       "venue": "Universidad de Valparaíso",
       "type": "minicurso",
-      "typeClass": "tt-mini"
+      "typeClass": "tt-mini",
+      "titleEn": "Game theory",
+      "venueEn": "University of Valparaíso",
+      "dateEn": "14 May-4 June 2020 · Online",
+      "typeEn": "Mini-course"
     },
     {
       "date": "23 abril-7 mayo 2020 · Virtual",
       "title": "Teoría de Grafos",
       "venue": "Universidad de Valparaíso",
       "type": "minicurso",
-      "typeClass": "tt-mini"
+      "typeClass": "tt-mini",
+      "titleEn": "Graph theory",
+      "venueEn": "University of Valparaíso",
+      "dateEn": "23 April-7 May 2020 · Online",
+      "typeEn": "Mini-course"
     },
     {
       "date": "5-19 julio 2018 · Valparaíso, Chile",
       "title": "Nudos, Links y Trenzas: Clasificando 3-variedades",
       "venue": "Seminario AtN - Universidad de Valparaíso",
       "type": "oral",
-      "typeClass": "tt-oral"
+      "typeClass": "tt-oral",
+      "titleEn": "Knots, links and braids: classifying 3-manifolds",
+      "venueEn": "AtN Seminar – University of Valparaíso",
+      "dateEn": "5-19 July 2018 · Valparaíso, Chile",
+      "typeEn": "Talk"
     },
     {
       "date": "2-16 noviembre 2017 · Valparaíso, Chile",
       "title": "Introducción a la Teoría de Nudos",
       "venue": "UTFSM",
       "type": "minicurso",
-      "typeClass": "tt-mini"
+      "typeClass": "tt-mini",
+      "titleEn": "Introduction to knot theory",
+      "venueEn": "UTFSM",
+      "dateEn": "2-16 November 2017 · Valparaíso, Chile",
+      "typeEn": "Mini-course"
     }
   ],
   "teaching": {
@@ -360,124 +505,190 @@
         "description": "Docencia de pregrado.",
         "institution": "Universidad de Valparaíso · 2020-2022",
         "current": false,
-        "materialsUrl": ""
+        "materialsUrl": "",
+        "titleEn": "Calculus I",
+        "institutionEn": "University of Valparaíso · 2020-2022",
+        "descriptionEn": "Undergraduate teaching."
       },
       {
         "title": "Fundamentos de la Matemática",
         "description": "Docencia de pregrado.",
         "institution": "Universidad de Valparaíso · 2020-2022",
         "current": false,
-        "materialsUrl": ""
+        "materialsUrl": "",
+        "titleEn": "Foundations of Mathematics",
+        "institutionEn": "University of Valparaíso · 2020-2022",
+        "descriptionEn": "Undergraduate teaching."
       },
       {
         "title": "Fundamentos de Matemática",
         "description": "Cátedra y taller.",
         "institution": "PUCV · marzo-julio 2022",
         "current": false,
-        "materialsUrl": ""
+        "materialsUrl": "",
+        "titleEn": "Foundations of Mathematics",
+        "institutionEn": "PUCV · March-July 2022",
+        "descriptionEn": "Lectures and workshops."
       },
       {
         "title": "Matemática Discreta",
         "description": "Docencia de pregrado.",
         "institution": "UTFSM · marzo-julio 2022",
         "current": false,
-        "materialsUrl": ""
+        "materialsUrl": "",
+        "titleEn": "Discrete Mathematics",
+        "institutionEn": "UTFSM · March-July 2022",
+        "descriptionEn": "Undergraduate teaching."
       },
       {
         "title": "Matemática III",
         "description": "Docencia de pregrado.",
         "institution": "UTFSM · marzo-julio 2022",
         "current": false,
-        "materialsUrl": ""
+        "materialsUrl": "",
+        "titleEn": "Mathematics III",
+        "institutionEn": "UTFSM · March-July 2022",
+        "descriptionEn": "Undergraduate teaching."
       }
     ],
     "assistant": [
       {
         "title": "MAT215 Matemática Discreta",
         "description": "Ayudantía de cátedra.",
-        "institution": "UTFSM · 2017-1, 2018-1, 2019-1, 2020-1, 2021-1"
+        "institution": "UTFSM · 2017-1, 2018-1, 2019-1, 2020-1, 2021-1",
+        "titleEn": "MAT215 Discrete Mathematics",
+        "institutionEn": "UTFSM · 2017-1, 2018-1, 2019-1, 2020-1, 2021-1",
+        "descriptionEn": "Teaching assistantship."
       },
       {
         "title": "MAT021 Cálculo I y Álgebra I",
         "description": "Ayudantía de cátedra.",
-        "institution": "UTFSM · 2014-2, 2017-1, 2019-1"
+        "institution": "UTFSM · 2014-2, 2017-1, 2019-1",
+        "titleEn": "MAT021 Calculus I and Algebra I",
+        "institutionEn": "UTFSM · 2014-2, 2017-1, 2019-1",
+        "descriptionEn": "Teaching assistantship."
       },
       {
         "title": "MAT235 Variable Compleja",
         "description": "Ayudantía de cátedra.",
-        "institution": "UTFSM · 2016-2, 2018-2, 2019-2, 2020-2"
+        "institution": "UTFSM · 2016-2, 2018-2, 2019-2, 2020-2",
+        "titleEn": "MAT235 Complex Analysis",
+        "institutionEn": "UTFSM · 2016-2, 2018-2, 2019-2, 2020-2",
+        "descriptionEn": "Teaching assistantship."
       },
       {
         "title": "MAT212 Teoría de Cuerpos y Galois",
         "description": "Ayudantía de cátedra.",
-        "institution": "UTFSM · 2017-2, 2020-2"
+        "institution": "UTFSM · 2017-2, 2020-2",
+        "titleEn": "MAT212 Field and Galois Theory",
+        "institutionEn": "UTFSM · 2017-2, 2020-2",
+        "descriptionEn": "Teaching assistantship."
       },
       {
         "title": "MAT214 Estructuras Algebraicas",
         "description": "Ayudantía de cátedra.",
-        "institution": "UTFSM · 2016-1"
+        "institution": "UTFSM · 2016-1",
+        "titleEn": "MAT214 Algebraic Structures",
+        "institutionEn": "UTFSM · 2016-1",
+        "descriptionEn": "Teaching assistantship."
       },
       {
         "title": "IWG101 Introducción a la Ingeniería Matemática",
         "description": "Ayudantía de cátedra.",
-        "institution": "UTFSM · 2016-1"
+        "institution": "UTFSM · 2016-1",
+        "titleEn": "IWG101 Introduction to Mathematical Engineering",
+        "institutionEn": "UTFSM · 2016-1",
+        "descriptionEn": "Teaching assistantship."
       },
       {
         "title": "MAT060 Álgebra y Geometría",
         "description": "Ayudantía de cátedra.",
-        "institution": "UTFSM · 2019-1"
+        "institution": "UTFSM · 2019-1",
+        "titleEn": "MAT060 Algebra and Geometry",
+        "institutionEn": "UTFSM · 2019-1",
+        "descriptionEn": "Teaching assistantship."
       },
       {
         "title": "MAT051 Álgebra Lineal y Cálculo I para Arquitectura",
         "description": "Ayudantía de cátedra.",
-        "institution": "UTFSM · 2018-1"
+        "institution": "UTFSM · 2018-1",
+        "titleEn": "MAT051 Linear Algebra and Calculus I for Architecture",
+        "institutionEn": "UTFSM · 2018-1",
+        "descriptionEn": "Teaching assistantship."
       },
       {
         "title": "MAT015 EDO y EDP para Ingeniería",
         "description": "Ayudantía de cátedra.",
-        "institution": "UTFSM · 2017-2"
+        "institution": "UTFSM · 2017-2",
+        "titleEn": "MAT015 ODEs and PDEs for Engineering",
+        "institutionEn": "UTFSM · 2017-2",
+        "descriptionEn": "Teaching assistantship."
       },
       {
         "title": "MATE20 Álgebra Lineal para Ingeniería Comercial",
         "description": "Ayudantía de cátedra.",
-        "institution": "UTFSM · 2016-2"
+        "institution": "UTFSM · 2016-2",
+        "titleEn": "MATE20 Linear Algebra for Business Engineering",
+        "institutionEn": "UTFSM · 2016-2",
+        "descriptionEn": "Teaching assistantship."
       }
     ],
     "minicourses": [
       {
         "title": "Invariantes de Tipo Vassiliev",
         "description": "Seminario AtN - Universidad de Valparaíso",
-        "institution": "26 julio-11 septiembre 2024 · Valparaíso, Chile"
+        "institution": "26 julio-11 septiembre 2024 · Valparaíso, Chile",
+        "titleEn": "Vassiliev-type invariants",
+        "institutionEn": "26 July-11 September 2024 · Valparaíso, Chile",
+        "descriptionEn": "Seminario AtN - University of Valparaíso"
       },
       {
         "title": "Teoría de Juegos",
         "description": "Universidad de Valparaíso",
-        "institution": "29 abril-1 julio 2021 · Virtual"
+        "institution": "29 abril-1 julio 2021 · Virtual",
+        "titleEn": "Game theory",
+        "institutionEn": "29 April-1 July 2021 · Online",
+        "descriptionEn": "University of Valparaíso"
       },
       {
         "title": "Teoría de Nudos: Invariantes y Generalizaciones",
         "description": "II Encuentro de Álgebra y Teoría de Nudos",
-        "institution": "4-6 enero 2021 · Valparaíso, Chile"
+        "institution": "4-6 enero 2021 · Valparaíso, Chile",
+        "titleEn": "Knot theory: invariants and generalisations",
+        "institutionEn": "4-6 January 2021 · Valparaíso, Chile",
+        "descriptionEn": "2nd Meeting on Algebra and Knot Theory"
       },
       {
         "title": "Teoría de Nudos",
         "description": "Universidad de Valparaíso",
-        "institution": "11 junio-2 julio 2020 · Virtual"
+        "institution": "11 junio-2 julio 2020 · Virtual",
+        "titleEn": "Knot theory",
+        "institutionEn": "11 June-2 July 2020 · Online",
+        "descriptionEn": "University of Valparaíso"
       },
       {
         "title": "Teoría de Juegos",
         "description": "Universidad de Valparaíso",
-        "institution": "14 mayo-4 junio 2020 · Virtual"
+        "institution": "14 mayo-4 junio 2020 · Virtual",
+        "titleEn": "Game theory",
+        "institutionEn": "14 May-4 June 2020 · Online",
+        "descriptionEn": "University of Valparaíso"
       },
       {
         "title": "Teoría de Grafos",
         "description": "Universidad de Valparaíso",
-        "institution": "23 abril-7 mayo 2020 · Virtual"
+        "institution": "23 abril-7 mayo 2020 · Virtual",
+        "titleEn": "Graph theory",
+        "institutionEn": "23 April-7 May 2020 · Online",
+        "descriptionEn": "University of Valparaíso"
       },
       {
         "title": "Introducción a la Teoría de Nudos",
         "description": "UTFSM",
-        "institution": "2-16 noviembre 2017 · Valparaíso, Chile"
+        "institution": "2-16 noviembre 2017 · Valparaíso, Chile",
+        "titleEn": "Introduction to knot theory",
+        "institutionEn": "2-16 November 2017 · Valparaíso, Chile",
+        "descriptionEn": "UTFSM"
       }
     ]
   },
@@ -488,7 +699,11 @@
       "institution": "Universidad Nacional de Mar del Plata",
       "topic": "Una introducción a grafos temporales: El mundo dinámico.",
       "award": "Beca Fluence 2026 para una versión preliminar del proyecto",
-      "program": "pares-ordenados"
+      "program": "pares-ordenados",
+      "institutionEn": "Universidad Nacional de Mar del Plata",
+      "topicEn": "An introduction to temporal graphs: the dynamic world.",
+      "awardEn": "2026 Fluence Grant for a preliminary version of the project",
+      "yearEn": "2026 · Argentina"
     },
     {
       "year": "2026 · Argentina",
@@ -496,7 +711,11 @@
       "institution": "Universidad Nacional de Cuyo",
       "topic": "Una introducción a la Teoría de Juegos.",
       "award": "",
-      "program": "pares-ordenados"
+      "program": "pares-ordenados",
+      "institutionEn": "Universidad Nacional de Cuyo",
+      "topicEn": "An introduction to game theory.",
+      "awardEn": "",
+      "yearEn": "2026 · Argentina"
     },
     {
       "year": "2025 · Argentina",
@@ -504,7 +723,11 @@
       "institution": "Universidad Nacional de Cuyo",
       "topic": "Clasificación de nudos hasta 8 cruces.",
       "award": "Mención de honor en el concurso de monografías de la Unión Matemática Argentina",
-      "program": "pares-ordenados"
+      "program": "pares-ordenados",
+      "institutionEn": "Universidad Nacional de Cuyo",
+      "topicEn": "Classification of knots with up to eight crossings.",
+      "awardEn": "Honourable mention in the Argentine Mathematical Union monograph competition",
+      "yearEn": "2025 · Argentina"
     },
     {
       "year": "2025 · Colombia",
@@ -512,7 +735,11 @@
       "institution": "Universidad del Atlántico",
       "topic": "Algoritmos para calcular la p-coloración y el polinomio de Jones.",
       "award": "",
-      "program": "pares-ordenados"
+      "program": "pares-ordenados",
+      "institutionEn": "Universidad del Atlántico",
+      "topicEn": "Algorithms for computing p-colourings and the Jones polynomial.",
+      "awardEn": "",
+      "yearEn": "2025 · Colombia"
     },
     {
       "year": "2024 · México",
@@ -520,7 +747,11 @@
       "institution": "Universidad Autónoma de Guerrero",
       "topic": "Gráficas llamativas.",
       "award": "",
-      "program": "pares-ordenados"
+      "program": "pares-ordenados",
+      "institutionEn": "Universidad Autónoma de Guerrero",
+      "topicEn": "Eye-catching graphs.",
+      "awardEn": "",
+      "yearEn": "2024 · Mexico"
     },
     {
       "year": "2023 · Colombia",
@@ -528,7 +759,11 @@
       "institution": "Universidad Nacional de Colombia",
       "topic": "Una introducción a la Teoría de Juegos.",
       "award": "",
-      "program": "pares-ordenados"
+      "program": "pares-ordenados",
+      "institutionEn": "Universidad Nacional de Colombia",
+      "topicEn": "An introduction to game theory.",
+      "awardEn": "",
+      "yearEn": "2023 · Colombia"
     },
     {
       "year": "2021 · Chile",
@@ -536,7 +771,11 @@
       "institution": "UTFSM · Laboratorio de Modelación I",
       "topic": "Implementación de un algoritmo para obtener el polinomio HOMFLYPT en Python.",
       "award": "",
-      "program": "lab-modelacion"
+      "program": "lab-modelacion",
+      "institutionEn": "UTFSM · Mathematical Modelling Lab I",
+      "topicEn": "Implementation of an algorithm to compute the HOMFLYPT polynomial in Python.",
+      "awardEn": "",
+      "yearEn": "2021 · Chile"
     },
     {
       "year": "2017 · Chile",
@@ -544,7 +783,11 @@
       "institution": "UTFSM · Laboratorio de Modelación I",
       "topic": "Estudio de endolisinas.",
       "award": "",
-      "program": "lab-modelacion"
+      "program": "lab-modelacion",
+      "institutionEn": "UTFSM · Mathematical Modelling Lab I",
+      "topicEn": "Study of endolysins.",
+      "awardEn": "",
+      "yearEn": "2017 · Chile"
     }
   ],
   "outreach": [
@@ -553,49 +796,73 @@
       "title": "Matemátic@s Latin@s/Hispan@s Alrededor del Mundo",
       "description": "Panelista en Pares Ordenados, compartiendo experiencias académicas.",
       "year": "2025 · Virtual",
-      "url": "https://sites.google.com/view/23paresordenados/inicio"
+      "url": "https://sites.google.com/view/23paresordenados/inicio",
+      "titleEn": "Latin American and Hispanic mathematicians around the world",
+      "descriptionEn": "Panel speaker in Pares Ordenados, sharing academic experiences.",
+      "yearEn": "2025 · Online"
     },
     {
       "emoji": "📡",
       "title": "Contagiando Matemáticas",
       "description": "Coorganizador y moderador del ciclo de charlas abiertas al público durante la pandemia.",
-      "year": "Octubre-diciembre 2020 · UV"
+      "year": "Octubre-diciembre 2020 · UV",
+      "titleEn": "Contagiando Matemáticas",
+      "descriptionEn": "Co-organiser and moderator of a public lecture series during the pandemic.",
+      "yearEn": "October-December 2020 · UV"
     },
     {
       "emoji": "⛺",
       "title": "Campamento STEM",
       "description": "Monitor y monitor coordinador. Talleres de nudos, trenzas y criptografía para estudiantes de enseñanza media.",
-      "year": "2017-2019 · UTFSM"
+      "year": "2017-2019 · UTFSM",
+      "titleEn": "STEM Camp",
+      "descriptionEn": "Instructor and coordinator. Workshops on knots, braids and cryptography for secondary school students.",
+      "yearEn": "2017-2019 · UTFSM"
     },
     {
       "emoji": "🎪",
       "title": "Festival de Matemática: Teoría de Nudos y Redes de Pesca",
       "description": "Exposición interactiva mediante la construcción de redes de pesca.",
-      "year": "Septiembre 2017 · San Antonio"
+      "year": "Septiembre 2017 · San Antonio",
+      "titleEn": "Mathematics Festival: Knot theory and fishing nets",
+      "descriptionEn": "Interactive exhibition involving the construction of fishing nets.",
+      "yearEn": "September 2017 · San Antonio"
     },
     {
       "emoji": "🎪",
       "title": "Festival de Matemática: Cúpulas de da Vinci",
       "description": "Exposición y construcción participativa de cúpulas.",
-      "year": "Diciembre 2016 · Valparaíso"
+      "year": "Diciembre 2016 · Valparaíso",
+      "titleEn": "Mathematics Festival: Da Vinci domes",
+      "descriptionEn": "Exhibition and participatory construction of domes.",
+      "yearEn": "December 2016 · Valparaíso"
     },
     {
       "emoji": "🏫",
       "title": "Preuniversitario Solidario UV",
       "description": "Profesor de Matemática (2012-2024), coordinador del Departamento de Matemática (2017-2024) y secretario general (enero-septiembre 2024).",
-      "year": "2012-2024 · UV"
+      "year": "2012-2024 · UV",
+      "titleEn": "UV Solidarity Pre-university Programme",
+      "descriptionEn": "Mathematics teacher (2012–2024), mathematics department coordinator (2017–2024) and general secretary (January–September 2024).",
+      "yearEn": "2012-2024 · UV"
     },
     {
       "emoji": "🏫",
       "title": "Preuniversitario Universidad Católica de Valparaíso",
       "description": "Profesor de Matemática.",
-      "year": "Agosto-diciembre 2019"
+      "year": "Agosto-diciembre 2019",
+      "titleEn": "Catholic University of Valparaíso Pre-university Programme",
+      "descriptionEn": "Mathematics teacher.",
+      "yearEn": "August-December 2019"
     },
     {
       "emoji": "📚",
       "title": "Minicursos en línea",
       "description": "Minicursos de teoría de nudos, grafos y juegos.",
-      "year": "2020-2021 · UV"
+      "year": "2020-2021 · UV",
+      "titleEn": "Online mini-courses",
+      "descriptionEn": "Mini-courses on knot theory, graph theory and game theory.",
+      "yearEn": "2020-2021 · UV"
     }
   ],
   "collaborators": [
@@ -603,19 +870,22 @@
       "name": "Juan González-Meneses",
       "alias": "J. González-Meneses",
       "url": "https://personal.us.es/meneses/",
-      "linkLabel": "Página personal"
+      "linkLabel": "Página personal",
+      "linkLabelEn": "Personal website"
     },
     {
       "name": "Marithania Silvero",
       "alias": "M. Silvero",
       "url": "https://marithania.github.io/",
-      "linkLabel": "Página personal"
+      "linkLabel": "Página personal",
+      "linkLabelEn": "Personal website"
     },
     {
       "name": "Álvaro del Valle Vílchez",
       "alias": "Á. del Valle Vílchez",
       "url": "https://cafeconciencia.fundaciondescubre.es/protagonistas/alvaro-del-valle-vilchez/",
-      "linkLabel": "Perfil de divulgación"
+      "linkLabel": "Perfil de divulgación",
+      "linkLabelEn": "Outreach profile"
     }
   ],
   "upcomingTalks": [
@@ -627,7 +897,12 @@
       "typeClass": "tt-oral",
       "endDate": "2026-12-18",
       "status": "Aceptada",
-      "url": "https://somachi2026.mat.uc.cl/"
+      "url": "https://somachi2026.mat.uc.cl/",
+      "titleEn": "From skein modules to polynomial invariants of tied links in the solid torus",
+      "venueEn": "94th Annual Meeting of SOMACHI (15–18 December) · Pontifical Catholic University of Chile · Geometry Session",
+      "statusEn": "Accepted",
+      "dateEn": "18 December 2026 · 11:30 · Santiago, Chile",
+      "typeEn": "Talk"
     },
     {
       "date": "19–22 enero 2027 · Talca, Chile",
@@ -637,7 +912,12 @@
       "typeClass": "tt-oral",
       "endDate": "2027-01-22",
       "status": "Aceptada",
-      "url": "https://www.grupoatn.org/encuentro/viii/"
+      "url": "https://www.grupoatn.org/encuentro/viii/",
+      "titleEn": "From skein modules to polynomial invariants of tied links in the solid torus",
+      "venueEn": "8th Meeting on Algebra and Knot Theory · University of Talca",
+      "statusEn": "Accepted",
+      "dateEn": "19–22 January 2027 · Talca, Chile",
+      "typeEn": "Talk"
     }
   ],
   "interests": [
@@ -645,25 +925,33 @@
       "title": "Combate medieval",
       "emoji": "⚔️",
       "description": "Combate histórico, armaduras y entrenamiento en equipo.",
-      "photos": []
+      "photos": [],
+      "titleEn": "Medieval combat",
+      "descriptionEn": "Historical combat, armour and team training."
     },
     {
       "title": "Entrenamiento de fuerza",
       "emoji": "🏋️",
       "description": "Entrenamiento con pesas y progresión en fuerza.",
-      "photos": []
+      "photos": [],
+      "titleEn": "Strength training",
+      "descriptionEn": "Weight training and strength development."
     },
     {
       "title": "Música electrónica",
       "emoji": "🎶",
       "description": "Hard techno, fiestas y cultura electrónica.",
-      "photos": []
+      "photos": [],
+      "titleEn": "Electronic music",
+      "descriptionEn": "Hard techno, parties and electronic music culture."
     },
     {
       "title": "Congresos y viajes",
       "emoji": "🌍",
       "description": "Encuentros matemáticos, viajes y experiencias compartidas con colegas en distintos lugares del mundo.",
-      "photos": []
+      "photos": [],
+      "titleEn": "Conferences and travel",
+      "descriptionEn": "Mathematical meetings, travel and shared experiences with colleagues around the world."
     }
   ],
   "blog": []

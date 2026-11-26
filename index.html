@@ -211,7 +211,7 @@
     .cicon { width: 34px; height: 34px; border-radius: 9px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; flex-shrink: 0; }
     .cv-box { background: rgba(255,255,255,0.05); border: 1.5px solid rgba(255,255,255,0.11); border-radius: 18px; padding: 2rem; text-align: center; }
     .cv-box .cv-icon { font-size: 2.8rem; margin-bottom: 0.9rem; }
-    .cv-box h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.45rem; color: white; }
+    .cv-box h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 1.2rem; color: white; }
     .cv-box p  { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin-bottom: 1.4rem; }
     .btn-teal { background: linear-gradient(135deg,var(--teal),#0f766e); color: white; border: none; padding: 0.65rem 1.4rem; border-radius: 9px; font-size: 0.88rem; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-block; }
     .btn-teal:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(13,148,136,0.3); }
@@ -401,7 +401,6 @@
       <div class="cv-box">
         <div class="cv-icon">📋</div>
         <h3>Curriculum Vitae</h3>
-        <p>CV completo con publicaciones, proyectos, docencia, tutorías y trayectoria académica.</p>
         <a href="CV_2026.pdf" class="btn-teal">Descargar CV (PDF)</a>
       </div>
     </div>
@@ -456,6 +455,9 @@ function toggleLang() {
 function applyLang(d) {
   const lang = currentLang;
   document.documentElement.lang=lang;
+  document.title=lang==='en'?"O'Bryan Cárdenas-Andaur — Knot Theory":"O'Bryan Cárdenas-Andaur — Teoría de Nudos";
+  const langButton=document.getElementById('lang-toggle');
+  langButton.setAttribute('aria-label',lang==='en'?'Cambiar a español':'Switch to English');
   document.getElementById('lang-toggle').textContent=lang==='es'?'EN / ES':'ES / EN';
   const bio = lang === 'en' && d.bioEn ? d.bioEn : d.bio;
   document.getElementById('hero-role').textContent = bio.role || d.bio.role;
@@ -496,7 +498,6 @@ function applyLang(d) {
     ['#tab-blog .sec-header p','Notas, reflexiones y cosas que me gustaría compartir','Notes, reflections and things I would like to share'],
     ['#tab-contacto .sec-header h2','Contacto','Contact'],
     ['#tab-contacto .sec-header p','Colaboraciones, consultas académicas o estudiantes de tesis','Collaborations, academic enquiries and thesis students'],
-    ['.cv-box p','CV completo con publicaciones, proyectos, docencia, tutorías y trayectoria académica.','Full CV with publications, projects, teaching, mentoring and academic experience.'],
     ['.cv-box .btn-teal','Descargar CV (PDF)','Download CV (PDF)'],
     ['.hero-links a:nth-child(1)','📄 Publicaciones','📄 Publications'],
     ['.hero-links a:nth-child(2)','✉️ Contacto','✉️ Contact'],
@@ -504,7 +505,7 @@ function applyLang(d) {
   ];
   staticLabels.forEach(([selector,es,en])=>{const el=document.querySelector(selector);if(el)el.textContent=lang==='en'?en:es;});
   const profileLabels=document.querySelectorAll('#tab-perfil .subsec-title');
-  if(profileLabels.length===2){profileLabels[0].textContent=lang==='en'?'🎓 Education':'🎓 Formación académica';profileLabels[1].textContent=lang==='en'?'📜 Theses':'📜 Trabajos de tesis';}
+  if(profileLabels.length===2){profileLabels[0].textContent=lang==='en'?'🎓 Education':'🎓 Formación académica';profileLabels[1].textContent=lang==='en'?'📜 Degree projects and theses':'📜 Trabajos de tesis';}
   const mentorHeaders=document.querySelectorAll('#tab-tutorias-div .sec-header');
   if(mentorHeaders.length===2){const labels=lang==='en'?[['Mentoring and supervision','Directed reading and formative research projects'],['Outreach & Community','Mathematics for everyone']]:[['Tutorías y Supervisión','Lectura dirigida y proyectos de investigación formativa'],['Divulgación & Comunidad','Matemáticas para todo el mundo']];mentorHeaders.forEach((el,i)=>{el.querySelector('h2').textContent=labels[i][0];el.querySelector('p').textContent=labels[i][1];});}
   const mentorLabels=document.querySelectorAll('#tab-tutorias-div .subsec-title');
@@ -565,8 +566,22 @@ const photoUrl = s => httpUrl(s) || (typeof s==='string' && /^images\/[\p{L}\p{N
 fetch('data.json', {cache:'no-cache'})
   .then(r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json();})
   .then(d=>{ cachedData=d; renderData(d); })
-  .catch(err=>{console.error('Error cargando data.json:',err); const notice=document.getElementById('load-error'); notice.hidden=false; notice.textContent='No se pudo cargar el contenido completo. Recarga la página.';});
+  .catch(err=>{console.error('Error cargando data.json:',err); const notice=document.getElementById('load-error'); notice.hidden=false; notice.textContent=currentLang==='en'?'Could not load the full content. Please reload the page.':'No se pudo cargar el contenido completo. Recarga la página.';});
+function localize(value) {
+  if (Array.isArray(value)) return value.map(localize);
+  if (!value || typeof value !== 'object') return value;
+  const result = Object.fromEntries(Object.entries(value).map(([k,v]) => [k,localize(v)]));
+  for (const key of Object.keys(value)) {
+    if (!key.endsWith('En') && Object.hasOwn(value,key+'En')) result[key] = localize(value[key+'En']);
+  }
+  return result;
+}
 function renderData(d){
+    if (currentLang==='en') {
+      const originalBio=d.bio;
+      d=localize(d);
+      d.bio={...originalBio,...d.bio};
+    }
     document.getElementById('hero-name').textContent=d.bio.name;
     document.getElementById('hero-role').textContent=d.bio.role;
     document.getElementById('hero-inst').textContent=d.bio.institution;
@@ -592,14 +607,14 @@ function renderData(d){
         <div class="tc-univ">${t.institution}</div>
         <div class="tc-adv">${t.advisor}</div>
         <div class="tc-year">${esc(t.year)}</div>
-        ${pdfUrl(t.pdf)?`<div class="pub-actions"><a class="pub-link doi" href="${pdfUrl(t.pdf)}" target="_blank" rel="noopener noreferrer">${currentLang==='en'?'Read thesis (PDF)':'Consultar tesis (PDF)'}</a></div>`:''}
+        ${pdfUrl(t.pdf)?`<div class="pub-actions"><a class="pub-link doi" href="${pdfUrl(t.pdf)}" target="_blank" rel="noopener noreferrer">${currentLang==='en'?'View':'Consultar'}</a></div>`:''}
       </div>`).join('');
     const renderResearchCard = r => `<div class="research-card"><h3>${r.title}</h3><p>${r.description}</p><span class="rc-tag ${r.tagClass}">${r.tag}</span></div>`;
     document.getElementById('research-math-list').innerHTML = d.research.filter(r=>r.category==='math').map(renderResearchCard).join('');
     document.getElementById('research-aplic-list').innerHTML = d.research.filter(r=>r.category==='aplicaciones').map(renderResearchCard).join('');
     const collaborators=d.collaborators || [];
     const renderAuthors=authors=>collaborators.reduce((s,c)=>httpUrl(c.url)?s.replace(c.alias,`<a class="author-link" href="${httpUrl(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.alias)}</a>`):s,authors);
-    document.getElementById('collab-list').innerHTML=collaborators.map(c=>`<article class="collab-card"><strong>${esc(c.name)}</strong><p>${httpUrl(c.url)?`<a class="collab-link" href="${httpUrl(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.linkLabel || 'Página web')} ↗</a>`:'Coautor'}</p></article>`).join('');
+    document.getElementById('collab-list').innerHTML=collaborators.map(c=>`<article class="collab-card"><strong>${esc(c.name)}</strong><p>${httpUrl(c.url)?`<a class="collab-link" href="${httpUrl(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.linkLabel || (currentLang==='en'?'Website':'Página web'))} ↗</a>`:(currentLang==='en'?'Coauthor':'Coautor')}</p></article>`).join('');
     document.getElementById('pub-list').innerHTML=d.publications.map(p=>`
       <div class="pub-item">
         <div class="pub-year ${p.yearClass}">${p.year}</div>
@@ -658,7 +673,7 @@ function renderData(d){
       {icon:'📧',label:d.bio.email,url:`mailto:${d.bio.email}`},
       {icon:'📐',label:'arXiv (math.GT)',url:d.bio.arxiv},
       {icon:'🔗',label:'ORCID',url:d.bio.orcid},
-      {icon:'🏛️',label:'Universidad de Valparaíso',url:d.bio.website_uv},
+      {icon:'🏛️',label:currentLang==='en'?'University of Valparaíso':'Universidad de Valparaíso',url:d.bio.website_uv},
     ];
     document.getElementById('contact-links').innerHTML=links.filter(l=>l.url).map(l=>`
       <a href="${l.url}" ${l.url.startsWith('mailto')?'':'target="_blank" rel="noopener noreferrer"'} class="contact-link">
