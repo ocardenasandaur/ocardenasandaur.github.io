@@ -4,6 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>O'Bryan Cárdenas-Andaur — Teoría de Nudos</title>
+  <meta name="description" content="O'Bryan Cárdenas-Andaur — Doctor en Matemáticas por la Universidad de Sevilla. Investigador en teoría de nudos, tied links e invariantes polinomiales. Matemático chileno." />
+  <meta name="keywords" content="O'Bryan Cárdenas-Andaur, teoría de nudos, tied links, invariantes polinomiales, módulos skein, topología de baja dimensión, matemático chileno, Universidad de Valparaíso" />
+  <meta name="author" content="O'Bryan Cárdenas-Andaur" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ocardenasandaur.github.io/" />
+  <meta property="og:title" content="O'Bryan Cárdenas-Andaur — Teoría de Nudos" />
+  <meta property="og:description" content="Doctor en Matemáticas (Sevilla, 2026). Investigación en teoría de nudos, tied links e invariantes polinomiales." />
+  <meta property="og:url" content="https://ocardenasandaur.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CL" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="O'Bryan Cárdenas-Andaur — Teoría de Nudos" />
+  <meta name="twitter:description" content="Doctor en Matemáticas (Sevilla, 2026). Investigación en teoría de nudos, tied links e invariantes polinomiales." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"O'Bryan Cárdenas-Andaur","url":"https://ocardenasandaur.github.io/","jobTitle":"Doctor en Matemáticas","affiliation":{"@type":"Organization","name":"Universidad de Valparaíso"},"alumniOf":{"@type":"Organization","name":"Universidad de Sevilla"},"knowsAbout":["Teoría de nudos","Tied links","Invariantes polinomiales","Topología de baja dimensión"],"sameAs":["https://orcid.org/0009-0001-1728-0382","https://arxiv.org/search/?searchtype=author&query=Cardenas-Andaur"]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -226,12 +240,21 @@
     .blog-card p {margin:.7rem 0;color:var(--slate-mid);white-space:pre-wrap;}
     .blog-card summary {cursor:pointer;color:var(--violet-dark);font-weight:600;margin-top:1rem;}
     a:focus-visible,button:focus-visible,summary:focus-visible {outline:3px solid var(--teal);outline-offset:3px;}
+    .talk-item.upcoming { background: linear-gradient(135deg, rgba(13,148,136,0.07) 0%, rgba(94,234,212,0.04) 100%); border: 1.5px solid rgba(13,148,136,0.3); border-radius: 12px; padding: 1rem 1rem 1rem 1.75rem; margin-bottom: 1.75rem; }
+    .talk-item.upcoming::before { background: var(--teal); box-shadow: 0 0 0 2px var(--teal-light); border-color: white; }
+    .talk-item.upcoming .talk-meta { color: var(--teal); }
+    .research-category { margin-bottom: 2.5rem; }
+    .research-cat-title { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--slate); margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.5rem; }
+    .lang-toggle { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999; background: var(--violet); color: white; border: none; border-radius: 999px; padding: 0.55rem 1rem; font-size: 0.82rem; font-weight: 700; font-family: 'Inter', sans-serif; cursor: pointer; box-shadow: 0 4px 16px rgba(124,58,237,0.35); transition: all 0.2s; letter-spacing: 0.03em; }
+    .lang-toggle:hover { background: var(--violet-dark); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(124,58,237,0.4); }
+    .hero-photo { width:220px; height:220px; object-fit:cover; object-position:top center; border-radius:16px; border:2px solid rgba(255,255,255,0.18); box-shadow:0 20px 50px rgba(0,0,0,0.35); flex-shrink:0; }
     @media (max-width: 720px) {
       .hero-inner { flex-direction: column; text-align: center; }
       #hero-badges, .hero-links { justify-content: center; }
       #hero-summary { margin: 0 auto 1.2rem; }
       .contact-grid, .mas-layout { grid-template-columns: 1fr; }
       .hero-text h1 { font-size: 1.9rem; }
+      .hero-photo { width: 130px; height: 130px; }
     }
   </style>
 </head>
@@ -250,19 +273,20 @@
         <a href="#" class="btn btn-outline-white" onclick="switchTab('contacto');return false;">✉️ Contacto</a>
       </div>
     </div>
+    <img class="hero-photo" src="profile.jpg" alt="O'Bryan Cárdenas-Andaur">
   </div>
 </div>
 <div class="tab-bar-wrap">
   <div class="tab-bar">
-    <button class="tab-btn active" data-tab="perfil" onclick="switchTab('perfil')">Perfil</button>
-    <button class="tab-btn" data-tab="investigacion" onclick="switchTab('investigacion')">Investigación</button>
-    <button class="tab-btn" data-tab="publicaciones" onclick="switchTab('publicaciones')">Publicaciones</button>
-    <button class="tab-btn" data-tab="charlas" onclick="switchTab('charlas')">Charlas</button>
-    <button class="tab-btn" data-tab="docencia" onclick="switchTab('docencia')">Docencia</button>
-    <button class="tab-btn" data-tab="tutorias-div" onclick="switchTab('tutorias-div')">Divulgación &amp; Tutorías</button>
-    <button class="tab-btn" data-tab="mas-alla" onclick="switchTab('mas-alla')">Más allá</button>
-    <button class="tab-btn" data-tab="blog" onclick="switchTab('blog')">Blog</button>
-    <button class="tab-btn" data-tab="contacto" onclick="switchTab('contacto')">Contacto</button>
+    <button class="tab-btn active" data-tab="perfil" data-es="Perfil" data-en="Profile" onclick="switchTab('perfil')">Perfil</button>
+    <button class="tab-btn" data-tab="investigacion" data-es="Investigación" data-en="Research" onclick="switchTab('investigacion')">Investigación</button>
+    <button class="tab-btn" data-tab="publicaciones" data-es="Publicaciones" data-en="Publications" onclick="switchTab('publicaciones')">Publicaciones</button>
+    <button class="tab-btn" data-tab="charlas" data-es="Charlas" data-en="Talks" onclick="switchTab('charlas')">Charlas</button>
+    <button class="tab-btn" data-tab="docencia" data-es="Docencia" data-en="Teaching" onclick="switchTab('docencia')">Docencia</button>
+    <button class="tab-btn" data-tab="tutorias-div" data-es="Divulgación &amp; Tutorías" data-en="Outreach &amp; Mentoring" onclick="switchTab('tutorias-div')">Divulgación &amp; Tutorías</button>
+    <button class="tab-btn" data-tab="mas-alla" data-es="Más allá" data-en="Beyond Math" onclick="switchTab('mas-alla')">Más allá</button>
+    <button class="tab-btn" data-tab="blog" data-es="Blog" data-en="Blog" onclick="switchTab('blog')">Blog</button>
+    <button class="tab-btn" data-tab="contacto" data-es="Contacto" data-en="Contact" onclick="switchTab('contacto')">Contacto</button>
   </div>
 </div>
 <div id="tab-perfil" class="tab-panel active sec" style="background:white;">
@@ -282,7 +306,14 @@
 <div id="tab-investigacion" class="tab-panel sec" style="background:#f8fafc;">
   <div class="sec-inner">
     <div class="sec-header"><div class="sec-icon ic-violet">🪢</div><div><h2>Investigación</h2><p>Proyectos y líneas de trabajo activos</p></div></div>
-    <div class="research-grid" id="research-list"></div>
+    <div id="research-math-section" class="research-category">
+      <div class="research-cat-title">🪢 Investigación en Matemática</div>
+      <div class="research-grid" id="research-math-list"></div>
+    </div>
+    <div id="research-aplic-section" class="research-category">
+      <div class="research-cat-title">🌱 Aplicaciones</div>
+      <div class="research-grid" id="research-aplic-list"></div>
+    </div>
   </div>
 </div>
 <div id="tab-publicaciones" class="tab-panel sec" style="background:white;">
@@ -322,7 +353,7 @@
 <div id="tab-tutorias-div" class="tab-panel sec" style="background:#f8fafc;">
   <div class="sec-inner">
     <div class="sec-header"><div class="sec-icon ic-indigo">🌎</div><div><h2>Tutorías y Supervisión</h2><p>Lectura dirigida y proyectos de investigación formativa</p></div></div>
-    <p class="po-intro">Desde 2023 participo como tutor en el Programa Virtual de Lectura Dirigida <strong>"Pares Ordenados"</strong>, acompañando proyectos de investigación formativa a estudiantes de universidades latinoamericanas en temas de teoría de nudos, grafos, juegos y algoritmos. Anteriormente, también participé en la supervisión y orientación de proyectos desarrollados en la asignatura <strong>Laboratorio de Modelación I</strong> de la Universidad Técnica Federico Santa María (UTFSM).</p>
+    <p class="po-intro" id="po-intro-text">Desde 2023 participo como tutor en el Programa Virtual de Lectura Dirigida <strong><a href="https://sites.google.com/view/23paresordenados/inicio" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">"Pares Ordenados"</a></strong>, acompañando proyectos de investigación formativa a estudiantes de universidades latinoamericanas en temas de teoría de nudos, grafos, juegos y algoritmos. Anteriormente, también participé en la supervisión y orientación de proyectos desarrollados en la asignatura <strong>Laboratorio de Modelación I</strong> de la Universidad Técnica Federico Santa María (UTFSM).</p>
     <div class="subsec-title">🤝 Pares Ordenados</div>
     <div class="students-grid" id="students-pares"></div>
     <div class="subsec-title">🔬 Laboratorio de Modelación I · UTFSM</div>
@@ -355,16 +386,37 @@
         <div class="cv-icon">📋</div>
         <h3>Curriculum Vitae</h3>
         <p>CV completo con publicaciones, proyectos, docencia, tutorías y trayectoria académica.</p>
-        <a href="CV_2026.pdf" class="btn-teal">Descargar Cv (PDF)</a>
+        <a href="CV_2026.pdf" class="btn-teal">Descargar CV (PDF)</a>
       </div>
     </div>
   </div>
 </div>
+<button class="lang-toggle" id="lang-toggle" onclick="toggleLang()" title="Switch language / Cambiar idioma">EN / ES</button>
 <footer>
   <div class="footer-text" id="footer-name"></div>
   <div class="footer-motto">Este sitio es invariante bajo isotopía ambiente 🪢</div>
 </footer>
 <script>
+let currentLang = 'es';
+let cachedData = null;
+
+const i18n = {
+  es: {
+    researchTitle: 'Investigación', researchSub: 'Proyectos y líneas de trabajo activos',
+    researchMath: '🪢 Investigación en Matemática', researchAplic: '🌱 Aplicaciones',
+    upcomingLabel: 'Próximas charlas', pastLabel: 'Charlas anteriores',
+    contactText: 'Estoy abierto a colaboraciones en investigación sobre teoría de nudos, enlaces ligados e invariantes de baja dimensión, así como a dirigir trabajos de pre y postgrado en estas áreas.',
+    poIntro: 'Desde 2023 participo como tutor en el Programa Virtual de Lectura Dirigida <strong><a href="https://sites.google.com/view/23paresordenados/inicio" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">"Pares Ordenados"</a></strong>, acompañando proyectos de investigación formativa a estudiantes de universidades latinoamericanas en temas de teoría de nudos, grafos, juegos y algoritmos. Anteriormente, también participé en la supervisión y orientación de proyectos desarrollados en la asignatura <strong>Laboratorio de Modelación I</strong> de la Universidad Técnica Federico Santa María (UTFSM).',
+  },
+  en: {
+    researchTitle: 'Research', researchSub: 'Active projects and research lines',
+    researchMath: '🪢 Mathematics Research', researchAplic: '🌱 Applications',
+    upcomingLabel: 'Upcoming talks', pastLabel: 'Past talks',
+    contactText: 'I am open to research collaborations in knot theory, tied links and low-dimensional invariants, as well as supervising undergraduate and graduate theses in these areas.',
+    poIntro: 'Since 2023 I have been a tutor in the Virtual Directed Reading Program <strong><a href="https://sites.google.com/view/23paresordenados/inicio" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">"Pares Ordenados"</a></strong>, accompanying research projects by students from Latin American universities on knot theory, graphs, games, and algorithms. Previously, I also supervised projects in the <strong>Mathematical Modelling Lab I</strong> course at UTFSM.',
+  }
+};
+
 function switchTab(id) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -373,7 +425,43 @@ function switchTab(id) {
   const btn = document.querySelector('[data-tab="' + id + '"]');
   if (btn) { btn.classList.add('active'); btn.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'}); }
   window.scrollTo({top:0,behavior:'smooth'});
+  history.replaceState(null, '', '#' + id);
 }
+
+function toggleLang() {
+  currentLang = currentLang === 'es' ? 'en' : 'es';
+  document.getElementById('lang-toggle').textContent = currentLang === 'es' ? 'EN / ES' : 'ES / EN';
+  if (cachedData) applyLang(cachedData);
+}
+
+function applyLand(d) {
+  const lang = currentLang;
+  const bio = lang === 'en' && d.bioEn ? d.bioEn : d.bio;
+  document.getElementById('hero-role').textContent = bio.role || d.bio.role;
+  document.getElementById('hero-inst').textContent = bio.institution || d.bio.institution;
+  document.getElementById('hero-summary').innerHTML = bio.summary || d.bio.summary;
+  document.getElementById('hero-badges').innerHTML = (bio.badges || d.bio.badges).map(b=>`<span class="badge">${b}</span>`).join('');
+  document.getElementById('about-text').innerHTML = bio.about || d.bio.about;
+  const t = i18n[lang];
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    const key = lang === 'es' ? 'data-es' : 'data-en';
+    if (btn.dataset[lang === 'es' ? 'es' : 'en']) btn.innerHTML = btn.dataset[lang === 'es' ? 'es' : 'en'];
+  });
+  document.getElementById('po-intro-text').innerHTML = t.poIntro;
+  document.querySelector('#tab-investigacion .sec-header h2').textContent = t.researchTitle;
+  document.querySelector('#tab-investigacion .sec-header p').textContent = t.researchSub;
+  document.querySelector('#research-math-section .research-cat-title').textContent = t.researchMath;
+  document.querySelector('#research-aplic-section .research-cat-title').textContent = t.researchAplic;
+  document.querySelector('#tab-charlas .upcoming-block .subsec-title').textContent = t.upcomingLabel;
+  document.querySelector('#tab-charlas > .sec-inner > .subsec-title').textContent = t.pastLabel;
+  document.querySelector('.contact-info p').textContent = t.contactText;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash.replace('#','');
+  const validTabs = ['perfil','investigacion','publicaciones','charlas','docencia','tutorias-div','mas-alla','blog','contacto'];
+  if (hash && validTabs.includes(hash)) switchTab(hash);
+});
 (function(){
   function normalizePts(pts,cx,cy,r){
     const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]);
@@ -420,6 +508,7 @@ const photoUrl = s => httpUrl(s) || (/^images\/[\w./%-]+$/i.test(s || '') && !s.
 fetch('data.json')
   .then(r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json();})
   .then(d=>{
+    cachedData = d;
     document.getElementById('hero-name').textContent=d.bio.name;
     document.getElementById('hero-role').textContent=d.bio.role;
     document.getElementById('hero-inst').textContent=d.bio.institution;
@@ -446,12 +535,9 @@ fetch('data.json')
         <div class="tc-adv">${t.advisor}</div>
         <div class="tc-year">${t.year}</div>
       </div>`).join('');
-    document.getElementById('research-list').innerHTML=d.research.map(r=>`
-      <div class="research-card">
-        <h3>${r.title}</h3>
-        <p>${r.description}</p>
-        <span class="rc-tag ${r.tagClass}">${r.tag}</span>
-      </div>`).join('');
+    const renderResearchCard = r => `<div class="research-card"><h3>${r.title}</h3><p>${r.description}</p><span class="rc-tag ${r.tagClass}">${r.tag}</span></div>`;
+    document.getElementById('research-math-list').innerHTML = d.research.filter(r=>r.category==='math').map(renderResearchCard).join('');
+    document.getElementById('research-aplic-list').innerHTML = d.research.filter(r=>r.category==='aplicaciones').map(renderResearchCard).join('');
     const collaborators=d.collaborators || [];
     const renderAuthors=authors=>collaborators.reduce((s,c)=>httpUrl(c.url)?s.replace(c.alias,`<a class="author-link" href="${httpUrl(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.alias)}</a>`):s,authors);
     document.getElementById('collab-list').innerHTML=collaborators.map(c=>`<article class="collab-card"><strong>${esc(c.name)}</strong><p>${httpUrl(c.url)?`<a class="collab-link" href="${httpUrl(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.linkLabel || 'Página web')} ↗</a>`:'Coautor'}</p></article>`).join('');
@@ -470,7 +556,7 @@ fetch('data.json')
     const future=d.upcomingTalks || [];
     const pending=future.filter(t=>!t.endDate || t.endDate>=localDate).sort((a,b)=>(a.endDate||'').localeCompare(b.endDate||''));
     const pastEvents=future.filter(t=>t.endDate && t.endDate<localDate).sort((a,b)=>b.endDate.localeCompare(a.endDate));
-    const renderTalk=(t,upcoming=false)=>`<div class="talk-item"><div class="talk-meta">${esc(t.date)}</div><h3>${esc(t.title)} <span class="talk-type ${esc(t.typeClass)}">${esc(t.type)}</span></h3><p>${esc(t.venue)}</p>${upcoming&&t.status?`<div class="event-status">${esc(t.status)}</div>`:''}${httpUrl(t.url)?`<p><a class="event-link" href="${httpUrl(t.url)}" target="_blank" rel="noopener noreferrer">Web del evento ↗</a></p>`:''}</div>`;
+    const renderTalk=(t,upcoming=false)=>`<div class="talk-item${upcoming?' upcoming':''}"><div class="talk-meta">${esc(t.date)}</div><h3>${esc(t.title)} <span class="talk-type ${esc(t.typeClass)}">${esc(t.type)}</span></h3><p>${esc(t.venue)}</p>${upcoming&&t.status?`<div class="event-status">✓ ${esc(t.status)}</div>`:''}${httpUrl(t.url)?`<p><a class="event-link" href="${httpUrl(t.url)}" target="_blank" rel="noopener noreferrer">Web del evento ↗</a></p>`:''}</div>`;
     document.getElementById('upcoming-block').hidden=!pending.length;
     document.getElementById('upcoming-list').innerHTML=pending.map(t=>renderTalk(t,true)).join('');
     document.getElementById('talks-list').innerHTML=[...pastEvents,...d.talks].map(t=>renderTalk(t)).join('');
@@ -494,14 +580,14 @@ fetch('data.json')
         <div class="student-topic">${s.topic}</div>
         ${s.award?`<div class="student-award">${s.award}</div>`:''}
       </div>`;
-    document.getElementById('students-pares').innerHTML=d.students.filter(s=>s.program==='pares-ordenados').map(renderStudent).join('');
+    document.getElementById('students-pares').innerHTML=d.students.filter(s=>s.program==='pares-ordenador').map(renderStudent).join('');
     document.getElementById('students-lab').innerHTML=d.students.filter(s=>s.program==='lab-modelacion').map(renderStudent).join('');
     document.getElementById('outreach-list').innerHTML=d.outreach.map(o=>`
       <div class="div-card">
         <div class="div-emoji">${o.emoji}</div>
-        <h3>${o.title}</h3>
-        <p>${o.description}</p>
-        <div class="div-year">${o.year}</div>
+        <h3>${httpUrl(o.url)?`<a href="${httpUrl(o.url)}" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">${esc(o.title)}</a>`:esc(o.title)}</h3>
+        <p>${esc(o.description)}</p>
+        <div class="div-year">${esc(o.year)}</div>
       </div>`).join('');
     document.getElementById('interest-list').innerHTML=(d.interests||[]).map(i=>{
       const photos=(i.photos||[]).filter(p=>photoUrl(p.src));
@@ -520,7 +606,7 @@ fetch('data.json')
         <div class="cicon">${l.icon}</div>${l.label}
       </a>`).join('');
   })
-  .catch(err=>{console.error('Error cargando data.json:',err);document.getElementById('hero-name').textContent="O’Bryan Cárdenas-Andaur";document.getElementById('hero-summary').textContent='No se pudo cargar el contenido. Intenta recargar la página.';});
+  .catch(err=>{console.error('Error cargando data.json:',err);document.getElementById('hero-name').textContent="O'Bryan Cárdenas-Andaur";document.getElementById('hero-summary').textContent='No se pudo cargar el contenido. Intenta recargar la página.';});
 </script>
 </body>
 </html>
