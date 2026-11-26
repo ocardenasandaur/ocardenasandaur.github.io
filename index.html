@@ -90,6 +90,8 @@
     .fi-dot-line { width: 2px; flex: 1; background: var(--border); margin-top: 4px; }
     .formation-item:last-child .fi-dot-line { display: none; }
     .fi-body { flex: 1; }
+    .fi-work { margin: .65rem 0 .35rem; padding: .75rem 1rem; border-left: 3px solid var(--violet-light); background: var(--bg); border-radius: 0 8px 8px 0; }
+    .fi-work-title { font-size: .9rem; font-weight: 600; margin-bottom: .3rem; }
     .fi-degree { font-size: 1rem; font-weight: 700; color: var(--slate); margin-bottom: 0.15rem; }
     .fi-univ { font-size: 0.88rem; color: var(--violet); font-weight: 500; margin-bottom: 0.3rem; }
     .fi-desc { font-size: 0.85rem; color: var(--slate-soft); line-height: 1.65; }
@@ -313,10 +315,6 @@
       <div class="subsec-title">🎓 Formación académica</div>
       <div class="formation-grid" id="formation-list"></div>
     </div>
-    <div>
-      <div class="subsec-title">📜 Trabajos de tesis</div>
-      <div class="thesis-grid" id="thesis-list"></div>
-    </div>
   </div>
 </div>
 <div id="tab-investigacion" class="tab-panel sec" style="background:#f8fafc;">
@@ -481,7 +479,7 @@ function applyLang(d) {
   const staticLabels=[
     ['#tab-perfil .sec-header h2','Sobre mí','About me'],
     ['#tab-perfil .sec-header p','Matemático, docente y divulgador','Mathematician, teacher and science communicator'],
-    ['#tab-perfil .subsec-title:nth-of-type(1)','🎓 Formación académica','🎓 Education'],
+    ['#tab-perfil .subsec-title','🎓 Formación académica','🎓 Education'],
     ['#tab-publicaciones .sec-header h2','Publicaciones','Publications'],
     ['#tab-publicaciones .sec-header p','Artículos publicados, aceptados y en preparación','Published, accepted and in-progress papers'],
     ['#tab-publicaciones .subsec-title','Colaboradores y coautores','Collaborators and coauthors'],
@@ -504,8 +502,6 @@ function applyLang(d) {
     ['.footer-motto','Este sitio es invariante bajo isotopía ambiente 🪢','This site is invariant under ambient isotopy 🪢']
   ];
   staticLabels.forEach(([selector,es,en])=>{const el=document.querySelector(selector);if(el)el.textContent=lang==='en'?en:es;});
-  const profileLabels=document.querySelectorAll('#tab-perfil .subsec-title');
-  if(profileLabels.length===2){profileLabels[0].textContent=lang==='en'?'🎓 Education':'🎓 Formación académica';profileLabels[1].textContent=lang==='en'?'📜 Degree projects and theses':'📜 Trabajos de tesis';}
   const mentorHeaders=document.querySelectorAll('#tab-tutorias-div .sec-header');
   if(mentorHeaders.length===2){const labels=lang==='en'?[['Mentoring and supervision','Directed reading and formative research projects'],['Outreach & Community','Mathematics for everyone']]:[['Tutorías y Supervisión','Lectura dirigida y proyectos de investigación formativa'],['Divulgación & Comunidad','Matemáticas para todo el mundo']];mentorHeaders.forEach((el,i)=>{el.querySelector('h2').textContent=labels[i][0];el.querySelector('p').textContent=labels[i][1];});}
   const mentorLabels=document.querySelectorAll('#tab-tutorias-div .subsec-title');
@@ -591,23 +587,15 @@ function renderData(d){
     document.getElementById('about-text').innerHTML=d.bio.about;
     document.getElementById('formation-list').innerHTML=d.formation.map(f=>`
       <div class="formation-item">
-        <div class="fi-year">${f.years}</div>
+        <div class="fi-year">${esc(f.years)}</div>
         <div class="fi-dot"><div class="fi-dot-circle"></div><div class="fi-dot-line"></div></div>
         <div class="fi-body">
-          <div class="fi-degree">${f.degree}</div>
-          <div class="fi-univ">${f.institution}</div>
-          <div class="fi-desc">${f.description}</div>
-          <span class="fi-tag">${f.tag}</span>
+          <div class="fi-degree">${esc(f.degree)}</div>
+          <div class="fi-univ">${esc(f.institution)}</div>
+          ${f.description?`<div class="fi-desc">${esc(f.description)}</div>`:''}
+          ${f.work?`<div class="fi-work"><div class="thesis-type ${esc(f.work.typeClass)}">${esc(f.work.type)}</div><div class="fi-work-title">${esc(f.work.title)}</div><div class="tc-adv">${esc(f.work.advisor)}</div>${pdfUrl(f.work.pdf)?`<div class="pub-actions"><a class="pub-link doi" href="${pdfUrl(f.work.pdf)}" target="_blank" rel="noopener noreferrer">${currentLang==='en'?'View':'Consultar'}</a></div>`:''}</div>`:''}
+          <span class="fi-tag">${esc(f.tag)}</span>
         </div>
-      </div>`).join('');
-    document.getElementById('thesis-list').innerHTML=d.thesis.map(t=>`
-      <div class="thesis-card">
-        <div class="thesis-type ${t.typeClass}">${t.type}</div>
-        <h3>${t.title}</h3>
-        <div class="tc-univ">${t.institution}</div>
-        <div class="tc-adv">${t.advisor}</div>
-        <div class="tc-year">${esc(t.year)}</div>
-        ${pdfUrl(t.pdf)?`<div class="pub-actions"><a class="pub-link doi" href="${pdfUrl(t.pdf)}" target="_blank" rel="noopener noreferrer">${currentLang==='en'?'View':'Consultar'}</a></div>`:''}
       </div>`).join('');
     const renderResearchCard = r => `<div class="research-card"><h3>${r.title}</h3><p>${r.description}</p><span class="rc-tag ${r.tagClass}">${r.tag}</span></div>`;
     document.getElementById('research-math-list').innerHTML = d.research.filter(r=>r.category==='math').map(renderResearchCard).join('');
@@ -656,7 +644,7 @@ function renderData(d){
       </div>`;
     document.getElementById('students-pares').innerHTML=d.students.filter(s=>s.program==='pares-ordenados').map(renderStudent).join('');
     document.getElementById('students-lab').innerHTML=d.students.filter(s=>s.program==='lab-modelacion').map(renderStudent).join('');
-    document.getElementById('outreach-list').innerHTML=d.outreach.map(o=>`
+    document.getElementById('outreach-list').innerHTML=[...d.outreach].sort((a,b)=>(b.sortDate||'').localeCompare(a.sortDate||'')).map(o=>`
       <div class="div-card">
         <div class="div-emoji">${o.emoji}</div>
         <h3>${httpUrl(o.url)?`<a href="${httpUrl(o.url)}" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">${esc(o.title)}</a>`:esc(o.title)}</h3>

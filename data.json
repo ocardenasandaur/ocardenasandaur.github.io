@@ -37,95 +37,81 @@
       "years": "2021-2026",
       "degree": "Doctorado en Matemáticas",
       "institution": "Universidad de Sevilla, España",
-      "description": "Tesis: <em>Tied links and polynomial invariants</em>. Directores: Juan González-Meneses y Marithania Silvero.",
+      "description": "",
       "tag": "PhD",
       "institutionEn": "University of Seville, Spain",
       "degreeEn": "PhD in Mathematics",
-      "descriptionEn": "Thesis: <em>Tied links and polynomial invariants</em>. Supervisors: Juan González-Meneses and Marithania Silvero.",
-      "tagEn": "PhD"
+      "descriptionEn": "",
+      "tagEn": "PhD",
+      "work": {
+        "type": "Tesis doctoral",
+        "typeClass": "tt-doc",
+        "title": "Tied links and polynomial invariants",
+        "advisor": "Directora: Marithania Silvero · Tutor: Juan González-Meneses",
+        "pdf": "Tesis_Doctorado.pdf",
+        "typeEn": "Doctoral thesis",
+        "advisorEn": "Thesis supervisor: Marithania Silvero · Academic tutor: Juan González-Meneses"
+      }
     },
     {
       "years": "2019-2021",
       "degree": "Magíster en Matemáticas",
       "institution": "Universidad de Valparaíso, Chile",
-      "description": "Tesis: <em>Invariantes polinomiales para Tied-Links</em>.",
+      "description": "",
       "tag": "Magíster",
       "institutionEn": "University of Valparaíso, Chile",
       "degreeEn": "Master’s degree in Mathematics",
-      "descriptionEn": "Thesis: <em>Invariantes polinomiales para Tied-Links</em>.",
-      "tagEn": "Master’s"
+      "descriptionEn": "",
+      "tagEn": "Master’s",
+      "work": {
+        "type": "Tesis de magíster",
+        "typeClass": "tt-lic",
+        "title": "Invariantes polinomiales para Tied-Links",
+        "advisor": "Director: Jesús Juyumaya",
+        "pdf": "Tesis_Magíster.pdf",
+        "typeEn": "Master’s thesis",
+        "advisorEn": "Thesis supervisor: Jesús Juyumaya"
+      }
     },
     {
       "years": "2012-2021",
       "degree": "Ingeniería Civil Matemática",
       "institution": "Universidad Técnica Federico Santa María, Chile",
-      "description": "Mención en Inteligencia Artificial y Redes Neuronales Artificiales. Memoria sobre diseño de mallas curriculares mediante algoritmos heurísticos.",
+      "description": "Mención en Inteligencia Artificial y Redes Neuronales Artificiales.",
       "tag": "Ingeniería Civil",
       "institutionEn": "Federico Santa María Technical University, Chile",
       "degreeEn": "Degree in Mathematical Engineering",
-      "descriptionEn": "Specialisation in artificial intelligence and artificial neural networks. Graduation project on curriculum design using heuristic algorithms.",
-      "tagEn": "Engineering"
+      "descriptionEn": "Specialisation in artificial intelligence and artificial neural networks.",
+      "tagEn": "Engineering",
+      "work": {
+        "type": "Memoria de ingeniería",
+        "typeClass": "tt-ing",
+        "title": "Diseño de una malla curricular balanceada para Ingeniería Civil Matemática en la UTFSM usando algoritmos basados en heurísticas",
+        "advisor": "Profesora guía: María Cristina Riff · Correferente: Pedro Gajardo",
+        "pdf": "Memoria_Ingenieria.pdf",
+        "typeEn": "Engineering graduation project",
+        "advisorEn": "Project supervisor: María Cristina Riff · Co-referee: Pedro Gajardo"
+      }
     },
     {
       "years": "2016-2018",
       "degree": "Licenciatura en Matemática",
       "institution": "Universidad Técnica Federico Santa María, Chile",
-      "description": "Trabajo de grado: <em>Nudos, links y trenzas: Clasificando 3-variedades</em>.",
+      "description": "",
       "tag": "Licenciatura",
       "institutionEn": "Federico Santa María Technical University, Chile",
       "degreeEn": "Bachelor’s degree in Mathematics",
-      "descriptionEn": "Graduation project: <em>Nudos, links y trenzas: Clasificando 3-variedades</em>.",
-      "tagEn": "Bachelor’s"
-    }
-  ],
-  "thesis": [
-    {
-      "type": "Tesis doctoral",
-      "typeClass": "tt-doc",
-      "title": "Tied links and polynomial invariants",
-      "institution": "Universidad de Sevilla, España",
-      "advisor": "Dir.: Juan González-Meneses y Marithania Silvero",
-      "year": "2026",
-      "pdf": "Tesis_Doctorado.pdf",
-      "institutionEn": "University of Seville, Spain",
-      "typeEn": "Doctoral thesis",
-      "advisorEn": "Supervisors: Juan González-Meneses and Marithania Silvero"
-    },
-    {
-      "type": "Tesis de magíster",
-      "typeClass": "tt-lic",
-      "title": "Invariantes polinomiales para Tied-Links",
-      "institution": "Universidad de Valparaíso, Chile",
-      "advisor": "",
-      "year": "2021",
-      "pdf": "Tesis_Magíster.pdf",
-      "institutionEn": "University of Valparaíso, Chile",
-      "typeEn": "Master’s thesis",
-      "advisorEn": ""
-    },
-    {
-      "type": "Memoria de ingeniería",
-      "typeClass": "tt-ing",
-      "title": "Diseño de una malla curricular balanceada para Ingeniería Civil Matemática en la UTFSM usando algoritmos basados en heurísticas",
-      "institution": "Universidad Técnica Federico Santa María, Chile",
-      "advisor": "",
-      "year": "2021",
-      "pdf": "Memoria_Ingenieria.pdf",
-      "institutionEn": "Federico Santa María Technical University, Chile",
-      "typeEn": "Engineering graduation project",
-      "advisorEn": ""
-    },
-    {
-      "type": "Trabajo de grado",
-      "typeClass": "tt-lic",
-      "title": "Nudos, links y trenzas: Clasificando 3-variedades",
-      "institution": "Universidad Técnica Federico Santa María, Chile",
-      "advisor": "",
-      "year": "2018",
-      "pdf": "Trabajo_Licenciatura.pdf",
-      "institutionEn": "Federico Santa María Technical University, Chile",
-      "typeEn": "Undergraduate graduation project",
-      "advisorEn": ""
+      "descriptionEn": "",
+      "tagEn": "Bachelor’s",
+      "work": {
+        "type": "Trabajo de grado",
+        "typeClass": "tt-lic",
+        "title": "Nudos, links y trenzas: Clasificando 3-variedades",
+        "advisor": "Director: Jesús Juyumaya",
+        "pdf": "Trabajo_Licenciatura.pdf",
+        "typeEn": "Undergraduate graduation project",
+        "advisorEn": "Project supervisor: Jesús Juyumaya"
+      }
     }
   ],
   "research": [
@@ -799,43 +785,8 @@
       "url": "https://sites.google.com/view/23paresordenados/inicio",
       "titleEn": "Latin American and Hispanic mathematicians around the world",
       "descriptionEn": "Panel speaker in Pares Ordenados, sharing academic experiences.",
-      "yearEn": "2025 · Online"
-    },
-    {
-      "emoji": "📡",
-      "title": "Contagiando Matemáticas",
-      "description": "Coorganizador y moderador del ciclo de charlas abiertas al público durante la pandemia.",
-      "year": "Octubre-diciembre 2020 · UV",
-      "titleEn": "Contagiando Matemáticas",
-      "descriptionEn": "Co-organiser and moderator of a public lecture series during the pandemic.",
-      "yearEn": "October-December 2020 · UV"
-    },
-    {
-      "emoji": "⛺",
-      "title": "Campamento STEM",
-      "description": "Monitor y monitor coordinador. Talleres de nudos, trenzas y criptografía para estudiantes de enseñanza media.",
-      "year": "2017-2019 · UTFSM",
-      "titleEn": "STEM Camp",
-      "descriptionEn": "Instructor and coordinator. Workshops on knots, braids and cryptography for secondary school students.",
-      "yearEn": "2017-2019 · UTFSM"
-    },
-    {
-      "emoji": "🎪",
-      "title": "Festival de Matemática: Teoría de Nudos y Redes de Pesca",
-      "description": "Exposición interactiva mediante la construcción de redes de pesca.",
-      "year": "Septiembre 2017 · San Antonio",
-      "titleEn": "Mathematics Festival: Knot theory and fishing nets",
-      "descriptionEn": "Interactive exhibition involving the construction of fishing nets.",
-      "yearEn": "September 2017 · San Antonio"
-    },
-    {
-      "emoji": "🎪",
-      "title": "Festival de Matemática: Cúpulas de da Vinci",
-      "description": "Exposición y construcción participativa de cúpulas.",
-      "year": "Diciembre 2016 · Valparaíso",
-      "titleEn": "Mathematics Festival: Da Vinci domes",
-      "descriptionEn": "Exhibition and participatory construction of domes.",
-      "yearEn": "December 2016 · Valparaíso"
+      "yearEn": "2025 · Online",
+      "sortDate": "2025"
     },
     {
       "emoji": "🏫",
@@ -844,16 +795,8 @@
       "year": "2012-2024 · UV",
       "titleEn": "UV Solidarity Pre-university Programme",
       "descriptionEn": "Mathematics teacher (2012–2024), mathematics department coordinator (2017–2024) and general secretary (January–September 2024).",
-      "yearEn": "2012-2024 · UV"
-    },
-    {
-      "emoji": "🏫",
-      "title": "Preuniversitario Universidad Católica de Valparaíso",
-      "description": "Profesor de Matemática.",
-      "year": "Agosto-diciembre 2019",
-      "titleEn": "Catholic University of Valparaíso Pre-university Programme",
-      "descriptionEn": "Mathematics teacher.",
-      "yearEn": "August-December 2019"
+      "yearEn": "2012-2024 · UV",
+      "sortDate": "2024"
     },
     {
       "emoji": "📚",
@@ -862,7 +805,58 @@
       "year": "2020-2021 · UV",
       "titleEn": "Online mini-courses",
       "descriptionEn": "Mini-courses on knot theory, graph theory and game theory.",
-      "yearEn": "2020-2021 · UV"
+      "yearEn": "2020-2021 · UV",
+      "sortDate": "2021"
+    },
+    {
+      "emoji": "📡",
+      "title": "Contagiando Matemáticas",
+      "description": "Coorganizador y moderador del ciclo de charlas abiertas al público durante la pandemia.",
+      "year": "Octubre-diciembre 2020 · UV",
+      "titleEn": "Contagiando Matemáticas",
+      "descriptionEn": "Co-organiser and moderator of a public lecture series during the pandemic.",
+      "yearEn": "October-December 2020 · UV",
+      "sortDate": "2020-12"
+    },
+    {
+      "emoji": "🏫",
+      "title": "Preuniversitario Universidad Católica de Valparaíso",
+      "description": "Profesor de Matemática.",
+      "year": "Agosto-diciembre 2019",
+      "titleEn": "Catholic University of Valparaíso Pre-university Programme",
+      "descriptionEn": "Mathematics teacher.",
+      "yearEn": "August-December 2019",
+      "sortDate": "2019-12"
+    },
+    {
+      "emoji": "⛺",
+      "title": "Campamento STEM",
+      "description": "Monitor y monitor coordinador. Talleres de nudos, trenzas y criptografía para estudiantes de enseñanza media.",
+      "year": "2017-2019 · UTFSM",
+      "titleEn": "STEM Camp",
+      "descriptionEn": "Instructor and coordinator. Workshops on knots, braids and cryptography for secondary school students.",
+      "yearEn": "2017-2019 · UTFSM",
+      "sortDate": "2019-01"
+    },
+    {
+      "emoji": "🎪",
+      "title": "Festival de Matemática: Teoría de Nudos y Redes de Pesca",
+      "description": "Exposición interactiva mediante la construcción de redes de pesca.",
+      "year": "Septiembre 2017 · San Antonio",
+      "titleEn": "Mathematics Festival: Knot theory and fishing nets",
+      "descriptionEn": "Interactive exhibition involving the construction of fishing nets.",
+      "yearEn": "September 2017 · San Antonio",
+      "sortDate": "2017-09"
+    },
+    {
+      "emoji": "🎪",
+      "title": "Festival de Matemática: Cúpulas de da Vinci",
+      "description": "Exposición y construcción participativa de cúpulas.",
+      "year": "Diciembre 2016 · Valparaíso",
+      "titleEn": "Mathematics Festival: Da Vinci domes",
+      "descriptionEn": "Exhibition and participatory construction of domes.",
+      "yearEn": "December 2016 · Valparaíso",
+      "sortDate": "2016-12"
     }
   ],
   "collaborators": [
@@ -946,12 +940,22 @@
       "descriptionEn": "Hard techno, parties and electronic music culture."
     },
     {
-      "title": "Congresos y viajes",
-      "emoji": "🌍",
-      "description": "Encuentros matemáticos, viajes y experiencias compartidas con colegas en distintos lugares del mundo.",
+      "title": "Congresos",
+      "titleEn": "Conferences",
+      "emoji": "🎤",
+      "description": "Encuentros matemáticos y experiencias compartidas con colegas.",
+      "descriptionEn": "Mathematical meetings and shared experiences with colleagues.",
       "photos": [],
-      "titleEn": "Conferences and travel",
-      "descriptionEn": "Mathematical meetings, travel and shared experiences with colleagues around the world."
+      "folder": "images/congresos/"
+    },
+    {
+      "title": "Viajes",
+      "titleEn": "Travel",
+      "emoji": "🌍",
+      "description": "Lugares, culturas y experiencias de viaje.",
+      "descriptionEn": "Places, cultures and travel experiences.",
+      "photos": [],
+      "folder": "images/viajes/"
     }
   ],
   "blog": []
