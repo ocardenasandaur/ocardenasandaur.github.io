@@ -277,6 +277,32 @@
       .pub-item {padding:1rem;gap:.7rem;}
       .thesis-grid,.research-grid,.courses-grid,.students-grid,.div-grid,.collab-grid,.interest-grid {grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));}
     }
+
+    /* Research: scoped academic layout */
+    #tab-investigacion .research-section {margin-bottom:2.5rem;}
+    #tab-investigacion .research-heading {font-family:'Playfair Display',serif;font-size:1.25rem;line-height:1.35;border-bottom:1px solid var(--border);padding-bottom:.65rem;margin-bottom:1rem;}
+    .research-intro {max-width:800px;color:var(--slate-mid);font-size:.95rem;line-height:1.8;}
+    .research-intro p+p {margin-top:.75rem;}
+    .research-keywords {display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.1rem;}
+    .research-keywords span {font-size:.75rem;font-weight:600;color:var(--violet-dark);background:#ede9fe;border:1px solid #ddd6fe;border-radius:999px;padding:.22rem .7rem;}
+    .research-lines {display:grid;gap:.85rem;}
+    .research-line {display:grid;grid-template-columns:116px minmax(0,1fr);gap:1.2rem;align-items:center;background:white;border:1px solid var(--border);border-radius:14px;padding:1.2rem 1.4rem;}
+    .research-diagram {background:#f8fafc;border-radius:10px;padding:.4rem;}
+    .research-diagram svg {width:100%;display:block;}
+    #tab-investigacion h4 {font-size:1rem;line-height:1.45;margin-bottom:.35rem;}
+    .research-line p,.research-record p,.research-other p {font-size:.875rem;color:var(--slate-mid);line-height:1.7;}
+    .research-related-list {margin-top:.65rem;display:flex;flex-direction:column;align-items:flex-start;gap:.2rem;font-size:.78rem;}
+    .research-related-list span {color:var(--slate-soft);font-weight:600;}
+    .research-related {color:var(--violet-dark);text-underline-offset:3px;}
+    .research-other {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 1.5rem;}
+    .research-other article {padding:.8rem 0;border-bottom:1px solid var(--border);}
+    .research-status {display:inline-block;color:var(--slate-soft);font-size:.75rem;font-weight:600;margin-top:.3rem;}
+    .research-record {display:grid;grid-template-columns:155px minmax(0,1fr);gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border);}
+    .research-record:last-child {border-bottom:0;}
+    .research-period {font-size:.78rem;color:var(--violet-dark);font-weight:600;padding-top:.15rem;}
+    .research-meta {font-size:.8rem;color:#0f766e;font-weight:600;margin-bottom:.4rem;}
+    .research-record .research-leads {font-size:.78rem;color:var(--slate-soft);margin-top:.45rem;}
+    @media(max-width:560px){.research-line{grid-template-columns:64px minmax(0,1fr);gap:.75rem;padding:1rem;align-items:start;}.research-other{grid-template-columns:1fr;}.research-record{grid-template-columns:1fr;gap:.25rem;}}
   </style>
 </head>
 <body>
@@ -323,14 +349,11 @@
 <div id="tab-investigacion" class="tab-panel sec" style="background:#f8fafc;">
   <div class="sec-inner">
     <div class="sec-header"><div class="sec-icon ic-violet">🪢</div><div><h2>Investigación</h2><p>Líneas de investigación y proyectos</p></div></div>
-    <div id="research-math-section" class="research-category">
-      <div class="research-cat-title">🪢 Investigación en Matemática</div>
-      <div class="research-grid" id="research-math-list"></div>
-    </div>
-    <div id="research-aplic-section" class="research-category">
-      <div class="research-cat-title">🌱 Aplicaciones</div>
-      <div class="research-grid" id="research-aplic-list"></div>
-    </div>
+    <section class="research-section" aria-labelledby="research-intro-heading"><h3 id="research-intro-heading" class="research-heading">Intereses de investigación</h3><div id="research-intro" class="research-intro"></div><div id="research-keywords" class="research-keywords"></div></section>
+    <section class="research-section" aria-labelledby="research-lines-heading"><h3 id="research-lines-heading" class="research-heading">Principales líneas de investigación</h3><div id="research-lines" class="research-lines"></div></section>
+    <section class="research-section" aria-labelledby="research-other-heading"><h3 id="research-other-heading" class="research-heading">Otros intereses de investigación</h3><div id="research-other" class="research-other"></div></section>
+    <section class="research-section" aria-labelledby="research-projects-heading"><h3 id="research-projects-heading" class="research-heading">Proyectos de investigación</h3><div id="research-projects" class="research-records"></div></section>
+    <section class="research-section" aria-labelledby="research-previous-heading"><h3 id="research-previous-heading" class="research-heading">Investigación interdisciplinaria previa</h3><div id="research-previous" class="research-records"></div></section>
   </div>
 </div>
 <div id="tab-publicaciones" class="tab-panel sec" style="background:white;">
@@ -473,8 +496,9 @@ function applyLang(d) {
   document.getElementById('po-intro-text').innerHTML = t.poIntro;
   document.querySelector('#tab-investigacion .sec-header h2').textContent = t.researchTitle;
   document.querySelector('#tab-investigacion .sec-header p').textContent = t.researchSub;
-  document.querySelector('#research-math-section .research-cat-title').textContent = t.researchMath;
-  document.querySelector('#research-aplic-section .research-cat-title').textContent = t.researchAplic;
+  const researchLabels = [['intro','Intereses de investigación','Research interests'],['lines','Principales líneas de investigación','Main research areas'],['other','Otros intereses de investigación','Other research interests'],['projects','Proyectos de investigación','Research projects'],['previous','Investigación interdisciplinaria previa','Previous interdisciplinary research']];
+  researchLabels.forEach(([id,es,en])=>document.getElementById('research-'+id+'-heading').textContent=lang==='en'?en:es);
+  document.querySelector('#tab-investigacion .sec-header p').textContent=lang==='en'?'Interests, research areas and projects':'Intereses, líneas de trabajo y proyectos';
   document.querySelector('#tab-charlas .upcoming-block .subsec-title').textContent = t.upcomingLabel;
   document.querySelector('#tab-charlas > .sec-inner > .subsec-title').textContent = t.pastLabel;
   document.querySelector('.contact-info p').textContent = t.contactText;
@@ -574,6 +598,25 @@ function localize(value) {
   }
   return result;
 }
+function renderResearch(d) {
+  const r=d.researchProfile;
+  if(!r) return;
+  const en=currentLang==='en';
+  // Schematic planar diagrams: a tied unlink, an annular core, a singular crossing.
+  const icons={
+    tied:'<ellipse cx="32" cy="48" rx="22" ry="29" fill="none" stroke="#7c3aed" stroke-width="3.5"/><ellipse cx="88" cy="48" rx="22" ry="29" fill="none" stroke="#0d9488" stroke-width="3.5"/><path d="M54 48 H66" stroke="#b45309" stroke-width="2.5" stroke-dasharray="3 3"/>',
+    annular:'<circle cx="60" cy="48" r="42" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.5"/><circle cx="60" cy="48" r="19" fill="#fff" stroke="#0d9488" stroke-width="1.5"/><circle cx="60" cy="48" r="30" fill="none" stroke="#7c3aed" stroke-width="3.5"/>',
+    singular:'<path d="M35 14 L85 82 M85 14 L35 82" fill="none" stroke="#b45309" stroke-width="3.5" stroke-linecap="round"/><circle cx="60" cy="48" r="5" fill="#0f172a"/>'
+  };
+  const related=indices=>(indices||[]).map(i=>{const p=d.publications[i];if(!p)return '';const link=(p.links||[]).find(l=>httpUrl(l.url));return `<a class="research-related" ${link?`href="${httpUrl(link.url)}" target="_blank" rel="noopener noreferrer"`:'href="#publicaciones" onclick="switchTab(\'publicaciones\');return false;"'}>${esc(p.title)}</a>`;}).join('');
+  document.getElementById('research-intro').innerHTML=r.intro.map(p=>`<p>${esc(p)}</p>`).join('');
+  document.getElementById('research-keywords').innerHTML=r.keywords.map(k=>`<span lang="en">${esc(k)}</span>`).join('');
+  document.getElementById('research-lines').innerHTML=r.lines.map(x=>`<article class="research-line"><div class="research-diagram"><svg viewBox="0 0 120 96" aria-hidden="true" focusable="false">${icons[x.icon]||''}</svg></div><div><h4>${esc(x.title)}</h4><p>${esc(x.description)}</p>${x.related?.length?`<div class="research-related-list"><span>${en?'Related work':'Trabajos relacionados'}</span>${related(x.related)}</div>`:''}</div></article>`).join('');
+  document.getElementById('research-other').innerHTML=r.other.map(x=>`<article><h4>${esc(x.title)}</h4><p>${esc(x.description)}</p><span class="research-status">${esc(x.status)}</span></article>`).join('');
+  const record=x=>`<article class="research-record"><div class="research-period">${esc(x.period)}</div><div><h4>${esc(x.title)}</h4><div class="research-meta">${esc(x.institution)} · ${esc(x.role)}</div><p>${esc(x.description)}</p>${x.leads?`<p class="research-leads">${en?'Researchers in charge':'Investigadores a cargo'}: ${esc(x.leads)}</p>`:''}${x.related?.length?`<div class="research-related-list"><span>${en?'Related work':'Trabajos relacionados'}</span>${related(x.related)}</div>`:''}</div></article>`;
+  document.getElementById('research-projects').innerHTML=r.projects.map(record).join('');
+  document.getElementById('research-previous').innerHTML=r.previous.map(record).join('');
+}
 function renderData(d){
     if (currentLang==='en') {
       const originalBio=d.bio;
@@ -598,9 +641,7 @@ function renderData(d){
           <span class="fi-tag">${esc(f.tag)}</span>
         </div>
       </div>`).join('');
-    const renderResearchCard = r => `<div class="research-card"><h3>${r.title}</h3><p>${r.description}</p><span class="rc-tag ${r.tagClass}">${r.tag}</span></div>`;
-    document.getElementById('research-math-list').innerHTML = d.research.filter(r=>r.category==='math').map(renderResearchCard).join('');
-    document.getElementById('research-aplic-list').innerHTML = d.research.filter(r=>r.category==='aplicaciones').map(renderResearchCard).join('');
+    renderResearch(d);
     const collaborators=d.collaborators || [];
     const renderAuthors=authors=>collaborators.reduce((s,c)=>httpUrl(c.url)?s.replace(c.alias,`<a class="author-link" href="${httpUrl(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.alias)}</a>`):s,authors);
     document.getElementById('collab-list').innerHTML=collaborators.map(c=>`<article class="collab-card"><strong>${esc(c.name)}</strong><p>${httpUrl(c.url)?`<a class="collab-link" href="${httpUrl(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.linkLabel || (currentLang==='en'?'Website':'Página web'))} ↗</a>`:(currentLang==='en'?'Coauthor':'Coautor')}</p></article>`).join('');

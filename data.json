@@ -956,5 +956,165 @@
       "folder": "images/viajes/"
     }
   ],
-  "blog": []
+  "blog": [],
+  "researchProfile": {
+    "intro": [
+      "Mis intereses de investigación se sitúan principalmente en la teoría de nudos y la topología de baja dimensión, así como en sus conexiones con el álgebra y la combinatoria.",
+      "Me interesa especialmente la construcción y el estudio de invariantes de nudos y enlaces, las estructuras algebraicas que permiten definirlos y su extensión a distintas generalizaciones de los enlaces clásicos. En particular, mi trabajo se ha centrado en los enlaces ligados (tied links), los invariantes polinomiales y los módulos skein.",
+      "También me interesan los aspectos computacionales de la teoría de nudos, tanto para el cálculo de invariantes como para la exploración de ejemplos y el estudio de sus propiedades."
+    ],
+    "introEn": [
+      "My research interests lie primarily in knot theory and low-dimensional topology, and their connections with algebra and combinatorics.",
+      "I am particularly interested in constructing and studying knot and link invariants, the algebraic structures used to define them, and their extension to generalizations of classical links. In particular, my work has focused on tied links, polynomial invariants and skein modules.",
+      "I am also interested in computational aspects of knot theory, both in computing invariants and in exploring examples and studying their properties."
+    ],
+    "keywords": [
+      "Knot Theory",
+      "Low-dimensional Topology",
+      "Polynomial Invariants",
+      "Braid Groups",
+      "Tied Links"
+    ],
+    "lines": [
+      {
+        "title": "Enlaces ligados e invariantes polinomiales",
+        "titleEn": "Tied links and polynomial invariants",
+        "description": "Construcción y estudio de invariantes para enlaces ligados, con especial atención al corchete de Aicardi–Juyumaya, las relaciones skein y la obtención de fórmulas explícitas.",
+        "descriptionEn": "Construction and study of tied link invariants, with particular attention to the Aicardi–Juyumaya bracket, skein relations and explicit formulae.",
+        "icon": "tied",
+        "related": [
+          0,
+          1
+        ]
+      },
+      {
+        "title": "Enlaces en el toro sólido y módulos skein",
+        "titleEn": "Links in the solid torus and skein modules",
+        "description": "Estudio de enlaces clásicos y ligados en el toro sólido y construcción de invariantes de tipo Jones y Kauffman. Trabajo en colaboración con Álvaro del Valle Vílchez.",
+        "descriptionEn": "Study of classical and tied links in the solid torus and construction of Jones- and Kauffman-type invariants. Work in collaboration with Álvaro del Valle Vílchez.",
+        "icon": "annular",
+        "related": [
+          2
+        ]
+      },
+      {
+        "title": "Enlaces singulares e invariantes computacionales",
+        "titleEn": "Singular links and computational invariants",
+        "description": "Comparación de invariantes polinomiales para enlaces singulares y desarrollo de algoritmos para su cálculo a partir de trenzas singulares.",
+        "descriptionEn": "Comparison of polynomial invariants for singular links and development of algorithms to compute them from singular braids.",
+        "icon": "singular",
+        "related": []
+      }
+    ],
+    "other": [
+      {
+        "title": "Homología de Khovanov y enlaces ligados",
+        "titleEn": "Khovanov homology and tied links",
+        "description": "Estudio de posibles extensiones de la homología de Khovanov al contexto de los enlaces ligados.",
+        "descriptionEn": "Study of possible extensions of Khovanov homology to tied links.",
+        "status": "Tema explorado",
+        "statusEn": "Previously explored topic"
+      },
+      {
+        "title": "Grupos de trenzas y álgebras diagramáticas",
+        "titleEn": "Braid groups and diagram algebras",
+        "description": "Estructuras algebraicas asociadas a nudos y trenzas, receta de Jones y método de Kauffman.",
+        "descriptionEn": "Algebraic structures associated with knots and braids, the Jones recipe and the Kauffman method.",
+        "status": "Interés transversal",
+        "statusEn": "Cross-cutting interest"
+      },
+      {
+        "title": "Knotoids",
+        "titleEn": "Knotoids",
+        "description": "Generalizaciones de la teoría clásica de nudos.",
+        "descriptionEn": "Generalizations of classical knot theory.",
+        "status": "Interés emergente",
+        "statusEn": "Emerging interest"
+      },
+      {
+        "title": "Topología y biología",
+        "titleEn": "Topology and biology",
+        "description": "Posibles aplicaciones de la teoría de nudos al estudio de proteínas.",
+        "descriptionEn": "Potential applications of knot theory to the study of proteins.",
+        "status": "Interés emergente",
+        "statusEn": "Emerging interest"
+      },
+      {
+        "title": "Topología y criptografía",
+        "titleEn": "Topology and cryptography",
+        "description": "Problemas computacionales y posibles aplicaciones criptográficas de la teoría de nudos.",
+        "descriptionEn": "Computational problems and potential cryptographic applications of knot theory.",
+        "status": "Interés emergente",
+        "statusEn": "Emerging interest"
+      }
+    ],
+    "projects": [
+      {
+        "title": "Topología, grupos y representaciones",
+        "titleEn": "Topology, groups and representations",
+        "description": "Estudio del corchete de Aicardi–Juyumaya y deducción de fórmulas explícitas.",
+        "descriptionEn": "Study of the Aicardi–Juyumaya bracket and derivation of explicit formulae.",
+        "period": "Desde enero de 2025",
+        "periodEn": "Since January 2025",
+        "institution": "Universidad de Sevilla · I+D+i",
+        "institutionEn": "University of Seville · R&D",
+        "role": "Miembro del equipo de trabajo",
+        "roleEn": "Research team member",
+        "leads": "Marithania Silvero Casanova y Juan González-Meneses López",
+        "leadsEn": "Marithania Silvero Casanova and Juan González-Meneses López"
+      },
+      {
+        "title": "Métodos homotópicos y de teoría de grupos en topología",
+        "titleEn": "Homotopy and group-theoretic methods in topology",
+        "description": "Invariantes polinomiales, álgebras de diagramas y algoritmos para el estudio de nudos y trenzas.",
+        "descriptionEn": "Polynomial invariants, diagram algebras and algorithms for studying knots and braids.",
+        "period": "Marzo 2022 – diciembre 2024",
+        "periodEn": "March 2022 – December 2024",
+        "institution": "Universidad de Sevilla · I+D+i",
+        "institutionEn": "University of Seville · R&D",
+        "role": "Miembro del equipo de trabajo",
+        "roleEn": "Research team member",
+        "leads": "Fernando Muro Jiménez y Ramón Jesús Flores Díaz",
+        "leadsEn": "Fernando Muro Jiménez and Ramón Jesús Flores Díaz"
+      }
+    ],
+    "previous": [
+      {
+        "category": "aplicaciones",
+        "title": "Análisis metagenómico de coexistencia fago-bacteria",
+        "description": "Métricas de coexistencia, variantes del índice de Jaccard, automatización y validación estadística.",
+        "tag": "UTFSM-UPLA · 2017-2019",
+        "tagClass": "tag-teal",
+        "titleEn": "Metagenomic analysis of phage–bacteria coexistence",
+        "descriptionEn": "Coexistence metrics, variants of the Jaccard index, automation and statistical validation.",
+        "tagEn": "UTFSM-UPLA · 2017–2019",
+        "period": "Febrero 2017 – septiembre 2019",
+        "periodEn": "February 2017 – September 2019",
+        "institution": "UTFSM–UPLA",
+        "role": "Asistente de investigación",
+        "roleEn": "Research assistant",
+        "leads": "Roberto Orellana"
+      },
+      {
+        "category": "aplicaciones",
+        "title": "Propiedades fractales de árboles eléctricos",
+        "description": "Dimensión fractal y de correlación, análisis de descargas parciales e implementación de algoritmos.",
+        "tag": "UTFSM · 2016-2017",
+        "tagClass": "tag-violet",
+        "titleEn": "Fractal properties of electrical trees",
+        "descriptionEn": "Fractal and correlation dimensions, partial discharge analysis and algorithm implementation.",
+        "tagEn": "UTFSM · 2016–2017",
+        "period": "Mayo 2016 – junio 2017",
+        "periodEn": "May 2016 – June 2017",
+        "institution": "UTFSM",
+        "role": "Ayudante investigador",
+        "roleEn": "Research assistant",
+        "leads": "Roger Schürch, Pablo Aguirre y Marcos Zuñiga",
+        "leadsEn": "Roger Schürch, Pablo Aguirre and Marcos Zuñiga",
+        "related": [
+          3
+        ]
+      }
+    ]
+  }
 }
