@@ -45,13 +45,16 @@
         radial-gradient(circle at 20% 50%, rgba(94,234,212,0.06) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(167,139,250,0.08) 0%, transparent 40%);
     }
-    .hero-inner { max-width: 920px; margin: 0 auto; display: flex; gap: 3rem; align-items: center; position: relative; }
+    .hero-inner { max-width: 1160px; margin: 0 auto; display: flex; gap: clamp(1rem, 2.5vw, 2.5rem); align-items: center; position: relative; }
     #trefoil-main { border-radius: 50%; filter: drop-shadow(0 20px 60px rgba(124,58,237,0.5)); flex-shrink: 0; }
-    .hero-text h1 { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 700; line-height: 1.15; margin-bottom: 0.3rem; }
+    .hero-text h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.65rem, 3vw, 2.5rem); font-weight: 700; line-height: 1.15; margin-bottom: 0.3rem; }
     #hero-role { font-size: 1rem; color: var(--teal-light); font-weight: 500; margin-bottom: 0.2rem; }
     #hero-inst { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin-bottom: 1rem; }
-    #hero-summary { font-size: 0.95rem; color: rgba(255,255,255,0.82); max-width: 500px; line-height: 1.75; margin-bottom: 1.2rem; }
-    #hero-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.3rem; }
+    #hero-summary { font-size: 0.95rem; color: rgba(255,255,255,0.82); max-width: 660px; line-height: 1.75; margin-bottom: 1.2rem; }
+    .hero-text { flex: 1; }
+    #hero-name { overflow-wrap: normal; }
+    #trefoil-main { width: clamp(100px, 13vw, 160px); height: auto; }
+    @media (min-width: 900px) { #hero-name { white-space: nowrap; font-size: clamp(1.65rem, 2.8vw, 2.5rem); } }
     .badge { background: rgba(255,255,255,0.11); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 0.2rem 0.7rem; border-radius: 999px; font-size: 0.75rem; font-weight: 500; font-family: 'JetBrains Mono', monospace; }
     .hero-links { display: flex; gap: 0.7rem; flex-wrap: wrap; }
     .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.52rem 1.15rem; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: all 0.2s; cursor: pointer; }
@@ -249,13 +252,14 @@
     .research-cat-title { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--slate); margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 0.5rem; }
     .lang-toggle { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999; background: var(--violet); color: white; border: none; border-radius: 999px; padding: 0.55rem 1rem; font-size: 0.82rem; font-weight: 700; font-family: 'Inter', sans-serif; cursor: pointer; box-shadow: 0 4px 16px rgba(124,58,237,0.35); transition: all 0.2s; letter-spacing: 0.03em; }
     .lang-toggle:hover { background: var(--violet-dark); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(124,58,237,0.4); }
-    .hero-photo { width:220px; height:220px; object-fit:cover; object-position:top center; border-radius:16px; border:2px solid rgba(255,255,255,0.18); box-shadow:0 20px 50px rgba(0,0,0,0.35); flex-shrink:0; }
+    .hero-photo { width:clamp(130px,18vw,220px); aspect-ratio:1; height:auto; object-fit:cover; object-position:top center; border-radius:16px; border:2px solid rgba(255,255,255,0.18); box-shadow:0 20px 50px rgba(0,0,0,0.35); flex-shrink:0; }
     @media (max-width: 720px) {
       .hero-inner { flex-direction: column; text-align: center; }
-      #hero-badges, .hero-links { justify-content: center; }
+      .hero-links { justify-content: center; }
       #hero-summary { margin: 0 auto 1.2rem; }
       .contact-grid, .mas-layout { grid-template-columns: 1fr; }
-      .hero-text h1 { font-size: 1.9rem; }
+      .hero-text h1 { font-size: clamp(1.4rem, 6vw, 1.9rem); }
+      #trefoil-main { width: 125px; }
       .hero-photo { width: 130px; height: 130px; }
     }
     [hidden] { display:none !important; }
@@ -280,11 +284,10 @@
   <div class="hero-inner">
     <canvas id="trefoil-main" width="160" height="160"></canvas>
     <div class="hero-text">
-      <h1 id="hero-name">O’Bryan Cárdenas-Andaur</h1>
-      <div id="hero-role">Doctor en Matemáticas · Teoría de nudos y topología de baja dimensión</div>
-      <div id="hero-inst">Viña del Mar, Chile · Doctorado por la Universidad de Sevilla</div>
-      <p id="hero-summary">Investigación en teoría de nudos, enlaces ligados e invariantes polinomiales.</p>
-      <div id="hero-badges"></div>
+      <h1 id="hero-name">O’Bryan Cárdenas‑Andaur</h1>
+      <div id="hero-role">Matemático · Doctor en Matemáticas</div>
+      <div id="hero-inst">Valparaíso, Chile</div>
+      <p id="hero-summary">Mi investigación explora las conexiones entre la topología, el álgebra y la combinatoria a través de la teoría de nudos y sus generalizaciones.</p>
       <div class="hero-links">
         <a href="#" class="btn btn-white" onclick="switchTab('publicaciones');return false;">📄 Publicaciones</a>
         <a href="#" class="btn btn-outline-white" onclick="switchTab('contacto');return false;">✉️ Contacto</a>
@@ -461,7 +464,6 @@ function applyLang(d) {
   document.getElementById('hero-role').textContent = bio.role || d.bio.role;
   document.getElementById('hero-inst').textContent = bio.institution || d.bio.institution;
   document.getElementById('hero-summary').innerHTML = bio.summary || d.bio.summary;
-  document.getElementById('hero-badges').innerHTML = (bio.badges || d.bio.badges).map(b=>`<span class="badge">${b}</span>`).join('');
   document.getElementById('about-text').innerHTML = bio.about || d.bio.about;
   const t = i18n[lang];
   document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -578,12 +580,11 @@ function renderData(d){
       d=localize(d);
       d.bio={...originalBio,...d.bio};
     }
-    document.getElementById('hero-name').textContent=d.bio.name;
+    document.getElementById('hero-name').textContent=d.bio.name.replace('Cárdenas-Andaur','Cárdenas‑Andaur');
     document.getElementById('hero-role').textContent=d.bio.role;
     document.getElementById('hero-inst').textContent=d.bio.institution;
     document.getElementById('hero-summary').innerHTML=d.bio.summary;
-    document.getElementById('hero-badges').innerHTML=d.bio.badges.map(b=>`<span class="badge">${b}</span>`).join('');
-    document.getElementById('footer-name').textContent=`© ${new Date().getFullYear()} ${d.bio.name} · Viña del Mar, Chile`;
+    document.getElementById('footer-name').textContent=`© ${new Date().getFullYear()} ${d.bio.name} · Valparaíso, Chile`;
     document.getElementById('about-text').innerHTML=d.bio.about;
     document.getElementById('formation-list').innerHTML=d.formation.map(f=>`
       <div class="formation-item">

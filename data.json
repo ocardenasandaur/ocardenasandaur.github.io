@@ -1,17 +1,16 @@
 {
   "bio": {
     "name": "O'Bryan Cárdenas-Andaur",
-    "role": "Doctor en Matemáticas · Teoría de nudos y topología de baja dimensión",
-    "institution": "Viña del Mar, Chile · Doctorado por la Universidad de Sevilla",
-    "summary": "Investigo la <strong style='color:var(--teal-light)'>teoría de nudos</strong> y sus generalizaciones, con especial interés en los <em>tied links</em>, los invariantes polinomiales y los módulos skein.",
-    "about": "Soy matemático chileno, doctor en Matemáticas por la Universidad de Sevilla (2026), magíster en Matemáticas por la Universidad de Valparaíso e ingeniero civil matemático y licenciado en Matemática por la Universidad Técnica Federico Santa María.<br><br>Mi investigación se centra en la topología de baja dimensión, especialmente en los enlaces ligados (<em>tied links</em>), los invariantes de tipo Jones y Kauffman, las álgebras diagramáticas y los enlaces en el toro sólido. También me interesa la extensión de estos métodos a enlaces singulares y su implementación computacional.<br><br>He impartido docencia universitaria en la UV, la UTFSM y la PUCV. Participo en el programa latinoamericano de lectura dirigida <em>Pares Ordenados</em>, donde acompaño a estudiantes en sus primeros proyectos de investigación. Me interesa una enseñanza que combine motivación, historia, ejemplos y resolución de problemas.<br><br>Actualmente resido en Chile y cuento con un espacio de trabajo en la Universidad de Valparaíso.",
+    "role": "Matemático · Doctor en Matemáticas",
+    "institution": "Valparaíso, Chile",
+    "summary": "Mi investigación explora las conexiones entre la topología, el álgebra y la combinatoria a través de la teoría de nudos y sus generalizaciones.",
+    "about": "Soy matemático chileno y vivo en Valparaíso, Chile. Mi formación comenzó en la Universidad Técnica Federico Santa María, donde estudié Ingeniería Civil Matemática y Licenciatura en Matemática. Posteriormente realicé un magíster en la Universidad de Valparaíso y un doctorado en Matemáticas en la Universidad de Sevilla, que finalicé en 2026.<br><br>Mi principal interés es la teoría de nudos, un área que permite explorar las conexiones entre la topología, el álgebra y la combinatoria. En particular, me interesa comprender cómo las estructuras algebraicas pueden utilizarse para construir invariantes de nudos y enlaces, tanto clásicos como sus distintas generalizaciones. También disfruto explorando los aspectos computacionales de estos problemas.<br><br>La investigación es solo una parte de mi actividad matemática. La docencia, la divulgación y la formación de nuevos estudiantes han estado presentes a lo largo de mi trayectoria. He impartido docencia universitaria, organizado actividades de divulgación y acompañado a estudiantes en sus primeros proyectos de investigación a través de programas como <em>Pares Ordenados</em>.<br><br>Tras finalizar mi etapa doctoral en Sevilla, he regresado a Chile, donde continúo desarrollando mi investigación desde Valparaíso y manteniendo colaboraciones con investigadores nacionales e internacionales.",
     "badges": [
       "Teoría de nudos",
-      "Tied links",
+      "Topología de baja dimensión",
       "Invariantes polinomiales",
-      "Módulos skein",
-      "Toro sólido",
-      "Enlaces singulares"
+      "Grupos de trenzas",
+      "Tied links"
     ],
     "email": "obryan.cardenas@uv.cl",
     "arxiv": "https://arxiv.org/search/?searchtype=author&query=Cardenas-Andaur",
@@ -19,17 +18,16 @@
     "website_uv": "https://www.uv.cl"
   },
   "bioEn": {
-    "role": "PhD in Mathematics · Knot theory and low-dimensional topology",
-    "institution": "Viña del Mar, Chile · PhD, University of Seville",
-    "summary": "I research <strong style='color:var(--teal-light)'>knot theory</strong> and its generalizations, with special interest in <em>tied links</em>, polynomial invariants, and skein modules.",
-    "about": "I am a Chilean mathematician, with a PhD in Mathematics from the University of Seville (2026), a master’s degree in Mathematics from the University of Valparaíso, and degrees in Mathematical Engineering and Mathematics from the Federico Santa María Technical University.<br><br>My research focuses on low-dimensional topology, with an emphasis on tied links, Jones and Kauffman type invariants, diagrammatic algebras, and links in the solid torus. I am also interested in extending these techniques to singular links and their computational implementation.<br><br>I have taught at UV, UTFSM, and PUCV. I participate in the Latin American directed reading program <em>Pares Ordenados</em>, supporting students in their first research projects. I believe in teaching that combines motivation, historical context, concrete examples, and problem-solving.<br><br>I currently live in Chile with a workspace at the University of Valparaíso.",
+    "role": "Mathematician · PhD in Mathematics",
+    "institution": "Valparaíso, Chile",
+    "summary": "My research explores the connections between topology, algebra, and combinatorics through knot theory and its generalizations.",
+    "about": "I am a Chilean mathematician based in Valparaíso, Chile. My academic journey began at the Federico Santa María Technical University, where I studied Mathematical Engineering and Mathematics. I subsequently obtained a master's degree in Mathematics from the University of Valparaíso and a PhD in Mathematics from the University of Seville, which I completed in 2026.<br><br>My main research interest is knot theory, a field that brings together topology, algebra, and combinatorics. In particular, I am interested in understanding how algebraic structures can be used to construct invariants of classical knots and links, as well as their various generalizations. I also enjoy exploring the computational aspects of these problems.<br><br>Research is only one part of my mathematical activity. Teaching, mathematical outreach, and mentoring students have been an important part of my academic journey. I have taught university courses, organized outreach activities, and supported students in their first research projects through initiatives such as the Latin American directed reading program <em>Pares Ordenados</em>.<br><br>After completing my doctoral studies in Seville, I returned to Chile, where I continue my research from Valparaíso while maintaining collaborations with national and international researchers.",
     "badges": [
-      "Knot theory",
-      "Tied links",
-      "Polynomial invariants",
-      "Skein modules",
-      "Solid torus",
-      "Singular links"
+      "Knot Theory",
+      "Low-dimensional Topology",
+      "Polynomial Invariants",
+      "Braid Groups",
+      "Tied Links"
     ]
   },
   "formation": [
