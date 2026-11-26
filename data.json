@@ -196,10 +196,19 @@
           "label": "DOI",
           "url": "https://doi.org/10.1142/S0218216525500877",
           "class": "doi"
+        },
+        {
+          "label": "arXiv:2411.06259",
+          "url": "https://arxiv.org/abs/2411.06259",
+          "class": "arxiv"
         }
       ],
       "yearEn": "2026",
-      "journalEn": "Journal of Knot Theory and Its Ramifications, 35 (2026), 2550087"
+      "journalEn": "Journal of Knot Theory and Its Ramifications, 35 (2026), 2550087",
+      "status": "published",
+      "summary": "Se introducen los estados de Aicardi–Juyumaya y se demuestra que sus contribuciones al corchete no dependen del árbol de resolución. Se presenta un algoritmo de cálculo y ejemplos de enlaces ligados con el mismo polinomio HOMFLYPT clásico y distintos polinomios de Jones ligados.",
+      "summaryEn": "The paper introduces Aicardi–Juyumaya states and proves that their contributions to the bracket are independent of the resolution tree. It presents a computational algorithm and examples of tied links with the same classical HOMFLYPT polynomial but different tied Jones polynomials.",
+      "bibtex": "@article{CardenasAndaur2026,\n  author = {Cárdenas-Andaur, O'Bryan},\n  title = {On the {Aicardi-Juyumaya} bracket for tied links},\n  journal = {Journal of Knot Theory and Its Ramifications},\n  year = {2026},\n  volume = {35},\n  pages = {2550087},\n  doi = {10.1142/S0218216525500877}\n}"
     },
     {
       "year": "aceptado",
@@ -215,7 +224,11 @@
         }
       ],
       "yearEn": "accepted",
-      "journalEn": "Journal of Algebraic Combinatorics · Accepted for publication"
+      "journalEn": "Journal of Algebraic Combinatorics · Accepted for publication",
+      "status": "accepted",
+      "summary": "Se estudia la estructura de los estados de Aicardi–Juyumaya de diagramas de enlaces ligados con dos y tres colores y se obtienen fórmulas explícitas para el corchete.",
+      "summaryEn": "The paper studies the structure of Aicardi–Juyumaya states of tied link diagrams with two and three colors and obtains explicit formulae for the bracket.",
+      "bibtex": "@misc{CardenasAndaurGonzalezMenesesSilvero2025,\n  author = {Cárdenas-Andaur, O'Bryan and González-Meneses, Juan and Silvero, Marithania},\n  title = {Explicit formulae for the {Aicardi-Juyumaya} bracket of tied links},\n  year = {2025},\n  eprint = {2510.02075},\n  archivePrefix = {arXiv}\n}"
     },
     {
       "year": "prep.",
@@ -225,7 +238,8 @@
       "journal": "Manuscrito en preparación",
       "links": [],
       "yearEn": "in prep.",
-      "journalEn": "Manuscript in preparation"
+      "journalEn": "Manuscript in preparation",
+      "status": "preparation"
     },
     {
       "year": "2017",
@@ -233,9 +247,19 @@
       "title": "Electrical tree growth and partial discharges analyzed by fractal and correlation dimensions",
       "authors": "R. Schurch, P. Donoso, P. Aguirre, <strong>O. Cárdenas</strong>, M. Zuñiga &amp; S. Rowland",
       "journal": "IEEE Conference on Electrical Insulation and Dielectric Phenomena (CEIDP), 2017",
-      "links": [],
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1109/CEIDP.2017.8257601",
+          "class": "doi"
+        }
+      ],
       "yearEn": "2017",
-      "journalEn": "IEEE Conference on Electrical Insulation and Dielectric Phenomena (CEIDP), 2017"
+      "journalEn": "IEEE Conference on Electrical Insulation and Dielectric Phenomena (CEIDP), 2017",
+      "status": "published",
+      "summary": "Se estudia el crecimiento de árboles eléctricos mediante la dimensión fractal de su estructura tridimensional y la dimensión de correlación de las series temporales de descargas parciales.",
+      "summaryEn": "The study relates electrical tree growth to the fractal dimension of their three-dimensional structure and the correlation dimension derived from partial discharge time series.",
+      "bibtex": "@inproceedings{SchurchEtAl2017,\n  author = {Schurch, R. and Donoso, P. and Aguirre, P. and Cardenas, O. and Zuniga, M. and Rowland, S.},\n  title = {Electrical tree growth and partial discharges analyzed by fractal and correlation dimensions},\n  booktitle = {IEEE Conference on Electrical Insulation and Dielectric Phenomena (CEIDP)},\n  year = {2017},\n  doi = {10.1109/CEIDP.2017.8257601}\n}"
     }
   ],
   "talks": [

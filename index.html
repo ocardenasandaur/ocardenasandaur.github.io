@@ -303,6 +303,18 @@
     .research-meta {font-size:.8rem;color:#0f766e;font-weight:600;margin-bottom:.4rem;}
     .research-record .research-leads {font-size:.78rem;color:var(--slate-soft);margin-top:.45rem;}
     @media(max-width:560px){.research-line{grid-template-columns:64px minmax(0,1fr);gap:.75rem;padding:1rem;align-items:start;}.research-other{grid-template-columns:1fr;}.research-record{grid-template-columns:1fr;gap:.25rem;}}
+  
+    #pub-list {gap:1.8rem;}
+    .pub-group {display:grid;gap:.9rem;min-width:0;}
+    .pub-group h3.pub-group-heading {font-family:'Playfair Display',serif;font-size:1.25rem;border-bottom:1px solid var(--border);padding-bottom:.55rem;}
+    .pub-content {flex:1;min-width:0;overflow-wrap:anywhere;}
+    .pub-extra {font-size:.85rem;color:var(--slate-mid);margin-top:.6rem;}
+    .pub-extra summary {cursor:pointer;color:var(--violet-dark);font-weight:600;}
+    .pub-extra p {margin-top:.5rem;}
+    .pub-extra pre {white-space:pre-wrap;overflow-wrap:anywhere;background:#ede9fe;padding:.8rem;border-radius:8px;margin:.5rem 0;font-size:.75rem;}
+    .pub-copy {font:inherit;border:1px solid var(--border);background:white;color:var(--violet-dark);padding:.25rem .6rem;border-radius:6px;cursor:pointer;}
+    @media(max-width:480px){#pub-list .pub-item{flex-direction:column;}}
+
   </style>
 </head>
 <body>
@@ -360,7 +372,7 @@
   <div class="sec-inner">
     <div class="sec-header"><div class="sec-icon ic-teal">📚</div><div><h2>Publicaciones</h2><p>Artículos publicados, aceptados y en preparación</p></div></div>
     <div class="pub-list" id="pub-list"></div>
-    <div class="subsec-title" style="margin-top:2.5rem">Colaboradores y coautores</div><div class="collab-grid" id="collab-list"></div>
+    <div id="coauthors-heading" class="subsec-title" style="margin-top:2.5rem">Colaboradores y coautores</div><div class="collab-grid" id="collab-list"></div>
   </div>
 </div>
 <div id="tab-charlas" class="tab-panel sec" style="background:#f8fafc;">
@@ -508,7 +520,7 @@ function applyLang(d) {
     ['#tab-perfil .subsec-title','🎓 Formación académica','🎓 Education'],
     ['#tab-publicaciones .sec-header h2','Publicaciones','Publications'],
     ['#tab-publicaciones .sec-header p','Artículos publicados, aceptados y en preparación','Published, accepted and in-progress papers'],
-    ['#tab-publicaciones .subsec-title','Colaboradores y coautores','Collaborators and coauthors'],
+    ['#coauthors-heading','Colaboradores y coautores','Collaborators and coauthors'],
     ['#tab-charlas .sec-header h2','Charlas & Conferencias','Talks & Conferences'],
     ['#tab-charlas .sec-header p','Presentaciones seleccionadas','Selected presentations'],
     ['#tab-docencia .sec-header h2','Docencia','Teaching'],
@@ -645,16 +657,20 @@ function renderData(d){
     const collaborators=d.collaborators || [];
     const renderAuthors=authors=>collaborators.reduce((s,c)=>httpUrl(c.url)?s.replace(c.alias,`<a class="author-link" href="${httpUrl(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.alias)}</a>`):s,authors);
     document.getElementById('collab-list').innerHTML=collaborators.map(c=>`<article class="collab-card"><strong>${esc(c.name)}</strong><p>${httpUrl(c.url)?`<a class="collab-link" href="${httpUrl(c.url)}" target="_blank" rel="noopener noreferrer">${esc(c.linkLabel || (currentLang==='en'?'Website':'Página web'))} ↗</a>`:(currentLang==='en'?'Coauthor':'Coautor')}</p></article>`).join('');
-    document.getElementById('pub-list').innerHTML=d.publications.map(p=>`
-      <div class="pub-item">
-        <div class="pub-year ${p.yearClass}">${p.year}</div>
+    const en=currentLang==='en';
+    const renderPublication=p=>`<article class="pub-item">
+        <div class="pub-year ${esc(p.yearClass)}">${esc(p.year)}</div>
         <div class="pub-content">
-          <h3>${p.title}</h3>
+          <h3>${esc(p.title)}</h3>
           <div class="authors">${renderAuthors(p.authors)}</div>
-          <div class="journal">${p.journal}</div>
-          ${p.links.length?`<div class="pub-actions">${p.links.filter(l=>httpUrl(l.url)).map(l=>`<a href="${httpUrl(l.url)}" target="_blank" rel="noopener noreferrer" class="pub-link ${esc(l.class)}">${esc(l.label)}</a>`).join('')}</div>`:''}
-        </div>
-      </div>`).join('');
+          <div class="journal">${esc(p.journal)}</div>
+          ${(p.links||[]).length?`<div class="pub-actions">${p.links.filter(l=>httpUrl(l.url)).map(l=>`<a href="${httpUrl(l.url)}" target="_blank" rel="noopener noreferrer" class="pub-link ${esc(l.class)}">${esc(l.label)}</a>`).join('')}</div>`:''}
+          ${p.summary?`<details class="pub-extra"><summary>${en?'Summary':'Resumen'}</summary><p>${esc(p.summary)}</p></details>`:''}
+          ${p.bibtex?`<details class="pub-extra"><summary>BibTeX${p.status==='accepted'?' (arXiv)':''}</summary><pre>${esc(p.bibtex)}</pre><button type="button" class="pub-copy">${en?'Copy BibTeX':'Copiar BibTeX'}</button><span role="status" class="pub-copy-status"></span></details>`:''}
+        </div></article>`;
+    const groups=[{title:en?'Published and accepted papers':'Artículos publicados y aceptados',items:d.publications.filter(p=>['published','accepted'].includes(p.status))},{title:'Preprints',items:d.publications.filter(p=>p.status==='preprint')},{title:en?'Works in preparation':'Trabajos en preparación',items:d.publications.filter(p=>p.status==='preparation') }];
+    document.getElementById('pub-list').innerHTML=groups.filter(g=>g.items.length).map(g=>`<section class="pub-group"><h3 class="pub-group-heading">${esc(g.title)}</h3>${g.items.map(renderPublication).join('')}</section>`).join('');
+    document.querySelectorAll('#pub-list .pub-copy').forEach(btn=>btn.addEventListener('click',async()=>{const status=btn.nextElementSibling;try{await navigator.clipboard.writeText(btn.previousElementSibling.textContent);status.textContent=en?' Copied':' Copiado';}catch{status.textContent=en?' Select and copy the text manually.':' Selecciona y copia el texto manualmente.';}}));
     const today = new Date();
     const localDate = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
     const future=d.upcomingTalks || [];
