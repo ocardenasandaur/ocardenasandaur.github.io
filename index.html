@@ -373,6 +373,10 @@
 
     #mentor-content .subsec-title{margin-top:2rem;margin-bottom:1rem} #mentor-content .po-intro{max-width:none;margin-bottom:1rem} .mentor-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem} .mentor-area{font-size:.76rem;font-weight:600;color:#7c3aed;margin-top:.65rem}.mentor-area.graphs,.mentor-area.biology{color:#0f766e}.mentor-area.games{color:#b45309}.mentor-resources{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.6rem}.mentor-resources:empty{display:none}.mentor-resources a{font-size:.76rem;padding:.3rem .55rem;background:#ede9fe;color:#5b21b6;border-radius:6px;text-decoration:none}.mentor-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin:1rem 0}.mentor-stats div{background:white;border:1px solid var(--border);border-radius:12px;text-align:center;padding:.7rem .2rem}.mentor-stats strong{display:block;color:#7c3aed;font-size:1.45rem}.mentor-stats span{font-size:.75rem;color:var(--slate-soft)}.mentor-list{display:grid;gap:.8rem}.mentor-out{display:flex;gap:1rem;background:white;border:1px solid var(--border);border-radius:12px;padding:1rem;min-width:0}.mentor-out>div{flex:1;min-width:0}.mentor-out h3{font-size:.95rem;margin:.25rem 0;color:var(--slate)}.mentor-out p{font-size:.88rem;color:var(--slate-soft);line-height:1.6}.mentor-icon{width:36px;height:36px;flex:none;border-radius:8px;background:#ccfbf1;color:#0d9488;padding:7px}.mentor-icon svg{width:100%;height:100%}.mentor-timeline{display:grid;gap:.9rem;margin-top:1rem}.mentor-timeline strong,.mentor-timeline span{display:block;font-size:.8rem}.mentor-timeline span{color:var(--slate-soft)}.mentor-track{height:9px;background:#f1f5f9;border-radius:6px;position:relative;margin-top:.3rem}.mentor-track i{position:absolute;height:100%;border-radius:6px}.mentor-axis{display:flex;justify-content:space-between}.mentor-axis span{font-size:.68rem}@media(max-width:600px){.mentor-grid{grid-template-columns:1fr}.mentor-out{gap:.65rem;padding:.8rem}.mentor-stats span{font-size:.65rem}}
     #interest-list {display:block;scroll-margin-top:90px;}
+    .album-privacy {display:flex;align-items:flex-start;gap:.75rem;margin-top:1.75rem;padding:1rem 1.1rem;border:1px solid #ffffff30;border-radius:12px;background:#ffffff0d;color:#e0e7ff;font-size:.88rem;line-height:1.65;}
+    .album-privacy-icon {flex:none;color:#c4b5fd;font-size:1.15rem;}
+    .album-privacy p {margin:0 0 .35rem;}
+    .album-privacy a {color:#e0e7ff;text-decoration:underline;overflow-wrap:anywhere;}
     .beyond-intro,.album-description {max-width:850px;line-height:1.8;color:#e0e7ff;}
     .beyond-intro p,.album-description p {margin-bottom:.85rem;}
     .beyond-heading {font-size:1.12rem;margin:1.7rem 0 .8rem;color:#fff;}
@@ -534,6 +538,7 @@
   <div class="sec-inner">
     <div class="sec-header"><div class="sec-icon ic-star">✨</div><div><h2>Más allá de los nudos</h2><p>El matemático fuera del pizarrón</p></div></div>
     <div id="interest-list"></div>
+    <aside class="album-privacy"><span class="album-privacy-icon" aria-hidden="true">♡</span><div><p id="album-privacy-text">Estos álbumes reúnen recuerdos y momentos compartidos con muchas personas. Si apareces en alguna de las fotografías o vídeos y prefieres que sean retirados, no dudes en ponerte en contacto conmigo.</p><a href="mailto:obryan.cardenas@uv.cl">obryan.cardenas@uv.cl</a></div></aside>
   </div>
 </div>
 <div id="tab-blog" class="tab-panel sec">
@@ -664,6 +669,7 @@ function applyLang(d) {
     ['#teaching-past .doc-block-title','Cursos anteriores','Past courses'],
     ['#teaching-mini .doc-block-title','🪢 Minicursos y cursillos','🪢 Short courses'],
     ['#teaching-assistant .doc-block-title','📐 Ayudantías','📐 Teaching assistantships'],
+    ['#album-privacy-text','Estos álbumes reúnen recuerdos y momentos compartidos con muchas personas. Si apareces en alguna de las fotografías o vídeos y prefieres que sean retirados, no dudes en ponerte en contacto conmigo.','These albums bring together memories and moments shared with many people. If you appear in any of the photographs or videos and would prefer them to be removed, please feel free to contact me.'],
     ['#tab-mas-alla .sec-header h2','Más allá de los nudos','Beyond Knots'],
     ['#tab-mas-alla .sec-header p','Intereses, experiencias y recuerdos','Interests, experiences and memories'],
     ['#tab-blog .sec-header p','Ideas, experiencias y otras cosas que me gustaría compartir','Ideas, experiences and other things I would like to share'],
