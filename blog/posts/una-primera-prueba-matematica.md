@@ -2,7 +2,7 @@
 title: 'Una primera prueba: círculos, nudos y polinomios'
 date: 2026-11-26
 language: es
-published: true
+published: false
 featured: true
 categories: [nudos, divulgacion, computacion]
 summary: 'Una pequeña exploración del corchete de Kauffman para inaugurar y poner a prueba este espacio.'
