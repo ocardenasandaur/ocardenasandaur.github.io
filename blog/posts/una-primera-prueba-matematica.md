@@ -3,6 +3,7 @@ title: 'Una primera prueba: círculos, nudos y polinomios'
 date: 2026-11-26
 language: es
 published: true
+noindex: true
 featured: true
 categories: [nudos, divulgacion, computacion]
 summary: 'Una pequeña exploración del corchete de Kauffman para inaugurar y poner a prueba este espacio.'
@@ -53,7 +54,7 @@ $$
 \end{aligned}
 $$
 
-Esto completa la inducción. $\square$
+Esto completa la inducción.
 ```
 
 ```example Tres componentes
